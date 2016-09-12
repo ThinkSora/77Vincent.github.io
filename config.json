@@ -9,9 +9,12 @@
 
 	"bundles": {
 		"/css/all.css": [
-			"/css/normalize.css",	
-			"/css/main.css",
-			"/css/site.less"
-		]	
+			"/css/*.css"	
+		],
+
+		"/js/all.js": [
+			"/js/*.js",
+			"/js/lib/*.js"
+		]
 	}
 }
