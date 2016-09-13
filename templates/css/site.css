@@ -1,4 +1,3 @@
-
 #sidebar {
 	background: rgb(200,200,200);
 	padding: 20px;
@@ -9,6 +8,5 @@
 
 .main-content {
 	width: 80%;
-	float: left;
 	background-color: red;
 }
