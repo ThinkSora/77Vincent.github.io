@@ -2,7 +2,6 @@
 	"site-title": "qiqi",
 	"footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a>",
 	"navbar": [
-		{ "lable": "haha", "href": "/haha" },
 		{ "label": "About", "href": "/about" },
 		{ "label": "Projects", "href": "/projects" }
 	]
