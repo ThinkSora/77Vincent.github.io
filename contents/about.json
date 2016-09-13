@@ -1,3 +1,6 @@
 {
-	"title": "about"
+	"title": "about",
+	"infor": {
+		"name": "Vincent"
+	}
 }

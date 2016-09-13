@@ -1,6 +1,10 @@
 /*	GLOBAl
 */
 
+body {
+	margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 }
@@ -40,7 +44,10 @@ a:hover {
 	width: 200px;
 	height: 100%;
 	position: fixed;
-	transition: all 0.3s;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	overflow-y: auto;
 }
 
@@ -60,9 +67,13 @@ a:hover {
 .main-content {
 	margin-left: 200px;
 	padding: 20px 30px;
-	max-width: 1000px;
 }
 
-.main-content .page-title {
+.page-title {
+	border-bottom: 1px solid rgb(220,220,220);
+}
+
+.page-title h3 {
+	text-transform: capitalize;
 }
 
