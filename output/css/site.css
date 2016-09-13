@@ -1,3 +1,12 @@
+/*	GLOBAl
+*/
+h1 {
+	margin-bottom: 10px;
+}
+
+
+/*	SIDEBAR
+*/
 #sidebar {
 	background: rgb(200,200,200);
 	padding: 20px;
@@ -6,7 +15,11 @@
 	position: fixed;
 }
 
+/*	MAINCONTENT
+*/
+
 .main-content {
-	width: 80%;
-	background-color: red;
+	margin-left: 200px;
+	padding: 20px;
+	max-width: 1000px;
 }
