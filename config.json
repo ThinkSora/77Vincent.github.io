@@ -9,7 +9,9 @@
 
 	"bundles": {
 		"/css/all.css": [
-			"/css/*.css"	
+			"/css/main.css"	,
+			"/css/site.css"	,
+			"/css/responsive.css"
 		],
 
 		"/js/all.js": [
