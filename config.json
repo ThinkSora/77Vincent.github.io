@@ -9,14 +9,14 @@
 
 	"bundles": {
 		"/css/all.css": [
-			"/css/main.css"	,
-			"/css/site.css"	,
-			"/css/responsive.css"
+			"./css/main.css"	,
+			"./css/site.css"	,
+			"./css/responsive.css"
 		],
 
 		"/js/all.js": [
-			"/js/*.js",
-			"/js/lib/*.js"
+			"./js/*.js",
+			"./js/lib/*.js"
 		]
 	}
 }

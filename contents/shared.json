@@ -1,5 +1,6 @@
 {
-	"site-title": "qiqi",
+	"site-title": "web tech",
+	"logo": "./image/logo.png",
 	"footer-text": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a>",
 	"navbar": [
 		{ "label": "About", "href": "/about" },

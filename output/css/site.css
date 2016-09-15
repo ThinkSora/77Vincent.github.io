@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Optima-Regular';
+	src: url('font/Optima-Regular.eot') format('embedded-opentype'),
+		 url('font/Optima-Regular.woff') format('woff'),
+		 url('font/Optima-Regular.ttf') format('truetype'),
+		 url('font/Optima-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*	GLOBAl
 */
 
@@ -38,6 +48,11 @@ ul li {
 	padding: 5px 0;
 }
 
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
 /*	GRID SYSTEM
 */
 
@@ -47,37 +62,53 @@ ul li {
 
 /*	SIDEBAR
 */
+@keyframes slideRight {
+	from {left: -100%;}
+	to {left: 0;}
+}
+
 #sidebar {
 	background: #d4e2e5;
 	padding: 20px 0;
 	width: 200px;
 	height: 100%;
 	position: fixed;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 	overflow-y: auto;
+	-webkit-animation: slideRight 0.5s;
+	-moz-animation: slideRight 0.5s;
+	-o-animation: slideRight 0.5s;
+	animation: slideRight 0.5s;
+	font-family: 'Optima-Regular';
 }
 
 #sidebar ul li {
 	padding: 8px 25px;
 	font-size: 1.2em;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
 	cursor: pointer;
 }
 
 #sidebar ul li:hover {
 	background-color: rgb(252,252,252);
+	box-shadow: 1px 0 15px rgba(255,255,255,0.2);
 }
 
 #sidebar .title {
 	display: block;
 	text-align: center;
-	margin-bottom: 30px;
+}
+
+#sidebar .title .img-wrapper {
+	width: 60px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+#sidebar .title h2 {
+	text-transform: uppercase;
 }
 
 /*	MAINCONTENT
