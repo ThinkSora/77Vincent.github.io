@@ -1,0 +1,10 @@
+{
+	"title": "about",
+	"navbar": [
+		{ "label": "Author", "href": "/#author" },
+		{ "label": "Website", "href": "/#website" }
+	],
+	"infor": {
+		"name": "Vincent"
+	}
+}
