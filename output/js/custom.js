@@ -8,10 +8,10 @@ const Vinrainbow = function(selector) {
 
 Vinrainbow.prototype = {
 	init: function() {
-		this.calculate();
+		this.mouseEvent();
 	},
 
-	calculate: function() {
+	mouseEvent: function() {
 		var self = this;
 
 		function getRandomArbitrary(min, max) {
@@ -35,6 +35,27 @@ Vinrainbow.prototype = {
 		}
 	},
 };
+
+(function() {
+	/*	LANGUAGE SWITCH
+	*
+	*/
+	var url = window.location.href;
+	var lang = url.split('?')[1];
+	var zh = document.querySelectorAll('.zh-cn');
+	var en = document.querySelectorAll('.en-us');
+	if (lang == 'zh-cn') {
+		for (var i=0; i<zh.length; i++) {
+			zh[i].style.display = 'block';
+			en[i].style.display = 'none';
+		}
+	}	else {
+		for (var i=0; i<zh.length; i++) {
+			zh[i].style.display = 'none';
+			en[i].style.display = 'block';
+		}
+	}
+})();
 
 var rainbow = document.querySelector('#sidebar');
 new Vinrainbow(rainbow);

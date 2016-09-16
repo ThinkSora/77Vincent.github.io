@@ -1,0 +1,8 @@
+{
+	"page-title": "Projects",
+	"navbar": [
+		{ "label": "aaaaaa", "href": "project/vinslider" },
+		{ "label": "bbbbbb", "href": "project/vinalidation" },
+		{ "label": "cccccc", "href": "project/vinpopup" }
+	]
+}

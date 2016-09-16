@@ -1,20 +1,26 @@
-<nav id="sidebar">
+<nav id="sidebar" style="background: rgba(50,50,50,1);">
 
-	<a href="/" class="title">
+	{{#site-title}}
+	<a href="{{href}}" class="{{class}}">
 		<div class="img-wrapper">
-			<img src="{{{logo}}}">
+			<img src="{{logo}}">
 		</div>
-		<h2>{{site-title}}</h2>
+		<h2>{{label}}</h2>
 	</a>
+	{{/site-title}}
 	
-	<ul class="">
+	<ul>
 	{{#navbar}}
-		<li><a href="{{{href}}}">{{label}}</a>
+		<li class="{{class}}"><a href="{{href}}"><span>{{label}}</span></a>
 	{{/navbar}}
+		<li class="js-lang en-us"><a href="?zh-cn"><span>中文</span></a>
+		<li class="js-lang zh-cn"><a href="?en-us"><span>English</span></a>
 	</ul>
 
 	<footer>
-		<p>{{{footer-right}}}</p>
-		<p>{{{footer-power}}}</p>
+	{{#footer-content}}
+		<p class="{{{class}}}">{{{label}}}</p>
+	{{/footer-content}}
 	</footer>
+
 </nav>

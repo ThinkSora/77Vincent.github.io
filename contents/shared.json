@@ -1,11 +1,22 @@
 {
-	"site-title": "web tech",
-	"logo": "./image/logo-2.png",
-	"footer-right": "Created by Vincent",
-	"footer-power": "Built with <a href=\"http://laktek.github.com/punch\">Punch</a>",
+	"site-title": [
+		{"label": "web tech", "href": "/", "class": "title en-us", "logo": "./image/logo-2.png"},
+		{"label": "网页技术博客", "href": "/?zh-cn", "class": "title zh-cn", "logo": "./image/logo-2.png"}
+	],
+
+	
+	"footer-content": [
+		{"label": "Created by Vincent<br>Built with <a href=\"http://laktek.github.com/punch\">Punch</a>", "class": "en-us"},
+		{"label": "版权归77所有<br>由<a href=\"http://laktek.github.com/punch\">Punch</a>创建", "class": "zh-cn"}
+	],
+
 	"navbar": [
-		{ "label": "About", "href": "/about" },
-		{ "label": "Projects", "href": "/projects" },
-		{ "label": "Blogs", "href": "/blogs" }
+		{"label": "projects", "href": "/projects", "class": "en-us"},
+		{"label": "blogs",  "href": "/blogs", "class": "en-us"},
+		{"label": "about", "href": "/about", "class": "en-us"},
+
+		{"label": "作品", "href": "/projects?zh-cn", "class": "zh-cn"},
+		{"label": "博客",  "href": "/blogs?zh-cn", "class": "zh-cn"},
+		{"label": "关于", "href": "/about?zh-cn", "class": "zh-cn"}
 	]
 }
