@@ -1,16 +1,25 @@
 {{> header }}
-{{> nav }}
-	
-		<div role="main" class="main-content">
-			{{> page-title}}
+	<div class="wrapper">
 
-			<div class="content">
-				<section>
-					{{{about-site}}}	
-				</section >
-				<section>
-					{{{about-author}}}
-				</section>
-			</div>
+		<section>
+				<div class="profile {{profile-left}}"></div>
+				<article class="en-us">
+					{{{left-content}}}
+				</article>
+				<article class="zh-cn">
+					{{{left-content-zh}}}
+				</article>
+		</section>
 
+		<section>
+				<div class="profile {{profile-right}}"></div>
+				<article class="en-us">
+					{{{right-content}}}
+				</article>
+				<article class="zh-cn">
+					{{{right-content-zh}}}
+				</article>
+		</section>
+
+	</div>
 {{> footer }}

@@ -1,4 +1,6 @@
 {
+	"head-title": "webtech",
+	
 	"site-title": [
 		{"label": "web tech", "href": "/", "class": "title en-us", "logo": "./image/logo-2.png"},
 		{"label": "网页技术博客", "href": "/?zh-cn", "class": "title zh-cn", "logo": "./image/logo-2.png"}
@@ -11,12 +13,30 @@
 	],
 
 	"navbar": [
-		{"label": "projects", "href": "/projects", "class": "en-us"},
-		{"label": "blogs",  "href": "/blogs", "class": "en-us"},
-		{"label": "about", "href": "/about", "class": "en-us"},
-
-		{"label": "作品", "href": "/projects?zh-cn", "class": "zh-cn"},
-		{"label": "博客",  "href": "/blogs?zh-cn", "class": "zh-cn"},
-		{"label": "关于", "href": "/about?zh-cn", "class": "zh-cn"}
+		{	
+			"label": "projects", 
+			"href": "/projects", 
+			"class": "en-us js-type",
+			"subnav": [
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"}
+			]
+		},
+		{
+			"label": "blogs",  
+			"href": "/blogs", 
+			"class": "en-us js-type",
+			"subnav": [
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"},
+				{"label": "vinslider", "href": "#vinslider"}
+			]
+		},
+		{"label": "about", "href": "/about", "class": "en-us"}
 	]
 }

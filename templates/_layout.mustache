@@ -1,11 +1,31 @@
 {{> header }}
-{{> nav }}
-	
-		<div role="main" class="main-content">
-			{{> page-title}}
+	<div class="wrapper">
 
-			<div class="content">
+		{{#section}}
+		<section id="{{type}}">
 
-			</div>
+			{{#preview}}	
+			<a href="{{href}}" class="preview">
 
+				<div class="{{profile}}"></div>
+
+				<article class="en-us">
+					<h1 class="">{{title}}</h1>
+					<h4>{{subtitle}}</h4>
+					<p>{{info}}</p>
+				</article>
+
+				<article class="zh-cn">
+					<h1 class="">{{title}}</h1>
+					<h4>{{subtitle}}</h4>
+					<p>{{info}}</p>
+				</article>
+
+			</a>		
+			{{/preview}}
+
+		</section>
+		{{/section}}
+
+	</div>
 {{> footer }}

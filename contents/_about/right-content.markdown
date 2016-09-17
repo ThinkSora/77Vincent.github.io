@@ -9,6 +9,4 @@ Wechat: wentianqi77<br>
 Github: https://github.com/77Vincent<br>
 Linkedin: Vincent Wen<br>
 
-<br><br>
-
 **Feel free to contact me if you want to have a talk about any technology stuff.**

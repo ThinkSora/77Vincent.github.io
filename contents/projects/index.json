@@ -1,8 +1,0 @@
-{
-	"page-title": "projects",
-	"navbar": [
-		{ "label": "vinslider", "href": "projects/vinslider" },
-		{ "label": "vinalidation", "href": "projects/vinalidation" },
-		{ "label": "vinpopup", "href": "projects/vinpopup" }
-	]
-}

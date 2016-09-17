@@ -1,3 +1,77 @@
 {
-	"page-title": "homepage"
+	"page-title": "homepage",
+
+	"section": [
+		{
+			"type": "projects",
+			"preview": [
+				{
+					"href": "/vinslider",
+					"profile": "profile-vinslider",
+					"title": "vinslider",
+					"subtitle": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
+				},
+				{
+					"href": "/vinalidate",
+					"profile": "profile-vinalidate",
+					"title": "vinalidate",
+					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+				},
+				{
+					"href": "/vinalidate",
+					"profile": "profile-vinalidate",
+					"title": "vinalidate",
+					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+				},
+				{
+					"href": "/vinalidate",
+					"profile": "profile-vinalidate",
+					"title": "vinalidate",
+					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+				},
+				{
+					"href": "/vinalidate",
+					"profile": "profile-vinalidate",
+					"title": "vinalidate",
+					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+				},
+				{
+					"href": "/vinalidate",
+					"profile": "profile-vinalidate",
+					"title": "vinalidate",
+					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+				}
+			]
+		},
+
+		{	
+			"type": "blogs",
+			"preview": [
+				{
+					"profile": "profile-blogs_1",
+					"title": "blog_1",
+					"subtitle": "blog_1",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_2",
+					"title": "blog_2",
+					"subtitle": "blog_2",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_1",
+					"title": "blog_1",
+					"subtitle": "blog_1",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_2",
+					"title": "blog_2",
+					"subtitle": "blog_2",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				}
+			]
+		}
+	]
 }
