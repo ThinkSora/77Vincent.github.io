@@ -99,7 +99,7 @@ const custom = {
 				for (var f=0; f<nav.length; f++) {
 					removeClass('toggle', nav[f]);
 				}
-				addClass('toggle', this.children[1]);
+				toggleClass('toggle', this.children[1]);
 				var iden = this.children[0].href;
 
 				if (iden.indexOf('projects') > 0) {

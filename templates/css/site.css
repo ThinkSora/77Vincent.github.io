@@ -82,10 +82,10 @@ section {
 	width: 48%;
 	margin-right: 2%;
 	float: left;
-	-webkit-transition: all 0.4s;
-	-moz-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
 }
 
 section:last-child {
@@ -95,9 +95,9 @@ section:last-child {
 
 section.toggle,
 section.toggle {
-	opacity: 0.5;
-	filter: blur(20px);
-	-webkit-filter: blur(15px);
+	opacity: 0;
+	/*filter: blur(20px);*/
+	/*-webkit-filter: blur(15px);*/
 }
 
 section.toggle:after,
@@ -170,10 +170,10 @@ article h2 {
 	width: 220px;
 	height: 100%;
 	position: fixed;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+	transition: background-color 0.3s linear;
 	overflow-y: auto;
 	font-family: 'Optima-Regular', Arial, Helvetica, sans-serif, 'FangSong', 'STFangsong', 'SimHei', 'STHeiti';
 	color: white;
@@ -215,8 +215,6 @@ article h2 {
 
 #sidebar .subnav {
 	display: none;
-	border-top: 1px solid rgb(240,240,240);
-	border-bottom: 1px solid rgb(240,240,240);
 }
 
 #sidebar .subnav li {
@@ -237,16 +235,23 @@ article h2 {
 }
 
 #sidebar .title img {
-	animation: rotate 15s linear infinite;
-	-webkit-animation: rotate 15s linear infinite;
-	-moz-animation: rotate 15s linear infinite;
-	-o-animation: rotate 15s linear infinite;
+	animation: rotate 30s linear 1s infinite;
+	-webkit-animation: rotate 30s linear 1s infinite;
+	-moz-animation: rotate 30s linear 1s infinite;
+	-o-animation: rotate 30s linear 1s infinite;
+}
+
+#sidebar .title:hover img {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
 }
 
 #sidebar .title .img-wrapper {
 	width: 45px;
 	display: inline-block;
-	margin-bottom: 1em;
+	margin-bottom: 0.8em;
 }
 
 #sidebar .title h2 {
@@ -348,10 +353,10 @@ input[type='text'] {
 	border: 1px solid rgb(220,220,220);
 	/*border-radius: 15px;*/
 	padding: 20px 30px;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
+	-webkit-transition: box-shadow 0.2s;
+	-moz-transition: box-shadow 0.2s;
+	-o-transition: box-shadow 0.2s;
+	transition: box-shadow 0.2s;
 	-webkit-animation: fadeIn 0.8s ease-out forwards;
 	-moz-animation: fadeIn 0.8s ease-out forwards;
 	-o-animation: fadeIn 0.8s ease-out forwards;
