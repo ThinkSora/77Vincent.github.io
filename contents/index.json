@@ -6,40 +6,66 @@
 			"type": "projects",
 			"preview": [
 				{
-					"href": "/vinslider",
-					"profile": "profile-vinslider",
-					"title": "vinslider",
-					"subtitle": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
+					"href": "/test1",
+					"profile": "profile-test1",
+					"title": "test1",
+					"name": "#test1",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
 				},
 				{
-					"href": "/vinalidate",
-					"profile": "profile-vinalidate",
-					"title": "vinalidate",
-					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
-				},
-				{
-					"href": "/vinalidate",
-					"profile": "profile-vinalidate",
-					"title": "vinalidate",
-					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
-				},
-				{
-					"href": "/vinalidate",
-					"profile": "profile-vinalidate",
-					"title": "vinalidate",
-					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
-				},
-				{
-					"href": "/vinalidate",
-					"profile": "profile-vinalidate",
-					"title": "vinalidate",
-					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
-				},
-				{
-					"href": "/vinalidate",
-					"profile": "profile-vinalidate",
-					"title": "vinalidate",
-					"subtitle": "agedad asdf sadf sadf ag asd asdf sag "
+					"href": "/test2",
+					"profile": "profile-test2",
+					"title": "test2",
+					"name": "#test2",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test3",
+					"profile": "profile-test3",
+					"title": "test3",
+					"name": "#test3",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test4",
+					"profile": "profile-test4",
+					"title": "test4",
+					"name": "#test4",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test5",
+					"profile": "profile-test5",
+					"title": "test5",
+					"name": "#test5",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test6",
+					"profile": "profile-test6",
+					"title": "test6",
+					"name": "#test6",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test7",
+					"profile": "profile-test7",
+					"title": "test7",
+					"name": "#test7",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test8",
+					"profile": "profile-test8",
+					"title": "test8",
+					"name": "#test8",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test9",
+					"profile": "profile-test9",
+					"title": "test9",
+					"name": "#test9",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
+				},				{
+					"href": "/test10",
+					"profile": "profile-test10",
+					"title": "test10",
+					"name": "#test10",
+					"subtitle": "test1 test1 test1 test1 test1 test1 test1 test1 test1"
 				}
 			]
 		},
@@ -51,6 +77,24 @@
 					"profile": "profile-blogs_1",
 					"title": "blog_1",
 					"subtitle": "blog_1",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_2",
+					"title": "blog_2",
+					"subtitle": "blog_2",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_1",
+					"title": "blog_1",
+					"subtitle": "blog_1",
+					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+				},
+				{
+					"profile": "profile-blogs_2",
+					"title": "blog_2",
+					"subtitle": "blog_2",
 					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 				},
 				{
