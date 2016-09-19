@@ -44,7 +44,7 @@ Vinrainbow.prototype = {
 		}
 
 		this.selector.onmousemove = function() {
-			var move = event.clientY + event.clientX * 10;
+			var move = (event.clientY + (event.clientX-1700)*10);
 			/*	ALGORITHM
 			*/
 			var a = parseInt(((move + self.factor[0]) / (self.frame + self.factor[1])) * 60);

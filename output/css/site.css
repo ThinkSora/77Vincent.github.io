@@ -167,7 +167,8 @@ article h2 {
 #sidebar {
 	text-align: center;
 	padding: 20px 0;
-	width: 220px;
+	right: 0;
+	width: 10%;
 	height: 100%;
 	position: fixed;
 	-webkit-transition: background-color 0.3s linear;
@@ -276,7 +277,7 @@ input[type='text'] {
 ***************************************************/
 
 .master {
-	margin-left: 220px;
+	width: 90%;
 	padding: 40px;
 }
 
