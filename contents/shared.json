@@ -2,21 +2,19 @@
 	"head-title": "webtech",
 	
 	"site-title": [
-		{"label": "web tech", "href": "/", "class": "title en-us", "logo": "./image/logo-2.png"},
-		{"label": "网页技术博客", "href": "/?zh-cn", "class": "title zh-cn", "logo": "./image/logo-2.png"}
+		{"label": "web tech blog", "href": "/", "class": "title", "logo": "./image/logo.png"}
 	],
 
 	
 	"footer-content": [
-		{"label": "Created by Vincent<br>Built with <a href=\"http://laktek.github.com/punch\">Punch</a>", "class": "en-us"},
-		{"label": "版权归77所有<br>由<a href=\"http://laktek.github.com/punch\">Punch</a>创建", "class": "zh-cn"}
+		{"label": "Created by Vincent, Built with <a href=\"http://laktek.github.com/punch\">Punch</a>", "class": ""}
 	],
 
 	"navbar": [
 		{	
 			"label": "projects", 
 			"href": "/projects", 
-			"class": "en-us js-type",
+			"class": "js-type",
 			"subnav": [
 				{"label": "vinslider", "href": "#vinslider"},
 				{"label": "vinslider", "href": "#vinslider"},
@@ -28,7 +26,7 @@
 		{
 			"label": "blogs",  
 			"href": "/blogs", 
-			"class": "en-us js-type",
+			"class": "js-type",
 			"subnav": [
 				{"label": "vinslider", "href": "#vinslider"},
 				{"label": "vinslider", "href": "#vinslider"},
@@ -37,6 +35,6 @@
 				{"label": "vinslider", "href": "#vinslider"}
 			]
 		},
-		{"label": "about", "href": "/about", "class": "en-us"}
+		{"label": "about", "href": "/about", "class": ""} 
 	]
 }

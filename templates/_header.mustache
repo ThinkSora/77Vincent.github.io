@@ -17,7 +17,7 @@
     </head>
 
     <body>
-		<nav id="sidebar" style="background-color: rgba(50,50,50,1);">
+		<nav id="sidebar">
 
 			{{#site-title}}
 			<a href="{{href}}" class="{{class}}">
@@ -30,28 +30,10 @@
 
 			<ul>
 			{{#navbar}}
-				<li class="{{class}}">
+				<li class="jsColor {{class}}">
 					<a href="{{href}}">{{label}}</a>
-					<ul class="subnav">
-					{{#subnav}}
-						<li><a href="{{href}}">{{label}}</a></li>
-					{{/subnav}}
-					</ul>
 			{{/navbar}}
-{{! 				<li class="js-lang en-us"><a href="?zh-cn">中文</a>
-				<li class="js-lang zh-cn"><a href="?en-us">English</a> }}
 			</ul>
-
-{{! 			<form id="searchbar">
-				<input type="text" name="search" placeholder="search">
-				<input type="submit" name="" value=">">
-			</form> }}
-
-			<footer>
-			{{#footer-content}}
-				<p class="{{{class}}}">{{{label}}}</p>
-			{{/footer-content}}
-			</footer>
 
 		</nav>
 

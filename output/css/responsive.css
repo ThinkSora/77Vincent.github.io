@@ -2,36 +2,11 @@
 	html {
 		font-size: 0.95em;
 	}
-	#sidebar {
-		width: 200px;
-	}
-
-	.master {
-		margin-left: 200px;
-		padding: 30px;
-	}
-
-	.profile {
-		width: 40%;
-	}
 }
 
 @media only screen and (max-width: 1024px) {
 	html {
 		font-size: 0.9em;
-	}
-
-	#sidebar {
-		width: 180px;
-	}
-
-	.master {
-		margin-left: 180px;
-		padding: 25px;
-	}
-
-	.profile {
-		width: 50%;
 	}
 }
 
@@ -39,74 +14,13 @@
 	html {
 		font-size: 0.75em;
 	}
-
-	#sidebar {
-		width: 140px;
-	}
-
-	.master {
-		margin-left: 140px;
-		padding: 20px;
-	}
-
 	section {
 		width: 100%;
 		float: none;
 		padding-right: 0;
 	}
 
-	.profile {
-		width: 170px;
-	}
-}
 
 @media only screen and (max-width: 480px) {
 
-	/*
-	*	SIDEBAR
-	*/
-	#sidebar {
-		width: 100%;
-		height: auto;
-		top: 0;
-		padding: 9px;
-		text-align: left;
-		background-color: rgb(50,50,50);
-	}
-
-	#sidebar ul,
-	#sidebar footer {
-		display: none;
-	}
-
-	#sidebar .title {
-		display: inline-block;
-	}
-
-	#sidebar .title .img-wrapper {
-		display: inline-block;
-		margin: 0 5px;
-		vertical-align: middle;
-		width: 35px;
-	}
-
-	#sidebar .title h2 {
-		display: inline-block;
-		margin: 0 5px;
-		vertical-align: middle;
-	}
-
-	/*
-	*	MAIN CONTENT
-	*/
-
-	.master {
-		margin-left: 0;
-		padding: 18px;
-		margin-top: 65px;
-	}
-
-	.profile {
-		width: 150px;
-	}
 }

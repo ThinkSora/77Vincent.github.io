@@ -112,16 +112,13 @@ section.toggle:after {
 }
 
 footer {
-	position: absolute;
     text-align: center;
-    width: 100%;
-    bottom: 20px;
     font-size: 0.8em;
+    padding: 10px;
 }
 
 footer p {
 	margin-top: 4px;
-	padding: 0 10px;
 }
 
 article a {
@@ -134,10 +131,6 @@ article p {
 
 article h2 {
 	text-align: center;
-}
-
-.zh-cn {
-	display: none;
 }
 
 /*********************	SIDEBAR
@@ -166,64 +159,44 @@ article h2 {
 
 #sidebar {
 	text-align: center;
-	padding: 20px 0;
-	right: 0;
-	width: 10%;
-	height: 100%;
-	position: fixed;
+	padding: 15px;
 	-webkit-transition: background-color 0.3s linear;
 	-moz-transition: background-color 0.3s linear;
 	-o-transition: background-color 0.3s linear;
 	transition: background-color 0.3s linear;
-	overflow-y: auto;
 	font-family: 'Optima-Regular', Arial, Helvetica, sans-serif, 'FangSong', 'STFangsong', 'SimHei', 'STHeiti';
-	color: white;
 	text-transform: capitalize;
 	z-index: 9;
+	position: relative;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 #sidebar:after {
-	content: "";
-	background-image: url(../image/navbar-2.png);
 	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.03;
-	position: absolute;
-	z-index: -1;
+	content: "";
+	clear: both;
 }
 
 #sidebar > ul {
-	margin-top: 20px;
+	display: table;
+	position: absolute;
+	right: 30px;
+	top: 30%;
 }
 
 #sidebar ul li {
 	padding: 0;
-	font-size: 1.2em;
 	cursor: pointer;
+	display: table-cell;
 }
 
 #sidebar ul li a {
 	padding: 8px 10px;
+	vertical-align: middle;
 }
 
 #sidebar ul li a:hover {
-	background-color: #fff;
-	color: #000;
-}
-
-#sidebar .subnav {
-	display: none;
-}
-
-#sidebar .subnav li {
-	font-size: 0.8em;
-}
-
-#sidebar .subnav.toggle {
-	display: block;
+	text-decoration: underline;
 }
 
 #sidebar ul li a {
@@ -231,33 +204,29 @@ article h2 {
 }
 
 #sidebar .title {
-	display: block;
+	display: inline-block;
 	text-align: center;
 }
 
 #sidebar .title img {
-	animation: rotate 30s linear 1s infinite;
-	-webkit-animation: rotate 30s linear 1s infinite;
-	-moz-animation: rotate 30s linear 1s infinite;
-	-o-animation: rotate 30s linear 1s infinite;
-}
-
-#sidebar .title:hover img {
-	animation-play-state: paused;
-	-webkit-animation-play-state: paused;
-	-moz-animation-play-state: paused;
-	-o-animation-play-state: paused;
+	animation: rotate 30s linear 2s infinite;
+	-webkit-animation: rotate 30s linear 2s infinite;
+	-moz-animation: rotate 30s linear 2s infinite;
+	-o-animation: rotate 30s linear 2s infinite;
 }
 
 #sidebar .title .img-wrapper {
-	width: 45px;
+	width: 40px;
+	margin-right: 10px;
 	display: inline-block;
-	margin-bottom: 0.8em;
+	vertical-align: middle;
 }
 
 #sidebar .title h2 {
-	margin-top: 0;
+	margin: 0;
 	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #searchbar {
@@ -277,8 +246,22 @@ input[type='text'] {
 ***************************************************/
 
 .master {
-	width: 90%;
 	padding: 40px;
+	margin: 0 auto;
+	/*max-width: 1400px;*/
+	background-color: rgb(150,150,150);
+	/*background-image: url('http://aasarchitecture.com/wp-content/uploads/House-T-by-Dwek-Architecture-and-Partners-00.jpg');*/
+	background-size: cover;
+	background-position: center;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+	transition: background-color 0.3s linear;
+}
+
+.master .wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 .master .wrapper:after {
@@ -348,30 +331,28 @@ input[type='text'] {
 ***************************************************/
 
 .preview {
-	opacity: 0;
+	opacity: 0.95;
 	margin-bottom: 3em;
 	display: block;
-	border: 1px solid rgb(220,220,220);
-	/*border-radius: 15px;*/
+	/*border: 1px solid rgb(100,100,100);*/
+	border-radius: 15px;
 	padding: 20px 30px;
 	-webkit-transition: box-shadow 0.2s;
 	-moz-transition: box-shadow 0.2s;
 	-o-transition: box-shadow 0.2s;
 	transition: box-shadow 0.2s;
-	-webkit-animation: fadeIn 0.8s ease-out forwards;
+/*	-webkit-animation: fadeIn 0.8s ease-out forwards;
 	-moz-animation: fadeIn 0.8s ease-out forwards;
 	-o-animation: fadeIn 0.8s ease-out forwards;
-	animation: fadeIn 0.8s ease-out forwards;
+	animation: fadeIn 0.8s ease-out forwards;*/
+	background-color: #fff;
 }
 
 .preview:hover {
-	box-shadow: 0 0 10px rgba(0,0,0,0.25);
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-
-section:first-child .preview article {
-	text-align: center;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	opacity: 1;
 }
 
 .preview article {

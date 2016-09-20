@@ -1,31 +1,18 @@
 {{> header }}
 	<div class="wrapper">
-
 		{{#section}}
 		<section id="{{type}}">
-
 			{{#preview}}	
-			<a href="{{href}}" class="preview" id="{{name}}">
-
+			<a href="{{href}}" class="preview jsColor" id="{{name}}">
 				<div class="{{profile}}"></div>
 
-				<article class="en-us">
+				<article class="">
 					<h1 class="">{{title}}</h1>
-					<h4>{{subtitle}}</h4>
 					<p>{{info}}</p>
 				</article>
-
-				<article class="zh-cn">
-					<h1 class="">{{title}}</h1>
-					<h4>{{subtitle}}</h4>
-					<p>{{info}}</p>
-				</article>
-
 			</a>		
 			{{/preview}}
-
 		</section>
 		{{/section}}
-
 	</div>
 {{> footer }}

@@ -61,8 +61,9 @@ const custom = {
 		this.url = window.location.href;
 		this.lang = this.url.split('?')[1];
 
-		this.language();
+		// this.language();
 		this.typeSwitch();
+		this.shit();
 	},
 
 	language: function() {
@@ -111,6 +112,25 @@ const custom = {
 				}
 			}
 		}
+	},
+
+	shit: function() {
+		var jsColor = document.querySelectorAll('.jsColor');
+		var back = document.querySelector('.master');
+
+		for (var i=0; i<jsColor.length; i++) {
+			jsColor[i].onmouseenter = function() {
+				var r1 = Math.random();
+				var r2 = Math.random();
+				var r3 = Math.random();
+
+				var r = parseInt(150 + 30 * r1);
+				var g = parseInt(150 + 30 * r2);
+				var b = parseInt(150 + 30 * r3);
+
+				back.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+			}
+		}
 	}
 }
 
@@ -130,4 +150,4 @@ const custom = {
 custom.init();
 
 var rainbow = document.querySelector('#sidebar');
-new Vinrainbow(rainbow);
+// new Vinrainbow(rainbow);
