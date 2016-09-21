@@ -17,7 +17,7 @@
     </head>
 
     <body>
-		<nav id="sidebar">
+		<header>
 
 			{{#site-title}}
 			<a href="{{href}}" class="{{class}}">
@@ -35,7 +35,13 @@
 			{{/navbar}}
 			</ul>
 
-		</nav>
+			<div class="about">
+				<div class="wrapper">
+					{{{intro}}}
+				</div>
+			</div>
+
+		</header>
 
 		<div role="main" class="master">
 			<h4 class="page-title">{{{page-title}}}</h4>

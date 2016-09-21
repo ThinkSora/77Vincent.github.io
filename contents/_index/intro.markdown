@@ -1,5 +1,3 @@
-## about me
-
 Hello, I'm Vincent, a front end developer working in Shanghai. I created this blog to share my works and ideas during my exploring in the web technology wonderland.
 
 #### find me on:
