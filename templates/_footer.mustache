@@ -1,10 +1,12 @@
 		</div>
 		
 		<footer>
-		{{#footer-content}}
-			<p class="{{{class}}}">{{{label}}}</p>
-		{{/footer-content}}
+			{{#footer}}
+			<span>{{content}}</span>
+			<a href="{{punch-link}}">Punch</a>
+			{{/footer}}
 		</footer>
+
 		{{#javascript_bundle}}/js/all.js{{/javascript_bundle}} 
 
 	</body>

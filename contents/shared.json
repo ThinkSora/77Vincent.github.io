@@ -6,8 +6,8 @@
 	],
 
 	
-	"footer-content": [
-		{"label": "Created by Vincent, Built with <a href=\"http://laktek.github.com/punch\">Punch</a>", "class": ""}
+	"footer": [
+		{"punch-link": "http://laktek.github.com/punch", "content": "Created by Vincent, Built with"}
 	],
 
 	"navbar": [
