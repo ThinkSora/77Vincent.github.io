@@ -55,15 +55,11 @@ const custom = {
 		var sel =  document.querySelectorAll('.js-type');
 		var projects = document.querySelector('#projects');
 		var blogs = document.querySelector('#blogs');
-		var nav = document.querySelectorAll('#sidebar .subnav');
 		var self = this;
+
 		for (var i=0; i<sel.length; i++) {
 			sel[i].onclick = function(event) {
 				event.preventDefault();
-				for (var f=0; f<nav.length; f++) {
-					removeClass('toggle', nav[f]);
-				}
-				toggleClass('toggle', this.children[1]);
 				var iden = this.children[0].href;
 
 				if (iden.indexOf('projects') > 0) {
@@ -96,23 +92,51 @@ const custom = {
 		}
 	},
 
+	about: function() {
+		var title = document.querySelector('a.title');
+		var header = document.querySelector('header');
+		var about = document.querySelector('.about');
+		var nav = document.querySelector('header ul li:last-child');
+		var iden = 'toggle';
+		var hh = header.clientHeight;
+		var ah;
+
+		header.style.height = hh + 'px';
+
+		function open() {
+			addClass(iden, header);
+			about.style.display = 'block';
+			ah = about.clientHeight;
+			header.style.height = hh + ah + 'px';
+		}
+		function close() {
+			removeClass(iden, header);
+			header.style.height = hh + 'px';
+			setTimeout(function() {
+				about.style.display = 'none';
+			}, 300);
+		}
+		title.onmouseenter = function() {
+			open();
+			addClass(iden, nav);
+		}
+		header.onmouseleave = function() {
+			close();
+			removeClass(iden, nav)
+		}
+		nav.onclick = function(event) {
+			event.preventDefault();
+			if (this.className.indexOf(iden) < 0) {
+				open();
+			} else {
+				close();
+			}
+			toggleClass(iden, this);
+		}
+	}
 
 }
 
-// (function() {
-// 	var sel =  document.querySelector('.page-title');
-// 	window.onscroll = function() {
-// 		var posi = this.pageYOffset;
-// 		if (posi > 50) {
-// 			sel.className = 'page-title toggle';
-// 		}	else {
-// 			sel.className = 'page-title';
-// 		}
-// 	}
-
-// })();
-
-custom.init();
-
-var rainbow = document.querySelector('#sidebar');
-// new Vinrainbow(rainbow);
+window.onload = function() {
+	custom.init();
+}
