@@ -10,7 +10,7 @@ var webtech = {
 		/*	HOMEPAGE TYPE SWTICH
 		*	
 		*/
-		var sel =  document.querySelectorAll('.js-type');
+		var sel =  document.querySelectorAll('.jsType');
 		var projects = document.querySelector('#projects');
 		var blogs = document.querySelector('#blogs');
 		var iden = 'toggle';
@@ -42,9 +42,9 @@ var webtech = {
 				var r2 = Math.random();
 				var r3 = Math.random();
 
-				var r = parseInt(150 + 30 * r1);
-				var g = parseInt(150 + 30 * r2);
-				var b = parseInt(150 + 30 * r3);
+				var r = parseInt(145 + 35 * r1);
+				var g = parseInt(145 + 35 * r2);
+				var b = parseInt(145 + 35 * r3);
 
 				back.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			}

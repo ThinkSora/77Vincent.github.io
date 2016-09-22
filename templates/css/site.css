@@ -71,6 +71,10 @@ ul li {
 	padding: 5px 0;
 }
 
+li a {
+	display: block;
+}
+
 img {
 	width: 100%;
 	max-width: 100%;
@@ -138,11 +142,6 @@ article h2 {
 *
 ***************************************************/
 
-@keyframes slideRight {
-	from {left: -100%;}
-	to {left: 0;}
-}
-
 @keyframes rotate {
 	from {
 	    -ms-transform: rotate(0deg); /* IE 9 */
@@ -162,10 +161,13 @@ header {
 	height: auto;
 	padding: 12px;
 	font-family: 'Optima-Regular', Arial, Helvetica, sans-serif, 'FangSong', 'STFangsong', 'SimHei', 'STHeiti';
-	text-transform: capitalize;
 	z-index: 9;
 	position: relative;
 	overflow: hidden;
+	-webkit-transition: box-shadow 0.4s cubic-bezier(0,0,0,1);
+	-moz-transition: box-shadow 0.4s cubic-bezier(0,0,0,1);
+	-o-transition: box-shadow 0.4s cubic-bezier(0,0,0,1);
+	transition: box-shadow 0.4s cubic-bezier(0,0,0,1);
 }
 
 header:after {
@@ -174,31 +176,27 @@ header:after {
 	clear: both;
 }
 
-header ul {
+header > ul {
 	display: table;
 	position: absolute;
 	right: 30px;
 	top: 32px;
 }
 
-header ul li {
+header > ul li {
 	padding: 0;
 	cursor: pointer;
 	display: table-cell;
 	vertical-align: middle;
 }
 
-header ul li a {
+header > ul li a {
 	padding: 8px 10px;
 	vertical-align: middle;
 }
 
-header ul li a:hover {
+header > ul li a:hover {
 	text-decoration: underline;
-}
-
-header ul li a {
-	display: block;
 }
 
 header .title {
@@ -207,7 +205,7 @@ header .title {
 }
 
 header .title .img-wrapper {
-	width: 45px;
+	width: 40px;
 	margin-right: 10px;
 	display: inline-block;
 	vertical-align: middle;
@@ -227,26 +225,57 @@ header .title h2 {
 	vertical-align: middle;
 }
 
+header.toggle {
+	box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.3);
+}
+
 header.toggle .about {
-	height: 240px;
-	padding: 20px;
-	margin-top: 20px;
+	height: 180px;
+	padding: 20px 0;
 }
 
 .about {
-	-webkit-transition: all 0.4s cubic-bezier(0,0,0,1);
-	-moz-transition: all 0.4s cubic-bezier(0,0,0,1);
-	-o-transition: all 0.4s cubic-bezier(0,0,0,1);
-	transition: all 0.4s cubic-bezier(0,0,0,1);
+	-webkit-transition: height 0.4s cubic-bezier(0,0,0,1), padding 0.4s cubic-bezier(0,0,0,1);
+	-moz-transition: height 0.4s cubic-bezier(0,0,0,1), padding 0.4s cubic-bezier(0,0,0,1);
+	-o-transition: height 0.4s cubic-bezier(0,0,0,1), padding 0.4s cubic-bezier(0,0,0,1);
+	transition: height 0.4s cubic-bezier(0,0,0,1), padding 0.4s cubic-bezier(0,0,0,1);
 	height: 0px;
 	overflow: hidden;
+	position: relative;
 }
 
-input[type='text'] {
-	border: none;
-	background: transparent;
-	border-bottom: 1px solid #fff;
-	color: #fff;
+.about .intro{
+	font-size: 1.5em;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.about .contact:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
+.about .contact li {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.about .contact li img {
+	margin-bottom: 5px;
+	width: 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.about .contact li:hover img {
+	animation: rotate 0.6s linear;
+	-webkit-animation: rotate 0.6s linear;
+	-moz-animation: rotate 0.6s linear;
+	-o-animation: rotate 0.6s linear;
 }
 
 /********************	MAINCONTENT
@@ -257,9 +286,7 @@ input[type='text'] {
 .master {
 	padding: 40px;
 	margin: 0 auto;
-	/*max-width: 1400px;*/
 	background-color: rgb(150,150,150);
-	/*background-image: url('http://aasarchitecture.com/wp-content/uploads/House-T-by-Dwek-Architecture-and-Partners-00.jpg');*/
 	background-size: cover;
 	background-position: center;
 	-webkit-transition: background-color 0.3s linear;
@@ -279,30 +306,10 @@ input[type='text'] {
 	clear: both;
 }
 
-/*********************	PAGETITLE
+/*********************	PROFILE
 *
 *
 ***************************************************/
-
-.page-title {
-	text-align: right;
-	position: fixed;
-	right: 30px;
-	top: 20px;
-	padding-bottom: 0.3em;
-	border-bottom: 2px solid rgb(80,80,80);
-	margin-bottom: 0;
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-	display: none;
-}
-
-.page-title.toggle {
-	font-size: 0.85em;
-	border-bottom: 1px solid rgb(80,80,80);
-}
 
 .profile {
 	width: 125px;
@@ -315,11 +322,6 @@ input[type='text'] {
 	margin-bottom: 1.5em;
 }
 
-/*********************	PROFILE
-*
-*
-***************************************************/
-
 .profile:after {
 	display: block;
 	content: "";
@@ -331,7 +333,7 @@ input[type='text'] {
 }
 
 .profile-site {
-	background-image: url(../image/logo.png);
+	background-image: url(../image/logo.svg);
 }
 
 /*********************	PREVIEW

@@ -6,7 +6,7 @@
     <head>
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-			<title>{{{head-title}}}</title>
+			<title>webtech</title>
 			<meta name="description" content="">
 			<meta name="viewport" content="width=device-width">
 			<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
@@ -19,29 +19,33 @@
     <body>
 		<header>
 
-			{{#site-title}}
-			<a href="{{href}}" class="{{class}}">
+			<a href="/" class="title">
 				<div class="img-wrapper">
-					<img src="{{logo}}">
+					<img src="../image/77-logo.svg">
 				</div>
-				<h2>{{label}}</h2>
+				<h2>web tech blog</h2>
 			</a>
-			{{/site-title}}
 
 			<ul>
 			{{#navbar}}
-				<li class="jsColor {{class}}">
+				<li class="jsColor jsType">
 					<a href="{{href}}">{{label}}</a>
+				</li>
 			{{/navbar}}
 			</ul>
 
 			<div class="about">
 				<div class="wrapper">
-					{{{intro}}}
+					<p class="intro">A blog for sharing my personal practices, works, ideas on web technology mostly on front-end</p>
+					<ul class="contact">
+						<li><a class="jsColor" href="https://github.com/77Vincent"><img alt="github" src="image/icon-github.png"><span>Github</span></a></li>
+						<li><a class="jsColor" href=""><img alt="wechat" src="image/icon-wechat.png"><span>Wechat</span></a></li>
+						<li><a class="jsColor" href=""><img alt="email" src="image/icon-email.png"><span>Email</span></a></li>
+						<li><a class="jsColor" href="https://cn.linkedin.com/in/vincent-wen-5430b2101"><img alt="linkedin" src="image/icon-linkedin.png"><span>Linkedin</span></a></li>
+					</ul>
 				</div>
 			</div>
 
 		</header>
 
 		<div role="main" class="master">
-			<h4 class="page-title">{{{page-title}}}</h4>

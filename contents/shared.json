@@ -1,40 +1,13 @@
 {
-	"head-title": "webtech",
-	
-	"site-title": [
-		{"label": "web tech blog", "href": "/", "class": "title", "logo": "./image/logo.png"}
-	],
-
-	
-	"footer": [
-		{"punch-link": "http://laktek.github.com/punch", "content": "Created by Vincent, Built with"}
-	],
-
 	"navbar": [
 		{	
 			"label": "projects", 
-			"href": "#projects", 
-			"class": "js-type",
-			"subnav": [
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"}
-			]
+			"href": "#projects"
 		},
 		{
 			"label": "blogs",  
-			"href": "#blogs", 
-			"class": "js-type",
-			"subnav": [
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"},
-				{"label": "vinslider", "href": "#vinslider"}
-			]
+			"href": "#blogs"
 		},
-		{"label": "about", "href": "/about", "class": ""} 
+		{"label": "about", "href": "/about"} 
 	]
 }
