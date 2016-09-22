@@ -1,0 +1,1 @@
+var vinJs={addClass:function(a,s){a.className.indexOf(s)<0&&(a.className+=" "+s)},removeClass:function(a,s){a.className.indexOf(s)>=0&&(a.className=a.className.replace(" "+s,""))},toggleClass:function(a,s){a.className.indexOf(s)>=0?a.className=a.className.replace(" "+s,""):a.className+=" "+s}};
