@@ -5,18 +5,26 @@
 			"preview": [
 				{
 					"href": "#vinslider",
-					"profile": "profile-test1",
+					"profile": "profile-vinslider",
 					"title": "vinslider",
 					"date": "2016-9-22",
-					"category": "front-end utility",
+					"category": "front-end / utility",
 					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
 				},
 				{
 					"href": "#vinalidate",
-					"profile": "profile-test2",
+					"profile": "profile-vinalidate",
 					"title": "vinalidate",
 					"date": "2016-9-22",
-					"category": "front-end utility",
+					"category": "front-end / utility",
+					"info": ""
+				},
+				{
+					"href": "#vinjs",
+					"profile": "profile-vinjs",
+					"title": "vinjs",
+					"date": "2016-9-22",
+					"category": "front-end / javascript custom library",
 					"info": ""
 				}
 			]
@@ -25,48 +33,7 @@
 		{	
 			"type": "blogs",
 			"preview": [
-				{
-					"profile": "profile-blogs_1",
-					"title": "blog_1",
-					"subtitle": "blog_1",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_2",
-					"title": "blog_2",
-					"subtitle": "blog_2",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_1",
-					"title": "blog_1",
-					"subtitle": "blog_1",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_2",
-					"title": "blog_2",
-					"subtitle": "blog_2",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_2",
-					"title": "blog_2",
-					"subtitle": "blog_2",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_1",
-					"title": "blog_1",
-					"subtitle": "blog_1",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				},
-				{
-					"profile": "profile-blogs_2",
-					"title": "blog_2",
-					"subtitle": "blog_2",
-					"info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-				}
+
 			]
 		}
 	]
