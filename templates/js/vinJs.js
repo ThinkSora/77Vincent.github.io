@@ -21,5 +21,14 @@ var vinJs = {
 		}	else {
 			target.className += ' ' + classname;
 		}
+	},
+
+	closest: function (element, identifier) {
+		var p = element;
+		var result = document.querySelector(identifier);
+		while (p !== result) {
+			p = p.parentNode;
+		}
+		console.log(p)
 	}
 }

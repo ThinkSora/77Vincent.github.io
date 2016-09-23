@@ -38,11 +38,11 @@ var webtech = {
 
 		this.master.onclick = function(event) {
 			var t = event.target;
-			console.log(t)
-			if (t == self.master || t == self.wrapper) {
-				vinJs.removeClass(projects, self.iden);
-				vinJs.removeClass(blogs, self.iden);
-			}
+			vinJs.closest(event.target, 'section');
+			// if (t == self.master || t == self.wrapper) {
+			// 	vinJs.removeClass(projects, self.iden);
+			// 	vinJs.removeClass(blogs, self.iden);
+			// }
 		}
 
 		// for (var f=0; f<switchB.length; f++) {
