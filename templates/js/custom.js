@@ -48,9 +48,9 @@ var webtech = {
 				var r2 = Math.random();
 				var r3 = Math.random();
 
-				var r = parseInt(145 + 35 * r1);
-				var g = parseInt(145 + 35 * r2);
-				var b = parseInt(145 + 35 * r3);
+				var r = parseInt(150 + 30 * r1);
+				var g = parseInt(150 + 30 * r2);
+				var b = parseInt(150 + 30 * r3);
 
 				self.master.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			}

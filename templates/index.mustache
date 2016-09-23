@@ -2,15 +2,22 @@
 	<div class="wrapper">
 		{{#section}}
 		<section id="{{type}}">
+			<ul class="categories unit">
+				{{#categories}}
+				<li class="{{label}}">{{content}}</li>
+				{{/categories}}
+			</ul>
+
 			{{#preview}}	
-			<a href="{{href}}" class="preview jsColor" id="{{name}}">
+			<a href="{{href}}" class="preview unit jsColor {{category}}" id="{{name}}">
+				<aside></aside>
 				<article class="">
 					<h1 class="">{{title}}</h1>
 					<p>{{info}}</p>
-					<aside>
+					<div class="meta">
 						<p>{{date}}</p>
-						<p>{{category}}</p>
-					</aside>
+						<p>{{tag}}</p>
+					</div>
 				</article>
 			</a>		
 			{{/preview}}
