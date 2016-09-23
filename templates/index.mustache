@@ -4,12 +4,12 @@
 		<section id="{{type}}">
 			<ul class="categories unit">
 				{{#categories}}
-				<li class="{{label}}">{{content}}</li>
+				<li id="{{label}}" class="jsCategory {{label}}">{{content}}</li>
 				{{/categories}}
 			</ul>
 
 			{{#preview}}	
-			<a href="{{href}}" class="preview unit jsColor {{category}}" id="{{name}}">
+			<a class="preview unit jsColor {{category}}" id="{{name}}">
 				<aside></aside>
 				<article class="">
 					<h1 class="">{{title}}</h1>

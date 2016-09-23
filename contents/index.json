@@ -9,7 +9,7 @@
 			],
 			"preview": [
 				{
-					"href": "#vinslider",
+					"href": "/vinslider",
 					"title": "vinslider",
 					"category": "utility",
 					"date": "2016-9-22",
@@ -17,7 +17,7 @@
 					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
 				},
 				{
-					"href": "#vinalidate",
+					"href": "/vinalidate",
 					"title": "vinalidate",
 					"category": "utility",
 					"date": "2016-9-22",
@@ -25,7 +25,7 @@
 					"info": "Javascript module for client-side form validation with customizable options."
 				},
 				{
-					"href": "#vinjs",
+					"href": "/vinjs",
 					"title": "vinjs",
 					"category": "infrastructure",
 					"date": "2016-9-22",
@@ -33,7 +33,7 @@
 					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated manual labors and make code life easy."
 				},
 				{
-					"href": "#spotlight",
+					"href": "/spotlight",
 					"title": "spotlight",
 					"category": "fun",
 					"date": "2016-9-22",
@@ -46,13 +46,14 @@
 		{	
 			"type": "blogs",
 			"categories": [
-				{"label": "utility"},
-				{"label": "infrastructure"},
-				{"label": "fun"}
+				{"label": "javascript", "content": "javascript"},
+				{"label": "css", "content": "css"},
+				{"label": "html", "content": "html"},
+				{"label": "overall", "content": "overall"}
 			],
 			"preview": [
 				{
-					"href": "#javascript",
+					"href": "/javascript",
 					"title": "javascript",
 					"category": "javascript",
 					"date": "2016-9-22",
@@ -60,7 +61,7 @@
 					"info": ""
 				},
 				{
-					"href": "#css",
+					"href": "/css",
 					"title": "css",
 					"category": "css",
 					"date": "2016-9-22",
@@ -68,7 +69,7 @@
 					"info": ""
 				},
 				{
-					"href": "#html",
+					"href": "/html",
 					"title": "html",
 					"category": "html",
 					"date": "2016-9-22",
@@ -76,7 +77,7 @@
 					"info": ""
 				},
 				{
-					"href": "#overall",
+					"href": "/overall",
 					"title": "overall",
 					"category": "overall",
 					"date": "2016-9-22",

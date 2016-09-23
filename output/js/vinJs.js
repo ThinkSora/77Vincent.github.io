@@ -2,6 +2,7 @@
 */
 
 var vinJs = {
+
 	addClass: function(target, classname) {
 		if (target.className.indexOf(classname) < 0) {
 			target.className += ' ' + classname;

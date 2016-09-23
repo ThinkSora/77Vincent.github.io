@@ -2,6 +2,7 @@ var webtech = {
 
 	init: function() {
 		this.master = document.querySelector('.master');
+		this.wrapper = document.querySelector('.wrapper');
 		this.header = document.querySelector('header');
 		this.title = document.querySelector('header a.title');
 		this.iden = "toggle";
@@ -14,13 +15,14 @@ var webtech = {
 		/*	HOMEPAGE TYPE SWTICH
 		*	
 		*/
-		var sel =  document.querySelectorAll('.jsType');
+		var switchA =  document.querySelectorAll('.jsType');
+		var switchB = document.querySelectorAll('.jsCategory');
 		var projects = document.querySelector('#projects');
 		var blogs = document.querySelector('#blogs');
 		var self = this;
 
-		for (var i=0; i<sel.length; i++) {
-			sel[i].onclick = function(event) {
+		for (var i=0; i<switchA.length; i++) {
+			switchA[i].onclick = function(event) {
 				event.preventDefault();
 				var condition = this.children[0].href;
 
@@ -33,6 +35,22 @@ var webtech = {
 				}
 			}
 		}
+
+		this.master.onclick = function(event) {
+			var t = event.target;
+			console.log(t)
+			if (t == self.master || t == self.wrapper) {
+				vinJs.removeClass(projects, self.iden);
+				vinJs.removeClass(blogs, self.iden);
+			}
+		}
+
+		// for (var f=0; f<switchB.length; f++) {
+		// 	switchB[f].onclick = function() {
+		// 		var iden = this.id;
+		// 		for ()
+		// 	}
+		// }
 	},
 
 	themeColor: function() {

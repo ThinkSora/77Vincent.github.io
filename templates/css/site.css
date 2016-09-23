@@ -99,8 +99,8 @@ section:last-child {
 section.toggle,
 section.toggle {
 	opacity: 0.1;
-/*	filter: blur(20px);
-	-webkit-filter: blur(20px);*/
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
 }
 
 section.toggle:after,
@@ -320,6 +320,13 @@ header.toggle .about {
 	position: relative;
 }
 
+.unit:hover {
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	opacity: 1;
+}
+
 /*********************	PROFILE
 *
 *
@@ -361,11 +368,12 @@ header.toggle .about {
 }
 
 .categories li {
-	color: #fff;
+	color: #000;
 	display: inline-block;
 	text-align: center;
 	margin: 0 5%;
 	text-transform: uppercase;
+	font-size: 0.9em;
 }
 
 .categories li:before {
@@ -374,7 +382,7 @@ header.toggle .about {
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
-	margin-bottom: 5px;
+	margin-bottom: 12px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -389,6 +397,22 @@ header.toggle .about {
 
 .categories li.fun:before {
 	background-color: #d8bc8f;
+}
+
+.categories li.javascript:before {
+	background-color: #f3e585;
+}
+
+.categories li.css:before {
+	background-color: #92cd95;
+}
+
+.categories li.html:before {
+	background-color: #b3b1e7;
+}
+
+.categories li.overall:before {
+	background-color: rgb(200,200,200);
 }
 
 .preview.utility aside {
@@ -431,13 +455,6 @@ header.toggle .about {
 
 .preview:last-child {
 	margin-bottom: 0;
-}
-
-.preview:hover {
-	box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	opacity: 1 !important;
 }
 
 .preview aside {
