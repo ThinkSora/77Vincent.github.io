@@ -1,11 +1,6 @@
 @media only screen and (max-width: 1400px) {
-	#sidebar {
-		width: 200px;
-	}
-
-	.main-content {
-		margin-left: 200px;
-		padding: 20px 30px;
+	html {
+		font-size: 0.95em;
 	}
 }
 
@@ -13,81 +8,19 @@
 	html {
 		font-size: 0.9em;
 	}
-
-	#sidebar {
-		width: 180px;
-	}
-
-	.main-content {
-		margin-left: 180px;
-		padding: 20px 25px;
-	}
 }
 
 @media only screen and (max-width: 768px) {
 	html {
 		font-size: 0.75em;
 	}
-
-	#sidebar {
-		width: 140px;
-	}
-
-	.main-content {
-		margin-left: 140px;
-		padding: 20px;
-	}
-
 	section {
 		width: 100%;
 		float: none;
 		padding-right: 0;
 	}
-}
+
 
 @media only screen and (max-width: 480px) {
 
-	/*
-	*	SIDEBAR
-	*/
-	#sidebar {
-		width: 100%;
-		height: auto;
-		top: 0;
-		padding: 12px;
-		text-align: left;
-		background-color: rgb(50,50,50);
-	}
-
-	#sidebar ul,
-	#sidebar footer {
-		display: none;
-	}
-
-	#sidebar .title {
-		display: inline-block;
-	}
-
-	#sidebar .title .img-wrapper {
-		display: inline-block;
-		margin: 0 5px;
-		vertical-align: middle;
-		width: 35px;
-	}
-
-	#sidebar .title h2 {
-		display: inline-block;
-		margin: 0 5px;
-		vertical-align: middle;
-	}
-
-	/*
-	*	MAIN CONTENT
-	*/
-
-	.main-content {
-		margin-left: 0;
-		padding: 18px;
-		margin-top: 65px;
-	}
 }
