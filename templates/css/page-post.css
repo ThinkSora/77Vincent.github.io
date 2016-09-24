@@ -1,0 +1,52 @@
+/***************************************************  
+    GENERAL
+***************************************************/
+#page-post .unit {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#page-post .unit > h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+/***************************************************  
+    VINSLIDER
+***************************************************/
+
+.vinslider ul.vinmain {
+	height: 200px;
+}
+
+.vinslider ul.vinmain li {
+	background-color: rgb(200,200,200);
+	display: table;
+	text-align: center;
+}
+
+.vinslider ul.vinmain li:nth-child(even) {
+	background-color: #b4e4f4;
+}
+
+.vinslider ul.vinmain li h1 {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 4em;
+	color: #fff;
+	opacity: 0.8;
+}
+
+.vinslider .vinpager ul li {
+	background-color: rgb(230,230,230);
+	border: none;
+	height: 10px;
+	width: 10px;
+}
+
+.vinslider .vincontroller ul {
+    position: absolute;
+    top: 77px;
+    color: white;
+    padding: 0 15px;
+}

@@ -1,14 +1,23 @@
 var webtech = {
 
 	init: function() {
+		this.url = window.location.href;
 		this.master = document.querySelector('.master');
 		this.wrapper = document.querySelector('.wrapper');
 		this.header = document.querySelector('header');
 		this.title = document.querySelector('header a.title');
 		this.iden = "toggle";
-		this.typeSwitch();
+
+		this.indexController();
 		this.themeColor();
 		this.aboutDropdown();
+	},
+
+	indexController: function() {
+		var last = this.url.split('/');
+		if (last[last.length-1] == "") {
+			this.typeSwitch();
+		}
 	},
 
 	typeSwitch: function() {
@@ -24,9 +33,9 @@ var webtech = {
 		for (var i=0; i<switchA.length; i++) {
 			switchA[i].onclick = function(event) {
 				event.preventDefault();
-				var condition = this.children[0].href;
+				var condition = this.children[0].dataset.type;
 
-				if (condition.indexOf('projects') > 0) {
+				if (condition.indexOf('projects') >= 0) {
 					vinJs.addClass(blogs, self.iden);
 					vinJs.removeClass(projects, self.iden);
 				}	else {
@@ -108,4 +117,22 @@ var webtech = {
 
 window.onload = function() {
 	webtech.init();
+
+	var slider1 = document.querySelector('.slider1');
+	new Vinslider(slider1, {
+		duration: 3800,
+	});
+
+	var slider2 = document.querySelector('.slider2');
+	new Vinslider(slider2, {
+		duration: 3000,
+		mode: 'slide'
+	});
+
+	var slider3 = document.querySelector('.slider3');
+	new Vinslider(slider3, {
+		duration: 1500,
+		mode: 'carousel',
+		amount: 4
+	});
 }
