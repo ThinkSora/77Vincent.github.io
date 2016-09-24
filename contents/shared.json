@@ -1,13 +1,6 @@
 {
 	"navbar": [
-		{	
-			"label": "projects", 
-			"href": "#projects"
-		},
-		{
-			"label": "blogs",  
-			"href": "#blogs"
-		},
-		{"label": "about", "href": "/about"} 
+		{"label": "projects"},
+		{"label": "blogs"}
 	]
 }

@@ -16,7 +16,7 @@ var webtech = {
 		*	
 		*/
 		var switchA =  document.querySelectorAll('.jsType');
-		var switchB = document.querySelectorAll('.jsCategory');
+		var switchB = document.querySelectorAll('.jsCategories');
 		var projects = document.querySelector('#projects');
 		var blogs = document.querySelector('#blogs');
 		var self = this;
@@ -38,19 +38,35 @@ var webtech = {
 
 		this.master.onclick = function(event) {
 			var t = event.target;
-			vinJs.closest(event.target, 'section');
-			// if (t == self.master || t == self.wrapper) {
-			// 	vinJs.removeClass(projects, self.iden);
-			// 	vinJs.removeClass(blogs, self.iden);
-			// }
+			var c = vinJs.closest(event.target, 'section');
+
+			if (c == undefined || c.className.indexOf('toggle') >= 0) {
+				vinJs.removeClass(projects, self.iden);
+				vinJs.removeClass(blogs, self.iden);
+			}
 		}
 
-		// for (var f=0; f<switchB.length; f++) {
-		// 	switchB[f].onclick = function() {
-		// 		var iden = this.id;
-		// 		for ()
-		// 	}
-		// }
+		for (var f=0; f<switchB.length; f++) {
+			switchB[f].onclick = function(event) {
+				event.preventDefault();
+
+				var scope = vinJs.closest(this, 'section');
+				var children = scope.querySelectorAll('.preview');
+
+				for (var r=0; r<children.length; r++) {
+					vinJs.addClass(children[r], self.iden);
+					if (children[r].className.indexOf(this.dataset.categories) >= 0) {
+						vinJs.removeClass(children[r], self.iden);
+					}
+				}
+
+				if (this.dataset.categories == 'all') {
+					for (var t=0; t<children.length; t++) {
+						vinJs.removeClass(children[t], self.iden);
+					}
+				}
+			}
+		}
 	},
 
 	themeColor: function() {
@@ -79,25 +95,12 @@ var webtech = {
 		/*	ABOUT DROPDOWN SECTION
 		*	
 		*/
-		var nav = document.querySelector('header ul li:last-child');
 		var self = this;
-
 		this.title.onmouseenter = function() {
 			vinJs.addClass(self.header, self.iden);
-			vinJs.addClass(nav, self.iden);
 		}
 		this.header.onmouseleave = function() {
 			vinJs.removeClass(this, self.iden);
-			vinJs.removeClass(nav, self.iden)
-		}
-		nav.onclick = function(event) {
-			event.preventDefault();
-			if (this.className.indexOf(self.iden) < 0) {
-				vinJs.addClass(self.header, self.iden);
-			} else {
-				vinJs.removeClass(self.header, self.iden);
-			}
-			vinJs.toggleClass(this, self.iden);
 		}
 	}
 

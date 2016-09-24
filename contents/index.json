@@ -3,13 +3,12 @@
 		{
 			"type": "projects",
 			"categories": [
-				{"label": "utility", "content": "utility"},
-				{"label": "infrastructure", "content":"infrastructure"},
-				{"label": "fun", "content": "fun"}
+				{"label": "utility"},
+				{"label": "infrastructure"},
+				{"label": "fun"}
 			],
 			"preview": [
 				{
-					"href": "/vinslider",
 					"title": "vinslider",
 					"category": "utility",
 					"date": "2016-9-22",
@@ -17,7 +16,6 @@
 					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
 				},
 				{
-					"href": "/vinalidate",
 					"title": "vinalidate",
 					"category": "utility",
 					"date": "2016-9-22",
@@ -25,15 +23,13 @@
 					"info": "Javascript module for client-side form validation with customizable options."
 				},
 				{
-					"href": "/vinjs",
 					"title": "vinjs",
 					"category": "infrastructure",
 					"date": "2016-9-22",
 					"tag": "front-end / javascript / infrastructure",
-					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated manual labors and make code life easy."
+					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated labors and make code life easy. Used throught out this website."
 				},
 				{
-					"href": "/spotlight",
 					"title": "spotlight",
 					"category": "fun",
 					"date": "2016-9-22",
@@ -46,14 +42,13 @@
 		{	
 			"type": "blogs",
 			"categories": [
-				{"label": "javascript", "content": "javascript"},
-				{"label": "css", "content": "css"},
-				{"label": "html", "content": "html"},
-				{"label": "overall", "content": "overall"}
+				{"label": "javascript"},
+				{"label": "css"},
+				{"label": "html"},
+				{"label": "overall"}
 			],
 			"preview": [
 				{
-					"href": "/javascript",
 					"title": "javascript",
 					"category": "javascript",
 					"date": "2016-9-22",
@@ -61,23 +56,20 @@
 					"info": ""
 				},
 				{
-					"href": "/css",
-					"title": "css",
+					"title": "CSS",
 					"category": "css",
 					"date": "2016-9-22",
 					"tag": "front-end / css",
 					"info": ""
 				},
 				{
-					"href": "/html",
-					"title": "html",
+					"title": "HTML",
 					"category": "html",
 					"date": "2016-9-22",
 					"tag": "front-end / html",
 					"info": ""
 				},
 				{
-					"href": "/overall",
 					"title": "overall",
 					"category": "overall",
 					"date": "2016-9-22",

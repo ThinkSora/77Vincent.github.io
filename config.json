@@ -8,7 +8,8 @@
 	"bundles": {
 		"/css/all.css": [
 			"./css/main.css",
-			"./css/site.css",
+			"./css/desktop.css",
+			"./css/page-about.css",
 			"./css/responsive.css"
 		],
 

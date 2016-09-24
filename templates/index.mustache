@@ -1,18 +1,19 @@
 {{> header }}
-	<div class="wrapper">
+	<div class="wrapper" id="page-index">
 		{{#section}}
 		<section id="{{type}}">
 			<ul class="categories unit">
+				<li data-categories="all" class="jsColor jsCategories all"><a>all</a></li>
 				{{#categories}}
-				<li id="{{label}}" class="jsCategory {{label}}">{{content}}</li>
+				<li data-categories="{{label}}" class="jsColor jsCategories {{label}}"><a>{{label}}</a></li>
 				{{/categories}}
 			</ul>
 
 			{{#preview}}	
-			<a class="preview unit jsColor {{category}}" id="{{name}}">
+			<a href="/{{title}}" class="preview unit jsColor {{category}}" id="{{title}}">
 				<aside></aside>
-				<article class="">
-					<h1 class="">{{title}}</h1>
+				<article>
+					<h1>{{title}}</h1>
 					<p>{{info}}</p>
 					<div class="meta">
 						<p>{{date}}</p>

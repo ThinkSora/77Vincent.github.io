@@ -3,32 +3,37 @@
 
 var vinJs = {
 
-	addClass: function(target, classname) {
-		if (target.className.indexOf(classname) < 0) {
-			target.className += ' ' + classname;
+	addClass: function(object, classname) {
+		if (object.className.indexOf(classname) < 0) {
+			object.className += ' ' + classname;
 		}
 	},
 
-	removeClass: function(target, classname) {
-		if (target.className.indexOf(classname) >= 0) {
-			target.className = target.className.replace(' ' + classname, '');
+	removeClass: function(object, classname) {
+		if (object.className.indexOf(classname) >= 0) {
+			object.className = object.className.replace(' ' + classname, '');
 		}
 	},
 
-	toggleClass: function(target, classname) {
-		if (target.className.indexOf(classname) >= 0) {
-			target.className = target.className.replace(' ' + classname, '');
+	toggleClass: function(object, classname) {
+		if (object.className.indexOf(classname) >= 0) {
+			object.className = object.className.replace(' ' + classname, '');
 		}	else {
-			target.className += ' ' + classname;
+			object.className += ' ' + classname;
 		}
 	},
 
 	closest: function (element, identifier) {
-		var p = element;
-		var result = document.querySelector(identifier);
-		while (p !== result) {
-			p = p.parentNode;
+		var result = document.querySelectorAll(identifier);
+
+		for (var i=0; i<result.length; i++) {
+			var object = element;
+			while (object !== result[i] && object.parentNode !== null) {
+				object = object.parentNode;
+			}
+			if (object !== document) {
+				return object;
+			}
 		}
-		console.log(p)
 	}
 }
