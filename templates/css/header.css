@@ -85,7 +85,7 @@ header.toggle {
 }
 
 header.toggle .about {
-	height: 180px;
+	height: 80px;
 	padding: 20px 0;
 }
 
@@ -103,32 +103,4 @@ header.toggle .about {
 	font-size: 1.5em;
 	margin-top: 15px;
 	margin-bottom: 30px;
-}
-
-.about .contact:after {
-	clear: both;
-	display: block;
-	content: "";
-}
-
-.about .contact li {
-	display: inline-block;
-	float: left;
-	width: 25%;
-	text-align: center;
-}
-
-.about .contact li img {
-	margin-bottom: 5px;
-	width: 40px;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.about .contact li:hover img {
-	animation: rotate 0.6s linear;
-	-webkit-animation: rotate 0.6s linear;
-	-moz-animation: rotate 0.6s linear;
-	-o-animation: rotate 0.6s linear;
 }

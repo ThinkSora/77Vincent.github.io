@@ -11,27 +11,31 @@
 				{
 					"title": "vinslider",
 					"category": "utility",
-					"date": "2016-9-22",
+					"label": "vinslider",
+					"date": "2016-9-25",
 					"tag": "front-end / Javascript / utility",
 					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
 				},
 				{
-					"title": "vinalidate",
-					"category": "utility",
-					"date": "2016-9-22",
-					"tag": "front-end / Javascript / utility",
-					"info": "Javascript module for client-side form validation with customizable options."
-				},
-				{
 					"title": "vinJs",
 					"category": "infrastructure",
+					"label": "",
 					"date": "2016-9-22",
 					"tag": "front-end / javascript / infrastructure",
 					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated labors and make code life easy. Used throught out this website."
 				},
 				{
+					"title": "vinalidate",
+					"category": "utility",
+					"label": "",
+					"date": "2016-9-22",
+					"tag": "front-end / Javascript / utility",
+					"info": "Javascript module for client-side form validation with customizable options."
+				},
+				{
 					"title": "spotlight",
 					"category": "fun",
+					"label": "",
 					"date": "2016-9-22",
 					"tag": "front-end / javascript / fun",
 					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated manual labors and make code life easy."
@@ -45,35 +49,39 @@
 				{"label": "javascript"},
 				{"label": "css"},
 				{"label": "html"},
-				{"label": "overall"}
+				{"label": "other"}
 			],
 			"preview": [
 				{
-					"title": "javascript",
+					"title": "Properly organize event handler",
 					"category": "javascript",
-					"date": "2016-9-22",
+					"label": "blog-js-1",
+					"date": "2016-9-25",
 					"tag": "front-end / Javascript",
-					"info": ""
+					"info": "Sometimes we run into a situation where we find the window.onscroll is not working as we expect, or even does not respond at all, that's because it might be assigned somewhere else already."
 				},
 				{
-					"title": "CSS",
+					"title": "css animation-fill-mode: 'forwards' issue",
 					"category": "css",
-					"date": "2016-9-22",
+					"label": "blog-css-1",
+					"date": "2016-9-25",
 					"tag": "front-end / css",
-					"info": ""
+					"info": "the 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "
 				},
 				{
 					"title": "HTML",
 					"category": "html",
+					"label": "",
 					"date": "2016-9-22",
 					"tag": "front-end / html",
 					"info": ""
 				},
 				{
-					"title": "overall",
-					"category": "overall",
+					"title": "other",
+					"category": "other",
+					"label": "",
 					"date": "2016-9-22",
-					"tag": "front-end / overall",
+					"tag": "front-end / other",
 					"info": ""
 				}
 			]

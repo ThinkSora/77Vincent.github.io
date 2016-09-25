@@ -9,6 +9,7 @@ var webtech = {
 		this.iden = "toggle";
 
 		this.indexController();
+		this.postController();
 		this.themeColor();
 		this.aboutDropdown();
 	},
@@ -17,6 +18,13 @@ var webtech = {
 		var last = this.url.split('/');
 		if (last[last.length-1] == "") {
 			this.typeSwitch();
+		}
+	},
+
+	postController: function() {
+		var last = this.url.split('/');
+		if (last[last.length-1] == "vinslider") {
+			this.vinslider();
 		}
 	},
 
@@ -111,51 +119,52 @@ var webtech = {
 		this.header.onmouseleave = function() {
 			vinJs.removeClass(this, self.iden);
 		}
-	}
+	},
 
+	vinslider: function() {
+		var slider1 = document.querySelector('.slider1');
+		new Vinslider(slider1, {
+			duration: 3800,
+			mode: 'fade'
+		});
+
+		var slider2 = document.querySelector('.slider2');
+		new Vinslider(slider2, {
+			duration: 3000,
+			mode: 'slide',
+		});
+
+		var slider3 = document.querySelector('.slider3');
+		new Vinslider(slider3, {
+			duration: 1500,
+			mode: 'carousel',
+			amount: 4
+		});
+
+		var slider4 = document.querySelector('.slider4');
+		new Vinslider(slider4, {
+			duration: 4000,
+			mode: 'slide',
+			vertical: true
+		});
+
+		var slider5 = document.querySelector('.slider5');
+		new Vinslider(slider5, {
+			duration: 2500,
+			mode: 'slide',
+			direction: false
+		});
+
+		var slider6 = document.querySelector('.slider6');
+		new Vinslider(slider6, {
+			duration: 1500,
+			mode: 'carousel',
+			amount: 4,
+			gutter: 10
+		});
+	}
 }
 
 window.onload = function() {
 	webtech.init();
-
-	var slider1 = document.querySelector('.slider1');
-	new Vinslider(slider1, {
-		duration: 3800,
-		mode: 'fade'
-	});
-
-	var slider2 = document.querySelector('.slider2');
-	new Vinslider(slider2, {
-		duration: 3000,
-		mode: 'slide',
-	});
-
-	var slider3 = document.querySelector('.slider3');
-	new Vinslider(slider3, {
-		duration: 1500,
-		mode: 'carousel',
-		amount: 4
-	});
-
-	var slider4 = document.querySelector('.slider4');
-	new Vinslider(slider4, {
-		duration: 4000,
-		mode: 'slide',
-		vertical: true
-	});
-
-	var slider5 = document.querySelector('.slider5');
-	new Vinslider(slider5, {
-		duration: 2500,
-		mode: 'slide',
-		direction: false
-	});
-
-	var slider6 = document.querySelector('.slider6');
-	new Vinslider(slider6, {
-		duration: 1500,
-		mode: 'carousel',
-		amount: 4,
-		gutter: 10
-	});
 }

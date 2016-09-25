@@ -56,7 +56,7 @@
 	background-color: #b3b1e7;
 }
 
-.categories li.overall a:before {
+.categories li.other a:before {
 	background-color: #eed3a8;
 }
 
@@ -84,7 +84,7 @@
 	background-color: #b3b1e7;
 }
 
-.preview.overall aside {
+.preview.other aside {
 	background-color: #eed3a8;
 }
 
@@ -96,11 +96,16 @@
 
 .preview {
 	padding-left: 45px;
+	opacity: 0.9;
 	overflow: hidden;
 	-webkit-transition: padding 0.3s ease, margin 0.3s ease;
 	-moz-transition: padding 0.3s ease, margin 0.3s ease;
 	-o-transition: padding 0.3s ease, margin 0.3s ease;
 	transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+.preview:hover {
+	opacity: 1;
 }
 
 .preview.toggle {

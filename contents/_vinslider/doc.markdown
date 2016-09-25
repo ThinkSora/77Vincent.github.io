@@ -1,6 +1,6 @@
 # Vinslider - documentations
 
-**Light weight, responsive, native Javascript slider / carousel module. Highly customizable.**
+#### Light weight, responsive, native Javascript slider / carousel module. Highly customizable.
 
 ## Code Example
 

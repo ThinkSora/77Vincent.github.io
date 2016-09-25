@@ -7,12 +7,23 @@
 }
 
 .markdown h2,
-.markdown h3,
-.markdown h4 {
+.markdown h3 {
 	font-weight: bold;
 	margin: 1em 0;
 }
 
+.markdown .meta {
+	opacity: 0.7;
+	margin-bottom: 2em;
+}
+
+.markdown .meta p {
+	margin: 0;
+}
+
+.markdown p {
+	margin: 1em 0;
+}
 
 .markdown h1 {
 	margin: 1em 0;
@@ -27,13 +38,12 @@
 	text-transform: none;
 }
 
-.markdown > p:nth-child(2) {
+.markdown > h4:nth-child(2) {
 	margin-bottom: 3em;
-	font-size: 1.2em;
 }
 
 .markdown ul {
-	margin: 20px 0;
+	margin: 1.5em 0;
 	list-style: disc;
 	list-style-position: inside;
 }
@@ -45,9 +55,9 @@ blockquote {
 }
 
 pre {
-	padding: 20px;
+	padding: 1.5em;
 	background-color: rgb(245,245,245);
-	margin: 20px 0;
+	margin: 1.75em 0;
 }
 
 code {
@@ -107,10 +117,41 @@ code {
 }
 
 .vinslider .vincontroller ul li:after {
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .vinslider .vincontroller ul li:hover:after {
 	color: black;
 }
 
+/***************************************************  
+    BLOG CSS 1
+***************************************************/
+
+@keyframes forwardsDemo {
+	from {background-color: #62acff;}
+	to {background-color: gray;}
+}
+
+.blog-css-1 .message {
+	display: table-cell;
+	color: #fff;
+	vertical-align: middle;
+}
+
+.blog-css-1 {
+	display: table;
+	text-align: center;
+	height: 200px;
+	width: 100%;
+	background-color: #62acff;
+	cursor: pointer;
+	-webkit-animation: forwardsDemo 2s 7s forwards;
+	-moz-animation: forwardsDemo 2s 7s forwards;
+	-o-animation: forwardsDemo 2s 7s forwards;
+	animation: forwardsDemo 2s 7s forwards;
+}
+
+.blog-css-1:hover {
+	background-color: #c0495a !important;
+}
