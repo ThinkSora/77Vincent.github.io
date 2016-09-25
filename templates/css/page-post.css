@@ -1,4 +1,60 @@
 /***************************************************  
+    MARKDOWN
+***************************************************/
+
+.markdown {
+	font-size: 1.1em;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+
+.markdown h1 {
+	margin: 1em 0;
+}
+
+.markdown h2 {
+	border-bottom: 1px solid rgb(230,230,230);
+	padding-bottom: 0.3em;
+}
+
+.markdown h3 {
+	text-transform: none;
+}
+
+.markdown > p:nth-child(2) {
+	margin-bottom: 3em;
+	font-size: 1.2em;
+}
+
+.markdown ul {
+	margin: 20px 0;
+	list-style: disc;
+	list-style-position: inside;
+}
+
+blockquote {
+    padding: 0 1em;
+    color: #222;
+    border-left: 0.25em solid #ddd;
+}
+
+pre {
+	padding: 20px;
+	background-color: rgb(245,245,245);
+	margin: 20px 0;
+}
+
+code {
+	line-height: 1.3;
+}
+
+/***************************************************  
     GENERAL
 ***************************************************/
 #page-post .unit {
@@ -7,7 +63,6 @@
 }
 
 #page-post .unit > h1 {
-	text-align: center;
 	margin-top: 0;
 }
 
@@ -16,23 +71,23 @@
 ***************************************************/
 
 .vinslider ul.vinmain {
-	height: 200px;
+	height: 150px;
 }
 
 .vinslider ul.vinmain li {
 	background-color: rgb(200,200,200);
-	display: table;
 	text-align: center;
+	display: table;
 }
 
 .vinslider ul.vinmain li:nth-child(even) {
-	background-color: #b4e4f4;
+	background-color: #62acff;
 }
 
 .vinslider ul.vinmain li h1 {
 	display: table-cell;
 	vertical-align: middle;
-	font-size: 4em;
+	font-size: 3em;
 	color: #fff;
 	opacity: 0.8;
 }
@@ -44,9 +99,18 @@
 	width: 10px;
 }
 
-.vinslider .vincontroller ul {
+.vinslider .vincontroller {
     position: absolute;
-    top: 77px;
+    top: 61px;
     color: white;
     padding: 0 15px;
 }
+
+.vinslider .vincontroller ul li:after {
+	font-size: 18px;
+}
+
+.vinslider .vincontroller ul li:hover:after {
+	color: black;
+}
+

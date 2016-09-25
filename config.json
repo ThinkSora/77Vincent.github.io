@@ -10,7 +10,6 @@
 			"./css/lib/*.css",
 			"./css/main.css",
 			"./css/global.css",
-			"./css/markdown.css",
 			"./css/header.css",
 			"./css/page-index.css",
 			"./css/page-post.css",
@@ -18,8 +17,7 @@
 		],
 
 		"/js/all.js": [
-			"./js/*.js",
-			"./js/lib/*.js"
+			"./js/*.js"
 		]
 	}
 }

@@ -20,7 +20,7 @@
 header {
 	text-align: center;
 	height: auto;
-	padding: 12px;
+	padding: 15px;
 	font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti';
 	z-index: 9;
 	position: relative;
@@ -78,8 +78,6 @@ header .title h1 {
 	margin: 0;
 	display: inline-block;
 	vertical-align: middle;
-	letter-spacing: -2px;
-	word-spacing: 5px;
 }
 
 header.toggle {

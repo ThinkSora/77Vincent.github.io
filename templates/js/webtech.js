@@ -121,12 +121,13 @@ window.onload = function() {
 	var slider1 = document.querySelector('.slider1');
 	new Vinslider(slider1, {
 		duration: 3800,
+		mode: 'fade'
 	});
 
 	var slider2 = document.querySelector('.slider2');
 	new Vinslider(slider2, {
 		duration: 3000,
-		mode: 'slide'
+		mode: 'slide',
 	});
 
 	var slider3 = document.querySelector('.slider3');
@@ -134,5 +135,27 @@ window.onload = function() {
 		duration: 1500,
 		mode: 'carousel',
 		amount: 4
+	});
+
+	var slider4 = document.querySelector('.slider4');
+	new Vinslider(slider4, {
+		duration: 4000,
+		mode: 'slide',
+		vertical: true
+	});
+
+	var slider5 = document.querySelector('.slider5');
+	new Vinslider(slider5, {
+		duration: 2500,
+		mode: 'slide',
+		direction: false
+	});
+
+	var slider6 = document.querySelector('.slider6');
+	new Vinslider(slider6, {
+		duration: 1500,
+		mode: 'carousel',
+		amount: 4,
+		gutter: 10
 	});
 }
