@@ -48,6 +48,11 @@
 	list-style-position: inside;
 }
 
+.markdown a {
+	text-decoration: underline;
+	color: #62acff;
+}
+
 blockquote {
     padding: 0 1em;
     color: #222;
@@ -137,6 +142,10 @@ code {
 	display: table-cell;
 	color: #fff;
 	vertical-align: middle;
+}
+
+.blog-css-1 .message h2 {
+	margin: 0.5em 0;
 }
 
 .blog-css-1 {

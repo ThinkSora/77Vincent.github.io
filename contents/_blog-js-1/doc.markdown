@@ -5,7 +5,7 @@
 <p>date: 2016-9-25</p>
 </div>
 
-I am not sure if you have met issues like this before, but I am for sure that I had been troubled by this before when I was dealing with my not well-organized custom js.
+I am not sure if you have met issues like this before, but I am for sure that I had been troubled by this when I was dealing with my not well-organized custom js.
 
 Let's take a look at this as an example:
 
@@ -14,7 +14,7 @@ Let's take a look at this as an example:
 	
 	console.log(foo);
 
-What will foo be, obviousli it will only be 2 since 2 is assigned later. It could never be [1,2] or something weirder.
+What will foo be, obviousli it will only be 2. It could never be [1,2] or something weirder.
 
 Then how about this assignment:
 
