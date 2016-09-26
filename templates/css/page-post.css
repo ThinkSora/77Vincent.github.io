@@ -85,6 +85,10 @@ code {
     VINSLIDER
 ***************************************************/
 
+.slider1 {
+	display: none;
+}
+
 .vinslider ul.vinmain {
 	height: 150px;
 }

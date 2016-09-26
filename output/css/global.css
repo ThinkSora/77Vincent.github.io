@@ -158,7 +158,7 @@ footer p {
 }
 
 .unit {
-	opacity: 0.95;
+	/*opacity: 0.95;*/
 	margin-bottom: 2em;
 	display: block;
 	border-radius: 7px;
@@ -172,7 +172,7 @@ footer p {
 	box-shadow: 0 0 15px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	opacity: 1;
+	/*opacity: 1;*/
 }
 
 /***************************************************  

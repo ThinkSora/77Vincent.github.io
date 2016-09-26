@@ -25,10 +25,10 @@ header {
 	z-index: 9;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: all 0.4s ease-out;
-	-moz-transition: all 0.4s ease-out;
-	-o-transition: all 0.4s ease-out;
-	transition: all 0.4s ease-out;
+	-webkit-transition: height 0.4s ease-out;
+	-moz-transition: height 0.4s ease-out;
+	-o-transition: height 0.4s ease-out;
+	transition: height 0.4s ease-out;
 }
 
 header:after {
