@@ -7,13 +7,7 @@
 	},
 	"bundles": {
 		"/css/all.css": [
-			"./css/lib/*.css",
-			"./css/main.css",
-			"./css/global.css",
-			"./css/header.css",
-			"./css/page-index.css",
-			"./css/page-post.css",
-			"./css/responsive.css"
+			"./css/*.css"
 		],
 
 		"/js/all.js": [
