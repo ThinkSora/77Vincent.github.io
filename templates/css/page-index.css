@@ -136,10 +136,3 @@
 .preview article p {
 	margin: 0;
 }
-
-.preview article .meta {
-	margin-top: 15px;
-	font-size: 0.8em;
-	text-transform: capitalize;
-	color: rgb(180,180,180);
-}
