@@ -35,7 +35,7 @@ body:after {
 
 p {
 	line-height: 1.35;	
-	font-size: 1.05em;
+	font-size: 1.1em;
 	margin: 1em 0;
 }
 
@@ -168,9 +168,9 @@ footer p {
 }
 
 .unit:hover {
-	box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 /***************************************************  
@@ -242,7 +242,7 @@ footer p {
 	margin-top: 15px;
 	font-size: 0.8em;
 	text-transform: capitalize;
-	color: rgb(180,180,180);
+	color: rgb(150,150,150);
 }
 
 

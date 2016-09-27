@@ -14,7 +14,7 @@
 
 .markdown .meta {
 	opacity: 0.7;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .markdown .meta p {
@@ -63,6 +63,7 @@ pre {
 	padding: 1.5em;
 	background-color: rgb(245,245,245);
 	margin: 1.75em 0;
+	overflow: auto;
 }
 
 code {
@@ -73,8 +74,7 @@ code {
     GENERAL
 ***************************************************/
 #page-post .unit {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding: 45px;
 }
 
 #page-post .unit > h1 {
