@@ -1,12 +1,12 @@
 {
 	"nav": [
-		{"label": "code example", "href": "example"},
-		{"label": "Installation"},
-		{"label": "Configuration Options"},
-		{"label": "Dependency"},
-		{"label": "Features"},
-		{"label": "Demo"},
-		{"label": "Contributor"},
-		{"label": "License"}
+		{"label": "code example", "href": "#example"},
+		{"label": "Installation", "href": "#installation"},
+		{"label": "Configuration Options", "href": "#configuration"},
+		{"label": "Dependency", "href": "#dependency"},
+		{"label": "Features", "href": "#features"},
+		{"label": "Demo", "href": "#demo"},
+		{"label": "Contributor", "href": "#contributor"},
+		{"label": "License", "href": "#license"}
 	]
 }

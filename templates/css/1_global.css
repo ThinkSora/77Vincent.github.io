@@ -131,28 +131,11 @@ footer p {
 }
 
 /***************************************************  
-   NAV
-***************************************************/
-
-nav {
-	float: left;
-	width: 20%;
-	margin-right: 2%;
-	padding: 25px !important; 
-	text-transform: capitalize;
-	font-size: 1.1em;
-}
-
-nav * {
-	margin: 0;
-}
-
-/***************************************************  
    MAIN CONTAINER
 ***************************************************/
 
 .master {
-	padding: 3em 2em;
+	padding: 3em 3%;
 	margin: 0 auto;
 	background-color: rgb(150,150,150);
 	background-size: cover;
@@ -260,6 +243,28 @@ nav * {
 	font-size: 0.8em;
 	text-transform: capitalize;
 	color: rgb(150,150,150);
+}
+
+/***************************************************  
+   NAV
+***************************************************/
+
+nav.unit {
+	float: left;
+	width: 20%;
+	margin-right: 2%;
+	padding: 25px !important; 
+	text-transform: capitalize;
+	font-size: 1.1em;
+}
+
+nav.unit.toggle {
+	position: fixed;
+	width: 19.2%;
+}
+
+nav.unit * {
+	margin: 0;
 }
 
 
