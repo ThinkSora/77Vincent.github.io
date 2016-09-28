@@ -1,11 +1,11 @@
-# Properly manage event handler
+<h1 id="title">Properly manage event handler</h1>
 
 <div class="meta">
 <p>category: front-end / javascript</p>
 <p>date: 2016-9-25</p>
 </div>
 
-## Preface
+<h2 id="preface">preface</h2>
 
 I am not sure if you have met something like this before, but I am for sure that I had been troubled by it when I was dealing with my not well-organized custom Javascript.
 
@@ -32,7 +32,7 @@ As mentioned above, what I encountered when I was so immature with JS, is someth
 
 For productivity, I found I need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a "why is it not working?" hell. The reason why global objects are given here as an example is because they are most likely to be bound with hanlders here or there.
 
-## addEventListener() vs element.eventhandler
+<h2 id="addEventListener">addEventListener() vs element.eventhandler</h2>
 
 But actually there is a way to really "add" but not "override" new functions to an already declared one, which is addEventListener();
 
@@ -80,7 +80,7 @@ This time the result will be:
 
 Again, the later assigned one still overrides the previous onclick one, but dosen't affect the other two which are assigned with the addEventListener(); The only drawback of addEventListener is broswer compatibility, which is not supported by or under IE9. For more information please check on: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener. 
 
-## Practice
+<h2 id="practice">practice</h2>
 
 Now here is the practice, when binding functions to event handlers, instead of placing those event handlers here and there from time to time, I place them all in one place:
 

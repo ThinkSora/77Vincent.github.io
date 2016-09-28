@@ -1,12 +1,15 @@
 {
 	"nav": [
+		{"label": "vinslider", "href": "/vinslider", "class": "title"},
+		{"label": "demo", "href": "#demo", "class": "index"},
+		{"label": "documentation", "href": "#documentation", "class": "index"},
 		{"label": "code example", "href": "#example"},
-		{"label": "Installation", "href": "#installation"},
-		{"label": "Configuration Options", "href": "#configuration"},
-		{"label": "Dependency", "href": "#dependency"},
-		{"label": "Features", "href": "#features"},
-		{"label": "Demo", "href": "#demo"},
-		{"label": "Contributor", "href": "#contributor"},
-		{"label": "License", "href": "#license"}
+		{"label": "installation", "href": "#installation"},
+		{"label": "configuration", "href": "#configuration"},
+		{"label": "dependency", "href": "#dependency"},
+		{"label": "features", "href": "#features"},
+		{"label": "demo", "href": "#demo"},
+		{"label": "contributor", "href": "#contributor"},
+		{"label": "license", "href": "#license"}
 	]
 }

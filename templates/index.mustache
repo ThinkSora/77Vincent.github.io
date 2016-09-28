@@ -3,9 +3,8 @@
 		{{#section}}
 		<section id="{{type}}">
 			<div class="categories unit">
-				<h2>{{type}}</h2>
+				<h2 data-categories="all" class="jsCategories">{{type}}</h2>
 				<ul>
-					<li data-categories="all" class="jsCategories all"><a>all</a></li>
 					{{#categories}}
 					<li data-categories="{{label}}" class="jsCategories {{label}}"><a>{{label}}</a></li>
 					{{/categories}}

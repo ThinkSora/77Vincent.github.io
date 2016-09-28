@@ -55,7 +55,7 @@
 				{
 					"title": "Properly organize event handler",
 					"category": "javascript",
-					"label": "blog-js-1",
+					"label": "blog-js-1-eventhandler",
 					"date": "2016-9-25",
 					"tag": "front-end / Javascript",
 					"info": "Sometimes we run into a situation where we find the window.onscroll is not working as we expect, or even does not respond at all, that's because it might be assigned somewhere else already."
@@ -63,7 +63,7 @@
 				{
 					"title": "css animation-fill-mode: 'forwards' issue",
 					"category": "css",
-					"label": "blog-css-1",
+					"label": "blog-css-1-animationfillmode",
 					"date": "2016-9-25",
 					"tag": "front-end / css",
 					"info": "the 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "

@@ -1,4 +1,4 @@
-# Vinslider - documentations
+<h1 id="documentation">documentation</h1>
 
 #### Light weight, responsive, native Javascript slider / carousel module. Highly customizable.
 

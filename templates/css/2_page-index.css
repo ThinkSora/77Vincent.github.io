@@ -10,6 +10,10 @@
 
 .categories h2 {
 	text-align: center;
+	cursor: pointer;
+}
+
+.categories h2:hover {
 	opacity: 0.6;
 }
 
@@ -100,12 +104,18 @@
 ***************************************************/
 
 .preview {
-	padding-left: 45px;
+	padding-left: 2.8em;
 	overflow: hidden;
 	-webkit-transition: padding 0.3s ease, margin 0.3s ease;
 	-moz-transition: padding 0.3s ease, margin 0.3s ease;
 	-o-transition: padding 0.3s ease, margin 0.3s ease;
 	transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+.preview:hover {
+	box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .preview.toggle {

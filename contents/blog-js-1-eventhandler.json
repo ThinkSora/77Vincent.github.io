@@ -1,0 +1,9 @@
+{
+	"nav": [
+		{"label": "content", "href": "/blog-js-1-eventhandler", "class": "title"},
+		{"label": "preface", "href": "#preface", "class": "index"},
+		{"label": "addEventListener", "href": "#addEventListener", "class": "index"},
+		{"label": "practice", "href": "#practice", "class": "index"}
+
+	]
+}

@@ -10,7 +10,6 @@ var webtech = {
 		this.indexController();
 		this.postController();
 		this.themeColor();
-		this.stickyNav();
 	},
 
 	indexController: function() {
@@ -22,6 +21,9 @@ var webtech = {
 
 	postController: function() {
 		var last = this.url.split('/');
+		if (last[last.length-1] !== "") {
+			this.stickyNav();
+		}
 		if (last[last.length-1] == "vinslider") {
 			this.vinslider();
 		}
