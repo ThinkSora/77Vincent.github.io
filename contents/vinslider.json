@@ -1,6 +1,6 @@
 {
 	"nav": [
-		{"label": "code example"},
+		{"label": "code example", "href": "example"},
 		{"label": "Installation"},
 		{"label": "Configuration Options"},
 		{"label": "Dependency"},
