@@ -2,10 +2,6 @@
     MARKDOWN
 ***************************************************/
 
-.markdown {
-	font-size: 1.1em;
-}
-
 .markdown h2,
 .markdown h3 {
 	font-weight: bold;
