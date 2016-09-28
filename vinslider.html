@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<title>webtech</title>
+			<meta name="description" content="">
+			<meta name="viewport" content="width=device-width">
+			<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
+
+			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475030015000.css"> 
+    </head>
+
+    <body>
+		<header class="">
+
+			<a href="/" class="title">
+				<div class="img-wrapper">
+					<img src="../image/77-logo.svg">
+				</div>
+				<h1>web tech blog</h1>
+			</a>
+
+			<ul>
+				<li class="jsColor jsType">
+					<a data-type="projects" href="/">projects</a>
+				</li>
+				<li class="jsColor jsType">
+					<a data-type="blogs" href="/">blogs</a>
+				</li>
+				<li><a href="/about">about</a></li>
+			</ul>
+
+			<div class="about">
+				<p class="intro">A blog for sharing practices, works, ideas or issues mostly on front-end development</p>
+			</div>
+
+		</header>
+
+		<div role="main" class="master">
+	<div class="wrapper" id="page-post">
+		<div class="jsColor unit demo">
+    <h1>vinslider - demo</h1>
+    <section>
+        <h3>fade mode</h3>
+        <div class="vinslider slider1">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+            </ul>
+        </div>
+        <h3>slide mode</h3>
+        <div class="vinslider slider2">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+            </ul>
+        </div>
+        <h3>carousel mode</h3>
+        <div class="vinslider slider3">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+                <li><h1>5</h1></li>
+                <li><h1>6</h1></li>
+                <li><h1>7</h1></li>
+                <li><h1>8</h1></li>
+                <li><h1>9</h1></li>
+                <li><h1>10</h1></li>
+                <li><h1>11</h1></li>
+                <li><h1>12</h1></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h3>vertical: true</h3>
+        <div class="vinslider slider4">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+            </ul>
+        </div>
+        <h3>direction: false</h3>
+        <div class="vinslider slider5">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+            </ul>
+        </div>
+        <h3>gutter: 10px</h3>
+        <div class="vinslider slider6">
+            <ul>
+                <li><h1>1</h1></li>
+                <li><h1>2</h1></li>
+                <li><h1>3</h1></li>
+                <li><h1>4</h1></li>
+                <li><h1>5</h1></li>
+                <li><h1>6</h1></li>
+                <li><h1>7</h1></li>
+                <li><h1>8</h1></li>
+                <li><h1>9</h1></li>
+                <li><h1>10</h1></li>
+                <li><h1>11</h1></li>
+                <li><h1>12</h1></li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+		<div class="unit jsColor markdown">
+		<h1 id="vinslider-documentations">Vinslider - documentations</h1>
+<h4 id="light-weight-responsive-native-javascript-slider-carousel-module-highly-customizable-">Light weight, responsive, native Javascript slider / carousel module. Highly customizable.</h4>
+<h2 id="code-example">Code Example</h2>
+<h3 id="javascript-">Javascript:</h3>
+<pre><code>var selector = document.querySelector(&#39;DOM element&#39;);
+
+var options = {
+  mode: slide,
+  duration: 3500,
+  ......
+};
+
+var vinslider = new Vinslider(selector, options);
+</code></pre><ul>
+<li>The selector needs to be a native DOM element.</li>
+<li>If no custom option is given, Vinslider will be initialized with the default options.</li>
+<li>You can create several instance of Vinslider within one page with different options by this way.</li>
+</ul>
+<h3 id="html-">HTML:</h3>
+<pre><code>&lt;div id=&quot;selector&quot; class=&quot;vinslider&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;......&lt;/li&gt;
+    &lt;li&gt;......&lt;/li&gt;
+    &lt;li&gt;......&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;div&gt;
+</code></pre><ul>
+<li>The ul contains the list of elements that will be converted into a slider. No additional classname or id is needed.</li>
+<li>The parent wrapper could be of any kinds of tag.</li>
+<li>The classname &quot;vinslider&quot; is optional, for getting the basic style from vinslider.css</li>
+</ul>
+<h3 id="css-">CSS:</h3>
+<pre><code>vinslider.css
+</code></pre><ul>
+<li>This provides the default and basic style for a Vinslider instance.</li>
+<li>Feel free to override it for a custom style as you want.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>What you need are:</p>
+<ul>
+<li>vinslider.js</li>
+<li>vinslider.css (optional)</li>
+</ul>
+<p>Embed them into your project.</p>
+<h2 id="configuration-options">Configuration Options</h2>
+<h3 id="mode-string">mode : String</h3>
+<blockquote>
+<p><strong>fade</strong>: Each slide fades in and fades out when sliding <strong>(Default)</strong>.</p>
+<p><strong>slide</strong>: Normal slides effect.</p>
+<p><strong>carousel</strong>: Turning the slider into a carousel. </p>
+</blockquote>
+<h3 id="amount-number">amount: Number</h3>
+<blockquote>
+<p>When under carousel mode, this determines how many items will be shown within one row.</p>
+<p><em>NOTE: If no value is specified the value will be 2 by default, or if the value is greater than the total amount of items, the controller will be hidden</em>.</p>
+</blockquote>
+<h3 id="duration-number">duration : Number</h3>
+<blockquote>
+<p>How much time each slide stays <strong>(Default: 5000, mini second)</strong>.</p>
+</blockquote>
+<h3 id="gutter-number">gutter : Number</h3>
+<blockquote>
+<p>Add a gutter in between each items <strong>(Default: 0, pixels)</strong>.</p>
+</blockquote>
+<h3 id="percentgutter-boolean">percentGutter : Boolean</h3>
+<blockquote>
+<p>Turn the normal pixel unit gutter into a percentage one <strong>(Default: false)</strong>.</p>
+<p><em>NOTE: Only works when the gutter is also declared, if not, no effect or error will be met</em>.</p>
+</blockquote>
+<h3 id="startfrom-number">startFrom: Number</h3>
+<blockquote>
+<p>Determining from which item the slider or carousel starts <strong>(Default: 0)</strong>. </p>
+<p><em>NOTE: The first item will be an index of 0 and so on. If the value is greater than the total amount of items or less than 0, it will still start from 0</em>.</p>
+</blockquote>
+<h3 id="moveby-number">moveBy : Number</h3>
+<blockquote>
+<p>How many items will pass by with each slide <strong>(Default: 1)</strong></p>
+</blockquote>
+<h3 id="pager-boolean">pager : Boolean</h3>
+<blockquote>
+<p>ture: Show the bullet <strong>(Default)</strong>.</p>
+<p>false: Hide the bullet.</p>
+</blockquote>
+<h3 id="controller-boolean">controller : Boolean</h3>
+<blockquote>
+<p>ture: Show the controller <strong>(Default)</strong>.</p>
+<p>false: Hide the controller.</p>
+</blockquote>
+<h3 id="auto-boolean">auto : Boolean</h3>
+<blockquote>
+<p>ture: Auto play the slider or carousel <strong>(Default)</strong>.</p>
+<p>false: Do not auto play.</p>
+</blockquote>
+<h3 id="infinite-boolean">infinite : Boolean</h3>
+<blockquote>
+<p>ture: The slider or carousel will go back to the first item after reaching the last one <strong>(Default)</strong>.</p>
+<p>false: Will be stoped at the end the slide or carousel.</p>
+</blockquote>
+<h3 id="scrollable-boolean">scrollable : Boolean</h3>
+<blockquote>
+<p>ture: Mouse wheel scrolling could slide the slider or carousel.</p>
+<p>false: No mouse wheel event applied <strong>(Default)</strong>.</p>
+</blockquote>
+<h3 id="vertical-boolean">vertical : Boolean</h3>
+<blockquote>
+<p>ture: The slider or carousel will be shown in vertical mode. </p>
+<p>false: Horizontal mode <strong>(Default)</strong>. </p>
+</blockquote>
+<h3 id="direction-boolean">direction : Boolean</h3>
+<blockquote>
+<p>ture: Goes from left to right, or top to bottom <strong>(Default)</strong>.</p>
+<p>false: The opposite direction.</p>
+<p><em>NOTE: This only affects the auto playing. User events will still obey their original direction</em>.</p>
+</blockquote>
+<h3 id="enableclass-string">enableClass : String</h3>
+<blockquote>
+<p>&quot;vinactive&quot; <strong>(Default)</strong></p>
+<p>This is for changing the active class name of the current active element. Also the vinslider.css is using this class name as the selector. You can customize it into another classname if you want.</p>
+</blockquote>
+<h2 id="dependency">Dependency</h2>
+<p>None</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Vinslider will be immediately stopped if the DOM element is not found or improper and throw an error.</li>
+<li>Currently touch event on mobile devices is not supported yet.</li>
+<li>Pager(or bullet) are able to control the slider or carousel.</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p>Go to <a href="http://www.77webtech.com/vinslider">http://www.77webtech.com/vinslider</a> to see the demo.</p>
+<h2 id="contributor">Contributor</h2>
+<p>Vincent Wen</p>
+<h2 id="license">License</h2>
+<p>Released under the MIT license: <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a></p>
+
+		</div>
+	</div>
+		</div>
+		
+		<footer>
+			<span>Created by Vincent, Built with</span>
+			<a href="http://laktek.github.com/punch">Punch</a>
+		</footer>
+
+		<script src="/js/all-1475030015000.js"></script> 
+
+	</body>
+
+</html>
