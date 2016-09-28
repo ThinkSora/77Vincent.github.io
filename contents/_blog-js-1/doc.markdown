@@ -10,39 +10,39 @@ I am not sure if you have met something like this before, but I am for sure that
 Let's take a look at this as an example:
 
 	window.onclick = function() {
-		console.log( I'm scrolling );
-	}
+		console.log( 'foo' );
+	};
 
 	window.onclick = function() {
-		console.log( I just want to say something else );
-	}
+		console.log( 'bar' );
+	};
+
+	// result will only be 'bar'
+
 
 Will there be two messages logged when we click?
 
-In face, only the second one will work as assigning a function to a DOM event object in this way, what will happen is "takeover" but not "accumulate", the new declaration will override the previous one. They won't share one event handler and happen altogether when it's triggered.
+In face, only the second one will work as assigning a function to a DOM event object in this way, what will happen is "takeover" but not "add", the new declaration will override the previous one. They won't share one event handler and happen all together when triggered.
 
 As mentioned above, what I encountered when I was so immature with JS, is something similiar like the code above, I assigned one or more event handler with some functions to global objects like window or document, but somehow nothing happens, because the same event handler has already been assigned somewhere else and is more priorer in the code queue. 
 
-For productivity, we need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a "why is it not working?" hell. The reason why global objects are given here as an example is because they are most easy to be bound with some hanlders here or there.
+For productivity, I found I need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a "why is it not working?" hell. The reason why global objects are given here as an example is because they are most likely to be bound with hanlders here or there.
 
-The way could be, place of all these event at a place, 
+But actually there is a way to really "add" but not "override" new functions to an already declared one, which is addEventListener();
 
-	var customJs = {
+	window.onclick = function() {
+		console.log( 'foo' );
+	};
 
-		`
+	window.addEventListener('click', function() {
+		console.log( 'bar' );
+	});
 
-		window.onscroll = function() {
-			// what to do...
-		}
+	// result will be 
+	// 'foo'
+	// 'bar'
 
-		window.onresize = function() {
-			// what to do...
-		}
-
-		window.onclick = function() {
-			// what to do...
-		}
-	}
+The result here will be both 'foo' and 'bar', and actually we can keep adding.
 
 
 
