@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1400px) {
+	html {
+		font-size: 0.95em;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	html {
+		font-size: 0.9em;
+	}
+
+	.categories li {
+		margin: 0 10px;
+		font-size: 0.8em;
+	}
+
+	#page-post .unit {
+		padding: 35px;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	html {
+		font-size: 0.85em;
+	}
+
+	.master {
+		padding: 2em;
+	}
+
+	.categories li {
+		margin: 0 20px;
+		font-size: 0.9em;
+	}
+
+	#page-post .unit {
+		padding: 25px;
+	}
+
+	section.toggle {
+		display: none;
+	}
+
+	section {
+		width: 100%;
+		float: none;
+		margin-bottom: 2em;
+	}
+
+	section:last-child {
+		margin-left: 0;
+	}
+
+
+@media only screen and (max-width: 480px) {
+	.master {
+		padding: 2em 1.5em;
+	}
+
+	.categories li {
+		margin: 0 5px;
+		font-size: 0.7em;
+	}
+}
