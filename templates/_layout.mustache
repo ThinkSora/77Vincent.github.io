@@ -1,5 +1,12 @@
 {{> header }}
 	<div class="wrapper" id="page-post">
+		<nav class="unit">
+			<ul>
+				{{#nav}}
+				<li><a>{{label}}</a></li>
+				{{/nav}}
+			</ul>
+		</nav>
 		{{{demo}}}
 		<div class="unit jsColor markdown">
 		{{{doc}}}

@@ -1,0 +1,12 @@
+{
+	"nav": [
+		{"label": "code example"},
+		{"label": "Installation"},
+		{"label": "Configuration Options"},
+		{"label": "Dependency"},
+		{"label": "Features"},
+		{"label": "Demo"},
+		{"label": "Contributor"},
+		{"label": "License"}
+	]
+}

@@ -73,8 +73,16 @@ code {
 /***************************************************  
     GENERAL
 ***************************************************/
+
+#page-post .demo,
+#page-post .markdown {
+	width: 78%;
+	float: right;
+}
+
 #page-post .unit {
-	padding: 45px;
+	padding-top: 45px;
+	padding-bottom: 45px;
 }
 
 #page-post .unit > h1 {
