@@ -5,15 +5,15 @@
 			<div class="categories unit">
 				<h2>{{type}}</h2>
 				<ul>
-					<li data-categories="all" class="jsColor jsCategories all"><a>all</a></li>
+					<li data-categories="all" class="jsCategories all"><a>all</a></li>
 					{{#categories}}
-					<li data-categories="{{label}}" class="jsColor jsCategories {{label}}"><a>{{label}}</a></li>
+					<li data-categories="{{label}}" class="jsCategories {{label}}"><a>{{label}}</a></li>
 					{{/categories}}
 				</ul>
 			</div>
 
 			{{#preview}}	
-			<a href="/{{label}}" class="preview unit jsColor {{category}}" id="{{label}}">
+			<a href="/{{label}}" class="preview unit {{category}}" id="{{label}}">
 				<aside></aside>
 				<article>
 					<h2>{{title}}</h2>

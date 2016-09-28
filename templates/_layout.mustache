@@ -1,15 +1,19 @@
 {{> header }}
 	<div class="wrapper" id="page-post">
-		<nav class="unit">
-			<ul>
-				{{#nav}}
-				<li><a href="{{href}}">{{label}}</a></li>
-				{{/nav}}
-			</ul>
-		</nav>
-		{{{demo}}}
-		<div class="unit jsColor markdown">
-		{{{doc}}}
+		<div class="unit">
+			<nav>
+				<ul>
+					{{#nav}}
+					<li><a href="{{href}}">{{label}}</a></li>
+					{{/nav}}
+				</ul>
+			</nav>
+
+			{{{demo}}}
+
+			<div class="markdown">
+				{{{doc}}}
+			</div>
 		</div>
 	</div>
 {{> footer }}

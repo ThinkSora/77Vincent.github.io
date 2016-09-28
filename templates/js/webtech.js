@@ -5,13 +5,12 @@ var webtech = {
 		this.master = document.querySelector('.master');
 		this.wrapper = document.querySelector('.wrapper');
 		this.header = document.querySelector('header');
-		this.title = document.querySelector('header a.title');
 		this.iden = "toggle";
 
 		this.indexController();
 		this.postController();
 		this.themeColor();
-		this.aboutDropdown();
+		this.stickyNav();
 	},
 
 	indexController: function() {
@@ -26,6 +25,19 @@ var webtech = {
 		if (last[last.length-1] == "vinslider") {
 			this.vinslider();
 		}
+	},
+
+	stickyNav: function() {
+		var nav = document.querySelector('nav');
+		var self = this;
+		window.addEventListener('scroll', function() {
+			posi = window.pageYOffset;
+			if (posi > self.header.clientHeight + 48) {
+				vinJs.addClass(nav, self.iden);
+			}	else {
+				vinJs.removeClass(nav, self.iden);
+			}
+		});
 	},
 
 	typeSwitch: function() {
@@ -90,11 +102,11 @@ var webtech = {
 		/*	BACKGROUND COLOR
 		*	
 		*/
-		var jsColor = document.querySelectorAll('.jsColor');
+		var ob = document.querySelectorAll('.unit');
 		var self = this;
 
-		for (var i=0; i<jsColor.length; i++) {
-			jsColor[i].onmouseenter = function() {
+		for (var i=0; i<ob.length; i++) {
+			ob[i].onmouseenter = function() {
 				var r1 = Math.random();
 				var r2 = Math.random();
 				var r3 = Math.random();
@@ -105,19 +117,6 @@ var webtech = {
 
 				self.master.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			}
-		}
-	},
-
-	aboutDropdown: function() {
-		/*	ABOUT DROPDOWN SECTION
-		*	
-		*/
-		var self = this;
-		this.title.onmouseenter = function() {
-			vinJs.addClass(self.header, self.iden);
-		}
-		this.header.onmouseleave = function() {
-			vinJs.removeClass(this, self.iden);
 		}
 	},
 

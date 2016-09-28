@@ -1,4 +1,4 @@
-<div class="jsColor unit demo">
+<div class="demo">
     <h1>vinslider - demo</h1>
     <section>
         <h3>fade mode</h3>

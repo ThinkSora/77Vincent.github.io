@@ -1,4 +1,4 @@
-<div class="demo jsColor unit">
+<div class="demo">
     <h1>demo</h1>
 	<div class="blog-css-1">
 		<div class="message">

@@ -245,26 +245,4 @@ footer p {
 	color: rgb(150,150,150);
 }
 
-/***************************************************  
-   NAV
-***************************************************/
-
-nav.unit {
-	float: left;
-	width: 20%;
-	margin-right: 2%;
-	padding: 25px !important; 
-	text-transform: capitalize;
-	font-size: 1.1em;
-}
-
-nav.unit.toggle {
-	position: fixed;
-	width: 19.2%;
-}
-
-nav.unit * {
-	margin: 0;
-}
-
 

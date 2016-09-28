@@ -29,8 +29,11 @@
 	margin: 1em 0;
 }
 
+.markdown h1:first-child {
+	margin-top: 0;
+}
+
 .markdown h2 {
-	border-bottom: 1px solid rgb(230,230,230);
 	padding-bottom: 0.3em;
 }
 
@@ -74,19 +77,49 @@ code {
     GENERAL
 ***************************************************/
 
+#page-post .demo {
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+#page-post .demo:after,
+#page-post .markdown:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
 #page-post .demo,
 #page-post .markdown {
-	width: 78%;
-	float: right;
+	width: 80%;
+	margin-left: auto;
+	margin-right: 0;
 }
 
 #page-post .unit {
-	padding-top: 45px;
-	padding-bottom: 45px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
 }
 
-#page-post .unit > h1 {
-	margin-top: 0;
+/***************************************************  
+   NAV
+***************************************************/
+
+#page-post nav {
+	width: 17%;
+	margin-right: 3%;
+	float: left;
+}
+
+nav li {
+	padding: 7px 0;
+}
+
+#page-post nav.toggle {
+	position: fixed;
+	top: 1em;
 }
 
 /***************************************************  
