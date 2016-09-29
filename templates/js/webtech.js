@@ -1,3 +1,13 @@
+/**
+*
+*   @Title:     77webtech
+*   @Descr:     Central js controller for www.77webtech.com
+*   @Package:   Javascript
+*   @Copyright: 2016 (C) Vincent
+*   @Author:    Vincent Wen <www.77webtech.com/about> <wentianqi77@outlook.com>
+*
+**/
+
 var webtech = {
 
 	init: function() {
@@ -10,6 +20,7 @@ var webtech = {
 		this.indexController();
 		this.postController();
 		this.themeColor();
+		this.smoothScroll();
 	},
 
 	indexController: function() {
@@ -26,6 +37,15 @@ var webtech = {
 		}
 		if (last[last.length-1] == "vinslider") {
 			this.vinslider();
+		}
+	},
+
+	smoothScroll: function() {
+		var a = document.getElementsByTagName('a');
+		for (var i=0; i<a.length; i++) {
+			a[i].addEventListener('click', function() {
+				var posi = window.pageYOffset;
+			});
 		}
 	},
 

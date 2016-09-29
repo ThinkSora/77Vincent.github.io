@@ -26,7 +26,10 @@
 }
 
 .markdown h2 {
-	padding-bottom: 0.3em;
+	padding-bottom: 0.4em;
+	margin-top: 2em;
+	margin-bottom: 0.75em;
+	border-bottom: 1px solid rgb(200,200,200);
 }
 
 .markdown h3 {
@@ -37,10 +40,16 @@
 	margin-bottom: 3em;
 }
 
-.markdown ul {
+.markdown ul,
+.markdown ol {
+	list-style-position: outside;
+	padding-left: 1em;
 	margin: 1.5em 0;
-	list-style: disc;
-	list-style-position: inside;
+}
+
+.markdown li {
+	list-style-type: disc;
+	padding: 8px 0;
 }
 
 .markdown a {
@@ -72,7 +81,7 @@ code {
 #page-post .demo {
 	margin-bottom: 3em;
 	padding-bottom: 3em;
-	border-bottom: 1px solid rgb(200, 200, 200);
+	border-bottom: 1px solid rgb(0,0,0);
 }
 
 #page-post .demo:after,
