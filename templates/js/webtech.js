@@ -32,9 +32,10 @@ var webtech = {
 	stickyNav: function() {
 		var nav = document.querySelector('nav');
 		var self = this;
+		var pad = parseInt(window.getComputedStyle(self.master).paddingTop);
 		window.addEventListener('scroll', function() {
 			posi = window.pageYOffset;
-			if (posi > self.header.clientHeight + 48) {
+			if (posi > self.header.clientHeight + pad) {
 				vinJs.addClass(nav, self.iden);
 			}	else {
 				vinJs.removeClass(nav, self.iden);
