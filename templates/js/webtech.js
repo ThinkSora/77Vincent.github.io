@@ -45,6 +45,7 @@ var webtech = {
 		for (var i=0; i<a.length; i++) {
 			a[i].addEventListener('click', function() {
 				var posi = window.pageYOffset;
+				console.log(posi)
 			});
 		}
 	},

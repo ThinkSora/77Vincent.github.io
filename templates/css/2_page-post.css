@@ -19,6 +19,7 @@
 
 .markdown p {
 	margin: 1em 0;
+	font-size: 1.1em;
 }
 
 .markdown h1:first-child {
@@ -55,6 +56,10 @@
 .markdown a {
 	text-decoration: underline;
 	color: #62acff;
+}
+
+.markdown a:hover {
+	opacity: 0.6;
 }
 
 blockquote {
@@ -107,22 +112,20 @@ code {
     display: block;
     width: 20%;
     height: 100%;
-    background-color: rgb(245,245,245);
+    background-color: rgb(80,80,80);
+    color: #fff;
     top: 0;
     position: absolute;
     left: 0;
     z-index: 0;
-    -webkit-transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease, background-color 0.3s ease-out;
-    -moz-transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease, background-color 0.3s ease-out;
-    -o-transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease, background-color 0.3s ease-out;
-    transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease, background-color 0.3s ease-out;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
 }
 
 #page-post .unit .bg-nav:hover {
-	box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	background-color: rgb(250,250,250);
+	background-color: rgb(60,60,60);
 }
 
 #page-post nav {
@@ -142,7 +145,7 @@ code {
 #page-post nav li.title {
 	font-size: 1.5em;
 	padding-left: 0;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #fff;
 	font-weight: bold;
 	padding-bottom: 0.5em;
 }

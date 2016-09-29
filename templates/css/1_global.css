@@ -15,7 +15,7 @@
 
 html {
 	font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti';
-	font-size: 1.08em;
+	font-size: 1.05em;
 }
 
 body {
@@ -105,8 +105,8 @@ img {
 
 section {
 	position: relative;
-	width: 48.5%;
-	margin-right: 1.5%;
+	width: 48.8%;
+	margin-right: 1.2%;
 	float: left;
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
@@ -115,7 +115,7 @@ section {
 }
 
 section:last-child {
-	margin-left: 1.5%;
+	margin-left: 1.2%;
 	margin-right: 0;
 }
 
@@ -150,7 +150,7 @@ footer p {
 ***************************************************/
 
 .master {
-	padding: 2.5em;
+	padding: 2em;
 	margin: 0 auto;
 	background-color: rgb(150,150,150);
 	background-size: cover;

@@ -24,9 +24,9 @@ Result will only be
 	bar
 
 
-Will there be two messages logged when we click?
+Why aren't there two messages logged at the same time?
 
-In face, only the second one will work as assigning a function to a DOM event object in this way, what will happen is "takeover" but not "add", the new declaration will override the previous one. They won't share one event handler and happen all together when triggered.
+In face, assigning a function to a DOM event object in this way, what will happen is "override" but not "add". They won't share one event handler and happen all together when triggered.
 
 As mentioned above, what I encountered when I was so immature with JS, is something similiar like the code above, I assigned one or more event handler with some functions to global objects like window or document, but somehow nothing happens, because the same event handler has already been assigned somewhere else and is more priorer in the code queue. 
 
@@ -44,17 +44,12 @@ But actually there is a way to really "add" but not "override" new functions to 
 		console.log( 'bar' );
 	});
 
-	window.addEventListener('click', function() {
-		console.log( 'more stuff' );
-	});
-
 Result will be 
 
 	foo
 	bar
-	more stuff
 
-Then what about now we apply one more traditional onclick function again following all above:
+Then what about we apply one more traditional onclick function again following all above:
 
 	window.onclick = function() {
 		console.log( 'foo' );
@@ -64,21 +59,18 @@ Then what about now we apply one more traditional onclick function again followi
 		console.log( 'bar' );
 	});
 
-	window.addEventListener('click', function() {
-		console.log( 'more stuff' );
-	});
-
 	window.onclick = function() {
-		console.log( 'what will happen?' );
+		console.log( 'more stuff?' );
 	};
 
 This time the result will be:
 
 	bar
 	more stuff
-	what will happen?
 
-Again, the later assigned one still overrides the previous onclick one, but dosen't affect the other two which are assigned with the addEventListener(); The only drawback of addEventListener is broswer compatibility, which is not supported by or under IE9. For more information please check on: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener. 
+Again, the later assigned one still overrides the previous onclick one, but dosen't affect the other one which is assigned with the addEventListener. Look at the order of the result, even if the 'more stuff' one is overriding the first one, but still runs at last, everything just respect the normal order by runing one by one. Actually we can assign functions as many as we want to an objects by using addEventListener without worrying the overriding issue. 
+
+The drawback of addEventListener is broswer compatibility, which is not supported under IE9 and not fully supported in some occasions. For more information please check on: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener. 
 
 <h2 id="practice">practice</h2>
 
@@ -113,7 +105,7 @@ Now here is the practice, when binding functions to event handlers, instead of p
 		}
 	}
 
-So here will be the only place to manage these event handlers. But if using addEventListener, we can theoretically add them wherever we want.
+So here will be the only place to manage these event handlers. If using addEventListener, we can basically add them wherever we want.
 
 
 

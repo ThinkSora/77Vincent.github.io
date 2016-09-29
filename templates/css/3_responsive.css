@@ -9,6 +9,10 @@
 		font-size: 0.95em;
 	}
 
+	.master {
+		padding: 1.5em;
+	}
+
 	.categories li {
 		margin: 0 10px;
 		font-size: 0.8em;
@@ -33,6 +37,14 @@
 		font-size: 0.9em;
 	}
 
+	.master {
+		padding: 1em;
+	}
+
+	.unit {
+		margin-bottom: 1em;
+	}
+
 	#page-post .demo {
 		margin-bottom: 2em;
 		padding-bottom: 2em;
@@ -43,10 +55,6 @@
 	}
 	#page-post .unit .bg-nav {
 		display: none;
-	}
-
-	.master {
-		padding: 1.6em;
 	}
 
 	.categories li {
@@ -61,7 +69,7 @@
 	section {
 		width: 100%;
 		float: none;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 	section:last-child {
@@ -71,7 +79,7 @@
 
 @media only screen and (max-width: 480px) {
 	.master {
-		padding: 1.25em;
+		padding: 0.75em;
 	}
 
 	.categories li {
