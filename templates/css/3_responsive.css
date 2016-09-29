@@ -19,9 +19,30 @@
 	}
 }
 
+@media only screen and (max-width: 960px) {
+	#page-post .content {
+		width: 78%;
+	}
+	#page-post .unit .bg-nav {
+		width: 22%;
+	}
+}
+
 @media only screen and (max-width: 770px) {
 	html {
 		font-size: 0.9em;
+	}
+
+	#page-post .demo {
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+	}
+
+	#page-post .content {
+		width: 100%;
+	}
+	#page-post .unit .bg-nav {
+		display: none;
 	}
 
 	.master {
@@ -46,7 +67,7 @@
 	section:last-child {
 		margin-left: 0;
 	}
-
+}
 
 @media only screen and (max-width: 480px) {
 	.master {

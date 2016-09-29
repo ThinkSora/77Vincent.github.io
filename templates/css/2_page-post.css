@@ -161,21 +161,21 @@ code {
     VINSLIDER
 ***************************************************/
 
-.vinslider ul.vinmain {
+.vinslider .vinmain {
 	height: 150px;
 }
 
-.vinslider ul.vinmain li {
+.vinslider .vinmain li {
 	background-color: rgb(200,200,200);
 	text-align: center;
 	display: table;
 }
 
-.vinslider ul.vinmain li:nth-child(even) {
+.vinslider .vinmain li:nth-child(even) {
 	background-color: #62acff;
 }
 
-.vinslider ul.vinmain li h1 {
+.vinslider .vinmain li h1 {
 	display: table-cell;
 	vertical-align: middle;
 	font-size: 3em;
