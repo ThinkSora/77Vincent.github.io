@@ -13,7 +13,7 @@
 
 			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475030015000.css"> 
+			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475127185000.css"> 
     </head>
 
     <body>
@@ -27,10 +27,10 @@
 			</a>
 
 			<ul>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="projects" href="/">projects</a>
 				</li>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="blogs" href="/">blogs</a>
 				</li>
 				<li><a href="/about">about</a></li>
@@ -44,13 +44,29 @@
 
 		<div role="main" class="master">
 	<div class="wrapper" id="page-post">
-		
-		<div class="unit jsColor markdown">
-		<h1 id="properly-manage-event-handler">Properly manage event handler</h1>
+		<div class="unit">
+			<div class="bg-nav">
+				<nav>
+					<ul>
+						<li class="title"><a href="&#x2F;blog-js-1-eventhandler">content</a></li>
+						<li class="index"><a href="#preface">preface</a></li>
+						<li class="index"><a href="#addEventListener">addEventListener</a></li>
+						<li class="index"><a href="#practice">practice</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="content">
+				
+				<div class="markdown">
+					<h1 id="title">Properly manage event handler</h1>
+
 <div class="meta">
 <p>category: front-end / javascript</p>
 <p>date: 2016-9-25</p>
 </div>
+
+<h2 id="preface">preface</h2>
 
 <p>I am not sure if you have met something like this before, but I am for sure that I had been troubled by it when I was dealing with my not well-organized custom Javascript.</p>
 <p>Let&#39;s take a look at this as an example:</p>
@@ -61,12 +77,14 @@
 window.onclick = function() {
     console.log( &#39;bar&#39; );
 };
-
-// result will only be &#39;bar&#39;
+</code></pre><p>Result will only be </p>
+<pre><code>bar
 </code></pre><p>Will there be two messages logged when we click?</p>
 <p>In face, only the second one will work as assigning a function to a DOM event object in this way, what will happen is &quot;takeover&quot; but not &quot;add&quot;, the new declaration will override the previous one. They won&#39;t share one event handler and happen all together when triggered.</p>
 <p>As mentioned above, what I encountered when I was so immature with JS, is something similiar like the code above, I assigned one or more event handler with some functions to global objects like window or document, but somehow nothing happens, because the same event handler has already been assigned somewhere else and is more priorer in the code queue. </p>
 <p>For productivity, I found I need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a &quot;why is it not working?&quot; hell. The reason why global objects are given here as an example is because they are most likely to be bound with hanlders here or there.</p>
+<h2 id="addEventListener">addEventListener() vs element.eventhandler</h2>
+
 <p>But actually there is a way to really &quot;add&quot; but not &quot;override&quot; new functions to an already declared one, which is addEventListener();</p>
 <pre><code>window.onclick = function() {
     console.log( &#39;foo&#39; );
@@ -76,11 +94,69 @@ window.addEventListener(&#39;click&#39;, function() {
     console.log( &#39;bar&#39; );
 });
 
-// result will be 
-// &#39;foo&#39;
-// &#39;bar&#39;
-</code></pre><p>The result here will be both &#39;foo&#39; and &#39;bar&#39;, and actually we can keep adding.</p>
+window.addEventListener(&#39;click&#39;, function() {
+    console.log( &#39;more stuff&#39; );
+});
+</code></pre><p>Result will be </p>
+<pre><code>foo
+bar
+more stuff
+</code></pre><p>Then what about now we apply one more traditional onclick function again following all above:</p>
+<pre><code>window.onclick = function() {
+    console.log( &#39;foo&#39; );
+};
 
+window.addEventListener(&#39;click&#39;, function() {
+    console.log( &#39;bar&#39; );
+});
+
+window.addEventListener(&#39;click&#39;, function() {
+    console.log( &#39;more stuff&#39; );
+});
+
+window.onclick = function() {
+    console.log( &#39;what will happen?&#39; );
+};
+</code></pre><p>This time the result will be:</p>
+<pre><code>bar
+more stuff
+what will happen?
+</code></pre><p>Again, the later assigned one still overrides the previous onclick one, but dosen&#39;t affect the other two which are assigned with the addEventListener(); The only drawback of addEventListener is broswer compatibility, which is not supported by or under IE9. For more information please check on: <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a>. </p>
+<h2 id="practice">practice</h2>
+
+<p>Now here is the practice, when binding functions to event handlers, instead of placing those event handlers here and there from time to time, I place them all in one place:</p>
+<pre><code>customJs = {
+    init: function() {
+        this.var1 = ...;
+        this.var2 = ...;
+
+        this.windowClick();
+        this.windowScroll();
+        this.windowResize();
+    },
+
+    windowClick: function() {
+        window.onclick = function() {
+            // stuff to do...
+        }
+    },
+
+    windowScroll: function() {
+        window.onscroll = function() {
+            // stuff to do...
+        }
+    },
+
+    windowResize: function() {
+        window.onresize = function() {
+            // stuff to do...
+        }
+    }
+}
+</code></pre><p>So here will be the only place to manage these event handlers. But if using addEventListener, we can theoretically add them wherever we want.</p>
+
+				</div>
+			</div>
 		</div>
 	</div>
 		</div>
@@ -90,7 +166,7 @@ window.addEventListener(&#39;click&#39;, function() {
 			<a href="http://laktek.github.com/punch">Punch</a>
 		</footer>
 
-		<script src="/js/all-1475030015000.js"></script> 
+		<script src="/js/all-1475145966000.js"></script> 
 
 	</body>
 

@@ -13,7 +13,7 @@
 
 			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475030015000.css"> 
+			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475127185000.css"> 
     </head>
 
     <body>
@@ -27,10 +27,10 @@
 			</a>
 
 			<ul>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="projects" href="/">projects</a>
 				</li>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="blogs" href="/">blogs</a>
 				</li>
 				<li><a href="/about">about</a></li>
@@ -44,17 +44,30 @@
 
 		<div role="main" class="master">
 	<div class="wrapper" id="page-post">
-		<div class="demo jsColor unit">
+		<div class="unit">
+			<div class="bg-nav">
+				<nav>
+					<ul>
+						<li class="title"><a href="&#x2F;blog-css-1-animationfillmode">content</a></li>
+						<li class="index"><a href="#demo">demo</a></li>
+						<li class="index"><a href="#issue">issue</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="content">
+				<div id="demo" class="demo">
     <h1>demo</h1>
     <div class="blog-css-1">
         <div class="message">
-            <h2>please hover on me</h2>
-            <h2>after several seconds the animation will beging then hover on me again</h2>
+            <h3>please hover on me</h3>
+            <h3>after several seconds the animation will beging then hover on me again</h3>
         </div>
     </div>
 </div>
-		<div class="unit jsColor markdown">
-		<h1 id="css-animation-fill-mode-forwards-issue">CSS animation-fill-mode: &#39;forwards&#39; issue</h1>
+				<div class="markdown">
+					<h1 id="issue">CSS animation-fill-mode: &#39;forwards&#39; issue</h1>
+
 <div class="meta">
 <p>category: front-end / css</p>
 <p>date: 2016-9-25</p>
@@ -80,6 +93,8 @@
 </code></pre><p>Maybe you also have noticed this, the hover effect loses its effect immediately after the animation begins, when the effect of animation overrides the effect of hovering if they are dealing with the same CSS property. Actually I think at this moment the animation ending status will take over any effect that has been set under other conditions whatever it is a hover, active or focus. And this only happens when the animation-fill-mode is set to forwards.</p>
 <p><strong>Conclusion: Be careful with using the animation-fill-mode: forwards. As it will somehow assign the top level of priority to the certain CSS property which is dealing with, even more prior than the ! important declartion.</strong></p>
 
+				</div>
+			</div>
 		</div>
 	</div>
 		</div>
@@ -89,7 +104,7 @@
 			<a href="http://laktek.github.com/punch">Punch</a>
 		</footer>
 
-		<script src="/js/all-1475030015000.js"></script> 
+		<script src="/js/all-1475145966000.js"></script> 
 
 	</body>
 

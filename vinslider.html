@@ -13,7 +13,7 @@
 
 			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475030015000.css"> 
+			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475127185000.css"> 
     </head>
 
     <body>
@@ -27,10 +27,10 @@
 			</a>
 
 			<ul>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="projects" href="/">projects</a>
 				</li>
-				<li class="jsColor jsType">
+				<li class="jsType">
 					<a data-type="blogs" href="/">blogs</a>
 				</li>
 				<li><a href="/about">about</a></li>
@@ -44,8 +44,28 @@
 
 		<div role="main" class="master">
 	<div class="wrapper" id="page-post">
-		<div class="jsColor unit demo">
-    <h1>vinslider - demo</h1>
+		<div class="unit">
+			<div class="bg-nav">
+				<nav>
+					<ul>
+						<li class="title"><a href="&#x2F;vinslider">vinslider</a></li>
+						<li class="index"><a href="#demo">demo</a></li>
+						<li class="index"><a href="#documentation">documentation</a></li>
+						<li class=""><a href="#example">code example</a></li>
+						<li class=""><a href="#installation">installation</a></li>
+						<li class=""><a href="#configuration">configuration</a></li>
+						<li class=""><a href="#dependency">dependency</a></li>
+						<li class=""><a href="#features">features</a></li>
+						<li class=""><a href="#demo">demo</a></li>
+						<li class=""><a href="#contributor">contributor</a></li>
+						<li class=""><a href="#license">license</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="content">
+				<div class="demo" id="demo">
+    <h1>demo</h1>
     <section>
         <h3>fade mode</h3>
         <div class="vinslider slider1">
@@ -123,10 +143,12 @@
     </section>
 </div>
 
-		<div class="unit jsColor markdown">
-		<h1 id="vinslider-documentations">Vinslider - documentations</h1>
+				<div class="markdown">
+					<h1 id="documentation">documentation</h1>
+
 <h4 id="light-weight-responsive-native-javascript-slider-carousel-module-highly-customizable-">Light weight, responsive, native Javascript slider / carousel module. Highly customizable.</h4>
-<h2 id="code-example">Code Example</h2>
+<h2 id="example">Code Example</h2>
+
 <h3 id="javascript-">Javascript:</h3>
 <pre><code>var selector = document.querySelector(&#39;DOM element&#39;);
 
@@ -162,13 +184,16 @@ var vinslider = new Vinslider(selector, options);
 <li>Feel free to override it for a custom style as you want.</li>
 </ul>
 <h2 id="installation">Installation</h2>
+
 <p>What you need are:</p>
 <ul>
 <li>vinslider.js</li>
 <li>vinslider.css (optional)</li>
 </ul>
 <p>Embed them into your project.</p>
-<h2 id="configuration-options">Configuration Options</h2>
+<p>Download here: <a href="https://github.com/77Vincent/vinslider">https://github.com/77Vincent/vinslider</a></p>
+<h2 id="configuration">Configuration Options</h2>
+
 <h3 id="mode-string">mode : String</h3>
 <blockquote>
 <p><strong>fade</strong>: Each slide fades in and fades out when sliding <strong>(Default)</strong>.</p>
@@ -244,20 +269,28 @@ var vinslider = new Vinslider(selector, options);
 <p>This is for changing the active class name of the current active element. Also the vinslider.css is using this class name as the selector. You can customize it into another classname if you want.</p>
 </blockquote>
 <h2 id="dependency">Dependency</h2>
+
 <p>None</p>
 <h2 id="features">Features</h2>
+
 <ul>
 <li>Vinslider will be immediately stopped if the DOM element is not found or improper and throw an error.</li>
 <li>Currently touch event on mobile devices is not supported yet.</li>
 <li>Pager(or bullet) are able to control the slider or carousel.</li>
+<li>Controller will be hidden in carousel mode if the actual amount of items is less than the amount of items to be displayed at a time.</li>
 </ul>
 <h2 id="demo">Demo</h2>
+
 <p>Go to <a href="http://www.77webtech.com/vinslider">http://www.77webtech.com/vinslider</a> to see the demo.</p>
 <h2 id="contributor">Contributor</h2>
+
 <p>Vincent Wen</p>
 <h2 id="license">License</h2>
+
 <p>Released under the MIT license: <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a></p>
 
+				</div>
+			</div>
 		</div>
 	</div>
 		</div>
@@ -267,7 +300,7 @@ var vinslider = new Vinslider(selector, options);
 			<a href="http://laktek.github.com/punch">Punch</a>
 		</footer>
 
-		<script src="/js/all-1475030015000.js"></script> 
+		<script src="/js/all-1475145966000.js"></script> 
 
 	</body>
 

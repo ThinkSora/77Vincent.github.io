@@ -1,3 +1,13 @@
+/**
+*
+*   @Title:     77webtech
+*   @Descr:     Central js controller for www.77webtech.com
+*   @Package:   Javascript
+*   @Copyright: 2016 (C) Vincent
+*   @Author:    Vincent Wen <www.77webtech.com/about> <wentianqi77@outlook.com>
+*
+**/
+
 var webtech = {
 
 	init: function() {
@@ -5,13 +15,12 @@ var webtech = {
 		this.master = document.querySelector('.master');
 		this.wrapper = document.querySelector('.wrapper');
 		this.header = document.querySelector('header');
-		this.title = document.querySelector('header a.title');
 		this.iden = "toggle";
 
 		this.indexController();
 		this.postController();
 		this.themeColor();
-		this.aboutDropdown();
+		this.smoothScroll();
 	},
 
 	indexController: function() {
@@ -23,9 +32,35 @@ var webtech = {
 
 	postController: function() {
 		var last = this.url.split('/');
+		if (last[last.length-1] !== "") {
+			this.stickyNav();
+		}
 		if (last[last.length-1] == "vinslider") {
 			this.vinslider();
 		}
+	},
+
+	smoothScroll: function() {
+		var a = document.getElementsByTagName('a');
+		for (var i=0; i<a.length; i++) {
+			a[i].addEventListener('click', function() {
+				var posi = window.pageYOffset;
+			});
+		}
+	},
+
+	stickyNav: function() {
+		var nav = document.querySelector('nav');
+		var self = this;
+		var pad = parseInt(window.getComputedStyle(self.master).paddingTop);
+		window.addEventListener('scroll', function() {
+			posi = window.pageYOffset;
+			if (posi > self.header.clientHeight + pad) {
+				vinJs.addClass(nav, self.iden);
+			}	else {
+				vinJs.removeClass(nav, self.iden);
+			}
+		});
 	},
 
 	typeSwitch: function() {
@@ -90,11 +125,11 @@ var webtech = {
 		/*	BACKGROUND COLOR
 		*	
 		*/
-		var jsColor = document.querySelectorAll('.jsColor');
+		var ob = document.querySelectorAll('.unit');
 		var self = this;
 
-		for (var i=0; i<jsColor.length; i++) {
-			jsColor[i].onmouseenter = function() {
+		for (var i=0; i<ob.length; i++) {
+			ob[i].onmouseenter = function() {
 				var r1 = Math.random();
 				var r2 = Math.random();
 				var r3 = Math.random();
@@ -105,19 +140,6 @@ var webtech = {
 
 				self.master.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			}
-		}
-	},
-
-	aboutDropdown: function() {
-		/*	ABOUT DROPDOWN SECTION
-		*	
-		*/
-		var self = this;
-		this.title.onmouseenter = function() {
-			vinJs.addClass(self.header, self.iden);
-		}
-		this.header.onmouseleave = function() {
-			vinJs.removeClass(this, self.iden);
 		}
 	},
 
@@ -168,3 +190,6 @@ var webtech = {
 window.onload = function() {
 	webtech.init();
 }
+
+
+

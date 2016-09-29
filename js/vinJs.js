@@ -1,22 +1,29 @@
-/*	A custom javascript library for basic helpper functions	
-*/
+/**
+*
+*	@Title: 	vinJs
+*	@Descr: 	A javascript library for native DOM manipulation
+*	@Package: 	Javascript
+*	@Copyright: Released under the MIT license: http://opensource.org/licenses/MIT
+*	@Author: 	Vincent Wen <www.77webtech.com/about> <wentianqi77@outlook.com>
+*
+**/
 
 var vinJs = {
 
 	addClass: function(object, classname) {
-		if (object.className.indexOf(classname) < 0) {
+		if (object !== undefined && object.className.indexOf(classname) < 0) {
 			object.className += ' ' + classname;
 		}
 	},
 
 	removeClass: function(object, classname) {
-		if (object.className.indexOf(classname) >= 0) {
+		if (object !== undefined && object.className.indexOf(classname) >= 0) {
 			object.className = object.className.replace(' ' + classname, '');
 		}
 	},
 
 	toggleClass: function(object, classname) {
-		if (object.className.indexOf(classname) >= 0) {
+		if (object !== undefined && object.className.indexOf(classname) >= 0) {
 			object.className = object.className.replace(' ' + classname, '');
 		}	else {
 			object.className += ' ' + classname;
