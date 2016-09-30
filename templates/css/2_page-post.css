@@ -243,3 +243,15 @@ code {
 .blog-css-1:hover {
 	background-color: #c0495a !important;
 }
+
+/***************************************************  
+    BLOG CSS 2
+***************************************************/
+
+.blog-css-2 .target {
+	color: red;
+}
+
+.blog-css-2 .target ~ p {
+	color: #62acff;
+}

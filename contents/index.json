@@ -66,7 +66,15 @@
 					"label": "blog-css-1-animationfillmode",
 					"date": "2016-9-25",
 					"tag": "front-end / css",
-					"info": "the 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "
+					"info": "The 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "
+				},
+				{
+					"title": "The general sibling selector tip",
+					"category": "css",
+					"label": "blog-css-2-sibling",
+					"date": "2016-9-30",
+					"tag": "front-end / css",
+					"info": "The general sibling selector selects all elements that are siblings of a specified element. But be careful that it only selects siblings underneath"
 				},
 				{
 					"title": "HTML",
