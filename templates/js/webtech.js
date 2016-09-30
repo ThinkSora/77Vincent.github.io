@@ -35,7 +35,7 @@ var webtech = {
 		if (last[last.length-1] !== "") {
 			this.stickyNav();
 		}
-		if (last[last.length-1] == "vinslider") {
+		if (last[last.length-1] == "project-vinslider") {
 			this.vinslider();
 		}
 	},

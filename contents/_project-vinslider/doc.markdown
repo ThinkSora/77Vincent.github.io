@@ -142,7 +142,7 @@ None
 
 <h2 id="demo">Demo</h2>
 
-Go to http://www.77webtech.com/vinslider to see the demo.
+Go to http://www.77webtech.com/project-vinslider to see the demo.
 
 <h2 id="contributor">Contributor</h2>
 

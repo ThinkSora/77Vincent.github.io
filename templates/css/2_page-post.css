@@ -135,11 +135,13 @@ code {
 	position: relative;
 	z-index: 1;
 	text-transform: capitalize;
+	overflow: auto;
 }
 
 #page-post nav.toggle {
 	position: fixed;
 	top: 0;
+	max-height: calc(100% - 1.5em);
 }
 
 #page-post nav li.title {

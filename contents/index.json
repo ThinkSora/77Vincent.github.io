@@ -11,7 +11,7 @@
 				{
 					"title": "vinslider",
 					"category": "utility",
-					"label": "vinslider",
+					"label": "project-vinslider",
 					"date": "2016-9-25",
 					"tag": "front-end / Javascript / utility",
 					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
@@ -19,7 +19,7 @@
 				{
 					"title": "vinJs",
 					"category": "infrastructure",
-					"label": "",
+					"label": "project-vinjs",
 					"date": "2016-9-22",
 					"tag": "front-end / javascript / infrastructure",
 					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated labors and make code life easy. Used throught out this website."
