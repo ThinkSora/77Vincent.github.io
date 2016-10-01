@@ -32,7 +32,7 @@ As mentioned above, what I encountered when I was so immature with JS, is someth
 
 For productivity, I found I need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a "why is it not working?" hell. The reason why global objects are given here as an example is because they are most likely to be bound with hanlders here or there.
 
-<h2 id="addEventListener">addEventListener() vs element.eventhandler</h2>
+<h2 id="addEventListener">about addEventListener</h2>
 
 But actually there is a way to really "add" but not "override" new functions to an already declared one, which is addEventListener();
 

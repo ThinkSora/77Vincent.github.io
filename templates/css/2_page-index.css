@@ -104,7 +104,7 @@
 ***************************************************/
 
 .preview {
-	padding-left: 2.8em;
+	padding-left: 2.25em;
 	overflow: hidden;
 	-webkit-transition: padding 0.3s ease, margin 0.3s ease;
 	-moz-transition: padding 0.3s ease, margin 0.3s ease;
@@ -133,7 +133,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 20px;
+	width: 10px;
 	height: 100%;
 	background: gray;
 }

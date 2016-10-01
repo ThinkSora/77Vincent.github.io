@@ -22,7 +22,7 @@
 					"label": "project-vinjs",
 					"date": "2016-9-22",
 					"tag": "front-end / javascript / infrastructure",
-					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated labors and make code life easy. Used throught out this website."
+					"info": "Light weight JS library for native DOM manipulation. Used throughtout this website."
 				},
 				{
 					"title": "vinalidate",
