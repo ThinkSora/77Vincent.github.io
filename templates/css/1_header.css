@@ -30,6 +30,7 @@ header {
 	-moz-transition: height 0.4s ease-out;
 	-o-transition: height 0.4s ease-out;
 	transition: height 0.4s ease-out;
+	border-bottom: 1px solid gray;
 }
 
 header:after {
