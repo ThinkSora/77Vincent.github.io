@@ -22,7 +22,6 @@ header {
 	height: auto;
 	padding: 18px;
 	font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti';
-	background-color: #fff;
 	z-index: 9;
 	position: relative;
 	overflow: hidden;
@@ -30,7 +29,9 @@ header {
 	-moz-transition: height 0.4s ease-out;
 	-o-transition: height 0.4s ease-out;
 	transition: height 0.4s ease-out;
-	border-bottom: 1px solid gray;
+	// border-bottom: 1px solid gray;
+	background-color: #000;
+	color: #fff;
 }
 
 header:after {
@@ -63,7 +64,7 @@ header .title {
 }
 
 header .title .img-wrapper {
-	width: 3em;
+	width: 2.5em;
 	margin-right: 10px;
 	display: inline-block;
 	vertical-align: middle;
@@ -76,14 +77,14 @@ header .title img {
 	-o-animation: rotate 30s linear 2s infinite;
 }
 
-header .title h1 {
+header .title h2 {
 	margin: 0;
 	display: inline-block;
 	vertical-align: middle;
 }
 
 header:hover {
-	box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.3);
+	// box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.3);
 }
 
 header .title:hover ~ .about {

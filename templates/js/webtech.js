@@ -19,7 +19,7 @@ var webtech = {
 
 		this.indexController();
 		this.postController();
-		this.themeColor();
+		// this.themeColor();
 		this.smoothScroll();
 	},
 
@@ -57,9 +57,9 @@ var webtech = {
 		window.addEventListener('scroll', function() {
 			posi = window.pageYOffset;
 			if (posi > self.header.clientHeight + pad) {
-				vinJs.addClass(nav, self.iden);
+				vjs.addClass(nav, self.iden);
 			}	else {
-				vinJs.removeClass(nav, self.iden);
+				vjs.removeClass(nav, self.iden);
 			}
 		});
 	},
@@ -80,22 +80,22 @@ var webtech = {
 				var condition = this.children[0].dataset.type;
 
 				if (condition.indexOf('projects') >= 0) {
-					vinJs.addClass(blogs, self.iden);
-					vinJs.removeClass(projects, self.iden);
+					vjs.addClass(blogs, self.iden);
+					vjs.removeClass(projects, self.iden);
 				}	else {
-					vinJs.addClass(projects, self.iden);
-					vinJs.removeClass(blogs, self.iden);
+					vjs.addClass(projects, self.iden);
+					vjs.removeClass(blogs, self.iden);
 				}
 			}
 		}
 
 		this.master.onclick = function(event) {
 			var t = event.target;
-			var c = vinJs.closest(event.target, 'section');
+			var c = vjs.closest(event.target, 'section');
 
 			if (c == undefined || c.className.indexOf('toggle') >= 0) {
-				vinJs.removeClass(projects, self.iden);
-				vinJs.removeClass(blogs, self.iden);
+				vjs.removeClass(projects, self.iden);
+				vjs.removeClass(blogs, self.iden);
 			}
 		}
 
@@ -103,19 +103,19 @@ var webtech = {
 			switchB[f].onclick = function(event) {
 				event.preventDefault();
 
-				var scope = vinJs.closest(this, 'section');
+				var scope = vjs.closest(this, 'section');
 				var children = scope.querySelectorAll('.preview');
 
 				for (var r=0; r<children.length; r++) {
-					vinJs.addClass(children[r], self.iden);
+					vjs.addClass(children[r], self.iden);
 					if (children[r].className.indexOf(this.dataset.categories) >= 0) {
-						vinJs.removeClass(children[r], self.iden);
+						vjs.removeClass(children[r], self.iden);
 					}
 				}
 
 				if (this.dataset.categories == 'all') {
 					for (var t=0; t<children.length; t++) {
-						vinJs.removeClass(children[t], self.iden);
+						vjs.removeClass(children[t], self.iden);
 					}
 				}
 			}
@@ -146,7 +146,7 @@ var webtech = {
 
 	vinslider: function() {
 		var slider1 = document.querySelector('.slider1');
-		new Vinslider(slider1, {
+		var x1 = new Vinslider(slider1, {
 			duration: 3800,
 			mode: 'fade'
 		});

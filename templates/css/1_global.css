@@ -94,7 +94,7 @@ li a {
 }
 
 li a:hover {
-	opacity: 0.5;
+	color: #09FFC1;
 	cursor: pointer;
 }
 
@@ -152,7 +152,7 @@ footer p {
 .master {
 	padding: 2em;
 	margin: 0 auto;
-	background-color: rgb(150,150,150);
+	background-color: rgb(240,240,240);
 	background-size: cover;
 	background-position: center;
 	-webkit-transition: background-color 0.3s linear;
@@ -175,7 +175,7 @@ footer p {
 .unit {
 	margin-bottom: 1.75em;
 	display: block;
-	border-radius: 7px;
+	// border-radius: 3px;
 	padding: 1.5em 2em;
 	background-color: #fff;
 	overflow: hidden;
@@ -255,7 +255,7 @@ footer p {
 	margin-top: 15px;
 	font-size: 0.75em;
 	text-transform: capitalize;
-	color: rgb(150,150,150);
+	color: rgb(175,175,175);
 }
 
 

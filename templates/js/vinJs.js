@@ -8,7 +8,11 @@
 *
 **/
 
-var vinJs = {
+var vjs = {
+
+	cl: function(object) {
+		console.log(object);
+	},
 
 	addClass: function(object, classname) {
 		if (object !== undefined && object.className.indexOf(classname) < 0) {
