@@ -152,7 +152,7 @@ var webtech = {
 		});
 
 		var slider2 = document.querySelector('.slider2');
-		new Vinslider(slider2, {
+		var x2 = new Vinslider(slider2, {
 			duration: 3000,
 			mode: 'slide',
 		});
@@ -191,6 +191,5 @@ var webtech = {
 window.onload = function() {
 	webtech.init();
 }
-
 
 
