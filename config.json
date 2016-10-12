@@ -7,7 +7,7 @@
 	},
 	"bundles": {
 		"/css/all.css": [
-			"./css/*.css"
+			"./css/style.css"
 		],
 
 		"/js/all.js": [
