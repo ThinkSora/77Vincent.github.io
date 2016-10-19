@@ -1,8 +1,13 @@
 // Basic
-@import 'main';
-@import 'var';
-@import 'mix';
-@import 'global';
+@import 'basic/reset.scss';
+
+// Lib
+@import 'lib/vinslider.scss';
+
+//Global
+@import 'global/var.scss';
+@import 'global/mix.scss';
+@import 'global/global.scss';
 
 // Partial
 @import 'partial/header';
@@ -10,6 +15,3 @@
 // Page
 @import 'page/index';
 @import 'page/post';
-
-// Lib
-@import 'lib/vinslider.scss';

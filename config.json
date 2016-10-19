@@ -6,10 +6,6 @@
 		"port": 9009
 	},
 	"bundles": {
-		"/css/all.css": [
-			"./css/style.css"
-		],
-
 		"/js/all.js": [
 			"./js/*.js"
 		]

@@ -15,7 +15,7 @@
 .markdown .meta {
 	opacity: 0.7;
 	margin-bottom: 6em;
-	// color: #55FFED;
+	// color: $color-theme;
 }
 
 .markdown .meta p {
@@ -58,7 +58,7 @@
 
 .markdown a {
 	text-decoration: underline;
-	color: #55FFED;
+	color: $color-theme;
 }
 
 .markdown a:hover {
@@ -68,15 +68,15 @@
 blockquote {
     padding: 0 1em;
     color: #222;
-    border-left: 0.25em solid #55FFED;
+    border-left: 0.25em solid $color-theme;
 }
 
 pre {
 	padding: 1.5em;
-	background-color: rgb(50, 50, 50);
+	background-color: $color-darkgray;
 	margin: 1.75em 0;
 	overflow: auto;
-	color: #fff;
+	color: $color-lighttheme;
 }
 
 code {
@@ -115,8 +115,6 @@ code {
     display: block;
     width: 20%;
     height: 100%;
-    // background-color: rgb(240, 240, 240);
-    // color: #fff;
     top: 0;
     position: absolute;
     left: 0;
@@ -162,7 +160,7 @@ code {
 }
 
 #page-post nav li.index a {
-	border-left: 4px solid #55FFED;
+	border-left: 4px solid $color-theme;
 	padding-left: 0.35em;
 }
 
@@ -185,7 +183,7 @@ code {
 }
 
 .vinslider .vinmain li:nth-child(even) {
-	background-color: #55FFED;
+	background-color: $color-lighttheme;
 }
 
 .vinslider .vinmain li h1 {
@@ -197,7 +195,7 @@ code {
 }
 
 .vinslider .vinpager ul li {
-	background-color: rgb(230,230,230);
+	background-color: $color-lightgray;
 	border: none;
 	height: 10px;
 	width: 10px;
@@ -223,7 +221,7 @@ code {
 ***************************************************/
 
 @keyframes forwardsDemo {
-	from {background-color: #55FFED;}
+	from {background-color: $color-theme;}
 	to {background-color: gray;}
 }
 
@@ -242,7 +240,7 @@ code {
 	text-align: center;
 	height: 200px;
 	width: 100%;
-	background-color: #55FFED;
+	background-color: $color-theme;
 	cursor: pointer;
 	-webkit-animation: forwardsDemo 2s 7s forwards;
 	-moz-animation: forwardsDemo 2s 7s forwards;
@@ -263,5 +261,5 @@ code {
 }
 
 .blog-css-2 .target ~ p {
-	color: #55FFED;
+	color: $color-theme;
 }
