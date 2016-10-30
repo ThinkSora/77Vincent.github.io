@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'DIN-Regular';
+	src: url('font/DIN-Regular.eot') format('embedded-opentype'),
+		 url('font/DIN-Regular.woff') format('woff'),
+		 url('font/DIN-Regular.otf') format('opentype'),
+		 url('font/DIN-Regular.svg') format('svg'),
+		 url('font/DIN-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti';
+	font-size: 1.05em;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.5em 0;
+	text-transform: capitalize;
+}
+h1 {
+	font-size: 3.75em;
+	margin: 1.25em 0;
+	text-align: center;
+	font-weight: bold;
+}
+h2 {
+	font-size: 2.25em;
+}
+h3 {
+	font-size: 1.3em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1em;
+	opacity: 0.6;
+	text-align: center;
+}
+h6 {
+	font-size: 1em;
+}
+p {
+	line-height: 1.5;
+	font-size: 1.2em;
+	margin: 1em 0;
+}
+ol li,
+ul li {
+	padding: 5px 0;
+	line-height: 1.25;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+}
+pre {
+	background-color: rgb(235,235,235);
+	border: 1px solid rgb(200,200,200);
+	padding: 1.5em 2em;
+	margin: 1.5em 0;
+	border-radius: 7px;
+	font-size: 1.15em;
+	line-height: 1.5em;
+}
+.markdown {
+	h5 {
+		opacity: 0.5;
+		margin-bottom: 3em;
+	}
+
+	h2 {
+		margin-top: 2em;
+		padding-left: 0.5em;
+		border-left: 10px solid $color-theme;
+	}
+}

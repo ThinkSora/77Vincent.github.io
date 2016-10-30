@@ -1,0 +1,19 @@
+// Basic
+@import 'basic/reset';
+@import 'basic/common';
+
+// Lib
+
+//Global
+@import 'global/var';
+@import 'global/mixin';
+@import 'global/typography';
+@import 'global/global';
+
+// Partial
+@import 'partial/header';
+@import 'partial/footer';
+
+// Page
+@import 'page/index';
+@import 'page/about';

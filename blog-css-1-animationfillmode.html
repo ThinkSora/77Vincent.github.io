@@ -12,67 +12,31 @@
 			<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
 
 			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475127185000.css"> 
+			<link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
 
     <body>
 		<header class="">
+				<a href="/about" class="profile"></a>
+			<div class="wrapper">
+				<a href="/" class="title">
+					<div class="img-wrapper">
+						<img src="../image/77-logo.svg">
+					</div>
+					<h2>web tech blog</h2>
+				</a>
 
-			<a href="/" class="title">
-				<div class="img-wrapper">
-					<img src="../image/77-logo.svg">
+				<div class="about">
+					<p class="intro">A blog for sharing practices, works, ideas or issues mostly on front-end development</p>
 				</div>
-				<h1>web tech blog</h1>
-			</a>
-
-			<ul>
-				<li class="jsType">
-					<a data-type="projects" href="/">projects</a>
-				</li>
-				<li class="jsType">
-					<a data-type="blogs" href="/">blogs</a>
-				</li>
-				<li><a href="/about">about</a></li>
-			</ul>
-
-			<div class="about">
-				<p class="intro">A blog for sharing practices, works, ideas or issues mostly on front-end development</p>
 			</div>
-
 		</header>
 
 		<div role="main" class="master">
-	<div class="wrapper" id="page-post">
-		<div class="unit">
-			<div class="bg-nav">
-				<nav>
-					<ul>
-						<li class="title"><a href="&#x2F;blog-css-1-animationfillmode">content</a></li>
-						<li class="index"><a href="#demo">demo</a></li>
-						<li class="index"><a href="#issue">issue</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="content">
-				<div id="demo" class="demo">
-    <h1>demo</h1>
-    <div class="blog-css-1">
-        <div class="message">
-            <h3>please hover on me</h3>
-            <h3>after several seconds the animation will beging then hover on me again</h3>
-        </div>
-    </div>
-</div>
-				<div class="markdown">
-					<h1 id="issue">CSS animation-fill-mode: &#39;forwards&#39; issue</h1>
-
-<div class="meta">
-<p>category: front-end / css</p>
-<p>date: 2016-9-25</p>
-</div>
-
+	<div class="wrapper">
+		<div class="markdown">
+			<h1 id="css-animation-fill-mode-forwards">CSS animation-fill-mode: forwards</h1>
+<h5 id="css-2016-9-25-vincent-wen">CSS / 2016-9-25 / Vincent Wen</h5>
 <p>As the example shows above, a hover effect is applied to the lightblue block, making the background color to a rose pink when hovering. Also, an animation is applied to the block, which will start in a couple of seconds, turning the background color from the origin lightblue to gray. The animation-fill-mode is set to &#39;forwards&#39; (more information about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a>), which makes the element keep having the ending status of the animation, and after that, however, you will no longer be able to have the hover effect back again, even if with the important declaration, here is the code of the demo above, irrelevant parts have been removed:</p>
 <pre><code>    @keyframes forwardsDemo {
         from {background-color: #62acff;}
@@ -91,10 +55,8 @@
         background-color: #c0495a !important;
     }
 </code></pre><p>Maybe you also have noticed this, the hover effect loses its effect immediately after the animation begins, when the effect of animation overrides the effect of hovering if they are dealing with the same CSS property. Actually I think at this moment the animation ending status will take over any effect that has been set under other conditions whatever it is a hover, active or focus. And this only happens when the animation-fill-mode is set to forwards.</p>
-<p><strong>Conclusion: Be careful with using the animation-fill-mode: forwards. As it will somehow assign the top level of priority to the certain CSS property which is dealing with, even more prior than the ! important declartion.</strong></p>
+<p>Conclusion: Be careful with using the animation-fill-mode: forwards. As it will somehow assign the top level of priority to the certain CSS property which is dealing with, even more prior than the ! important declartion.</p>
 
-				</div>
-			</div>
 		</div>
 	</div>
 		</div>
@@ -104,7 +66,7 @@
 			<a href="http://laktek.github.com/punch">Punch</a>
 		</footer>
 
-		<script src="/js/all-1475145966000.js"></script> 
+		<script src="/js/all-1477826732356.js"></script> 
 
 	</body>
 

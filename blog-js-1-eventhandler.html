@@ -12,62 +12,32 @@
 			<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
 
 			<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-			<link rel="stylesheet" type="text/css" media="screen" href="/css/all-1475127185000.css"> 
+			<link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
 
     <body>
 		<header class="">
+				<a href="/about" class="profile"></a>
+			<div class="wrapper">
+				<a href="/" class="title">
+					<div class="img-wrapper">
+						<img src="../image/77-logo.svg">
+					</div>
+					<h2>web tech blog</h2>
+				</a>
 
-			<a href="/" class="title">
-				<div class="img-wrapper">
-					<img src="../image/77-logo.svg">
+				<div class="about">
+					<p class="intro">A blog for sharing practices, works, ideas or issues mostly on front-end development</p>
 				</div>
-				<h1>web tech blog</h1>
-			</a>
-
-			<ul>
-				<li class="jsType">
-					<a data-type="projects" href="/">projects</a>
-				</li>
-				<li class="jsType">
-					<a data-type="blogs" href="/">blogs</a>
-				</li>
-				<li><a href="/about">about</a></li>
-			</ul>
-
-			<div class="about">
-				<p class="intro">A blog for sharing practices, works, ideas or issues mostly on front-end development</p>
 			</div>
-
 		</header>
 
 		<div role="main" class="master">
-	<div class="wrapper" id="page-post">
-		<div class="unit">
-			<div class="bg-nav">
-				<nav>
-					<ul>
-						<li class="title"><a href="&#x2F;blog-js-1-eventhandler">content</a></li>
-						<li class="index"><a href="#preface">preface</a></li>
-						<li class="index"><a href="#addEventListener">addEventListener</a></li>
-						<li class="index"><a href="#practice">practice</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="content">
-				
-				<div class="markdown">
-					<h1 id="title">Properly manage event handler</h1>
-
-<div class="meta">
-<p>category: front-end / javascript</p>
-<p>date: 2016-9-25</p>
-</div>
-
+	<div class="wrapper">
+		<div class="markdown">
+			<h1 id="properly-manage-event-handler">Properly manage event handler</h1>
+<h5 id="javascript-2016-9-25-vincent-wen">Javascript / 2016-9-25 / Vincent Wen</h5>
 <h2 id="preface">preface</h2>
-
 <p>I am not sure if you have met something like this before, but I am for sure that I had been troubled by it when I was dealing with my not well-organized custom Javascript.</p>
 <p>Let&#39;s take a look at this as an example:</p>
 <pre><code>window.onclick = function() {
@@ -79,12 +49,11 @@ window.onclick = function() {
 };
 </code></pre><p>Result will only be </p>
 <pre><code>bar
-</code></pre><p>Will there be two messages logged when we click?</p>
-<p>In face, only the second one will work as assigning a function to a DOM event object in this way, what will happen is &quot;takeover&quot; but not &quot;add&quot;, the new declaration will override the previous one. They won&#39;t share one event handler and happen all together when triggered.</p>
+</code></pre><p>Why aren&#39;t there two messages logged at the same time?</p>
+<p>In face, assigning a function to a DOM event object in this way, what will happen is &quot;override&quot; but not &quot;add&quot;. They won&#39;t share one event handler and happen all together when triggered.</p>
 <p>As mentioned above, what I encountered when I was so immature with JS, is something similiar like the code above, I assigned one or more event handler with some functions to global objects like window or document, but somehow nothing happens, because the same event handler has already been assigned somewhere else and is more priorer in the code queue. </p>
 <p>For productivity, I found I need to organise those event handler in a better way. In fact, not only global objects but any object which is bound with event handler should be organised well otherwise it is likely to end up with a &quot;why is it not working?&quot; hell. The reason why global objects are given here as an example is because they are most likely to be bound with hanlders here or there.</p>
-<h2 id="addEventListener">addEventListener() vs element.eventhandler</h2>
-
+<h2 id="about-addeventlistener">about addEventListener</h2>
 <p>But actually there is a way to really &quot;add&quot; but not &quot;override&quot; new functions to an already declared one, which is addEventListener();</p>
 <pre><code>window.onclick = function() {
     console.log( &#39;foo&#39; );
@@ -93,15 +62,10 @@ window.onclick = function() {
 window.addEventListener(&#39;click&#39;, function() {
     console.log( &#39;bar&#39; );
 });
-
-window.addEventListener(&#39;click&#39;, function() {
-    console.log( &#39;more stuff&#39; );
-});
 </code></pre><p>Result will be </p>
 <pre><code>foo
 bar
-more stuff
-</code></pre><p>Then what about now we apply one more traditional onclick function again following all above:</p>
+</code></pre><p>Then what about we apply one more traditional onclick function again following all above:</p>
 <pre><code>window.onclick = function() {
     console.log( &#39;foo&#39; );
 };
@@ -110,20 +74,15 @@ window.addEventListener(&#39;click&#39;, function() {
     console.log( &#39;bar&#39; );
 });
 
-window.addEventListener(&#39;click&#39;, function() {
-    console.log( &#39;more stuff&#39; );
-});
-
 window.onclick = function() {
-    console.log( &#39;what will happen?&#39; );
+    console.log( &#39;more stuff?&#39; );
 };
 </code></pre><p>This time the result will be:</p>
 <pre><code>bar
 more stuff
-what will happen?
-</code></pre><p>Again, the later assigned one still overrides the previous onclick one, but dosen&#39;t affect the other two which are assigned with the addEventListener(); The only drawback of addEventListener is broswer compatibility, which is not supported by or under IE9. For more information please check on: <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a>. </p>
+</code></pre><p>Again, the later assigned one still overrides the previous onclick one, but dosen&#39;t affect the other one which is assigned with the addEventListener. Look at the order of the result, even if the &#39;more stuff&#39; one is overriding the first one, but still runs at last, everything just respect the normal order by runing one by one. Actually we can assign functions as many as we want to an objects by using addEventListener without worrying the overriding issue. </p>
+<p>The drawback of addEventListener is broswer compatibility, which is not supported under IE9 and not fully supported in some occasions. For more information please check on: <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a>. </p>
 <h2 id="practice">practice</h2>
-
 <p>Now here is the practice, when binding functions to event handlers, instead of placing those event handlers here and there from time to time, I place them all in one place:</p>
 <pre><code>customJs = {
     init: function() {
@@ -153,10 +112,8 @@ what will happen?
         }
     }
 }
-</code></pre><p>So here will be the only place to manage these event handlers. But if using addEventListener, we can theoretically add them wherever we want.</p>
+</code></pre><p>So here will be the only place to manage these event handlers. If using addEventListener, we can basically add them wherever we want.</p>
 
-				</div>
-			</div>
 		</div>
 	</div>
 		</div>
@@ -166,7 +123,7 @@ what will happen?
 			<a href="http://laktek.github.com/punch">Punch</a>
 		</footer>
 
-		<script src="/js/all-1475145966000.js"></script> 
+		<script src="/js/all-1477826732356.js"></script> 
 
 	</body>
 

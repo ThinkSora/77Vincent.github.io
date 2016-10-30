@@ -1,0 +1,23 @@
+body {
+	margin: 0 auto;
+	position: relative;
+}
+
+.master {
+	margin: 0 auto;
+	padding: 2em 0;
+	background-color: $color-lightgray;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.wrapper:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+

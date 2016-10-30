@@ -1,0 +1,29 @@
+.preview {
+	border-left: 3px solid $color-gray;
+	margin-bottom: 2.5em;
+	padding: 0 1em;
+	display: block;
+	overflow: hidden;
+	@include transition(border, 0.3s);
+
+	h2 {
+		margin-top: 0;
+	}
+
+	&:hover {
+		border-left: 6px solid $color-theme;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	article {
+		text-align: left;
+		cursor: pointer;
+
+		p {
+			margin: 0;
+		}
+	}
+}
