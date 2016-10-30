@@ -1,7 +1,0 @@
-{
-	"nav": [
-		{"label": "content", "href": "/blog-css-2-sibling", "class": "title"},
-		{"label": "demo", "href": "#demo", "class": "index"},
-		{"label": "issue", "href": "#issue", "class": "index"}
-	]
-}

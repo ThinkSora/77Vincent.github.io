@@ -1,98 +1,32 @@
 {
-	"section": [
+	"preview": [
 		{
-			"type": "projects",
-			"categories": [
-				{"label": "utility"},
-				{"label": "infrastructure"},
-				{"label": "fun"}
-			],
-			"preview": [
-				{
-					"title": "vinslider",
-					"category": "utility",
-					"label": "project-vinslider",
-					"date": "2016-9-25",
-					"tag": "front-end / Javascript / utility",
-					"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
-				},
-				{
-					"title": "vinJs",
-					"category": "infrastructure",
-					"label": "project-vinjs",
-					"date": "2016-9-22",
-					"tag": "front-end / javascript / infrastructure",
-					"info": "Light weight JS library for native DOM manipulation. Used throughtout this website."
-				},
-				{
-					"title": "vinalidate",
-					"category": "utility",
-					"label": "",
-					"date": "2016-9-22",
-					"tag": "front-end / Javascript / utility",
-					"info": "Javascript module for client-side form validation with customizable options."
-				},
-				{
-					"title": "spotlight",
-					"category": "fun",
-					"label": "",
-					"date": "2016-9-22",
-					"tag": "front-end / javascript / fun",
-					"info": "Light weight, easy-to-ues Javascript library for native DOM manipulation, to reduce repeated manual labors and make code life easy."
-				}
-			]
+			"title": "Vinslider",
+			"label": "vinslider",
+			"date": "2016-9-25",
+			"tag": "Javascript / utility",
+			"info": "Light weight, responsive, native Javascript slider / carousel module. Highly customizable."
 		},
-
-		{	
-			"type": "blogs",
-			"categories": [
-				{"label": "javascript"},
-				{"label": "css"},
-				{"label": "html"},
-				{"label": "other"}
-			],
-			"preview": [
-				{
-					"title": "Properly organize event handler",
-					"category": "javascript",
-					"label": "blog-js-1-eventhandler",
-					"date": "2016-9-25",
-					"tag": "front-end / Javascript",
-					"info": "Sometimes we run into a situation where we find the window.onscroll is not working as we expect, or even does not respond at all, that's because it might be assigned somewhere else already."
-				},
-				{
-					"title": "css animation-fill-mode: 'forwards' issue",
-					"category": "css",
-					"label": "blog-css-1-animationfillmode",
-					"date": "2016-9-25",
-					"tag": "front-end / css",
-					"info": "The 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "
-				},
-				{
-					"title": "The general sibling selector tip",
-					"category": "css",
-					"label": "blog-css-2-sibling",
-					"date": "2016-9-30",
-					"tag": "front-end / css",
-					"info": "The general sibling selector selects all elements that are siblings of a specified element. But be careful that it only selects siblings underneath"
-				},
-				{
-					"title": "HTML",
-					"category": "html",
-					"label": "",
-					"date": "2016-9-22",
-					"tag": "front-end / html",
-					"info": ""
-				},
-				{
-					"title": "other",
-					"category": "other",
-					"label": "",
-					"date": "2016-9-22",
-					"tag": "front-end / other",
-					"info": ""
-				}
-			]
+		{
+			"title": "wjs",
+			"label": "wjs",
+			"date": "2016-9-22",
+			"tag": "javascript / utility",
+			"info": "Light weight JS library for native DOM manipulation. Used throughtout this website."
+		},
+		{
+			"title": "Properly organize event handler",
+			"label": "blog-js-1-eventhandler",
+			"date": "2016-9-25",
+			"tag": "Javascript",
+			"info": "Sometimes we run into a situation where we find the window.onscroll is not working as we expect, or even does not respond at all, that's because it might be assigned somewhere else already."
+		},
+		{
+			"title": "css animation-fill-mode: 'forwards' issue",
+			"label": "blog-css-1-animationfillmode",
+			"date": "2016-9-25",
+			"tag": "CSS",
+			"info": "The 'forward' value of animation-fill-mode will make the propety unchangeable by hover after the animation is over. "
 		}
-	]
+	]	
 }

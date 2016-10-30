@@ -1,7 +1,0 @@
-{
-	"nav": [
-		{"label": "content", "href": "/blog-css-1-animationfillmode", "class": "title"},
-		{"label": "demo", "href": "#demo", "class": "index"},
-		{"label": "issue", "href": "#issue", "class": "index"}
-	]
-}

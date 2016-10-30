@@ -1,30 +1,16 @@
 {{> header }}
-	<div class="wrapper" id="page-index">
-		{{#section}}
-		<section id="{{type}}">
-			<div class="categories unit">
-				<h2 data-categories="all" class="jsCategories">{{type}}</h2>
-				<ul>
-					{{#categories}}
-					<li data-categories="{{label}}" class="jsCategories {{label}}"><a>{{label}}</a></li>
-					{{/categories}}
-				</ul>
+	<div class="wrapper">
+	{{#preview}}	
+	<a href="/{{label}}" class="preview" id="{{label}}">
+		<article>
+			<h2>{{title}}</h2>
+			<p>{{info}}</p>
+			<div class="meta">
+				<p>{{date}}</p>
+				<p>{{tag}}</p>
 			</div>
-
-			{{#preview}}	
-			<a href="/{{label}}" class="preview unit {{category}}" id="{{label}}">
-				{{! <aside></aside> }}
-				<article>
-					<h2>{{title}}</h2>
-					<p>{{info}}</p>
-					<div class="meta">
-						<p>{{date}}</p>
-						<p>{{tag}}</p>
-					</div>
-				</article>
-			</a>		
-			{{/preview}}
-		</section>
-		{{/section}}
+		</article>
+	</a>		
+	{{/preview}}
 	</div>
 {{> footer }}
