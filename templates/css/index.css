@@ -541,8 +541,7 @@ li > a {
   font-weight: normal;
   font-style: normal; }
 html {
-  font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti';
-  font-size: 1.05em; }
+  font-family: 'DIN-Regular', Helvetica, Arial, sans-serif, 'SimHei', 'STHeiti'; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
@@ -558,7 +557,7 @@ h2 {
   font-size: 2.25em; }
 
 h3 {
-  font-size: 1.3em; }
+  font-size: 1.8em; }
 
 h4 {
   font-size: 1.2em; }
@@ -573,7 +572,6 @@ h6 {
 
 p {
   line-height: 1.5;
-  font-size: 1.2em;
   margin: 1em 0; }
 
 ol li,
@@ -591,7 +589,6 @@ pre {
   padding: 1.5em 2em;
   margin: 1.5em 0;
   border-radius: 7px;
-  font-size: 1.15em;
   line-height: 1.5em; }
 
 .markdown h5 {
@@ -613,7 +610,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 900px; }
+  max-width: 870px; }
 
 .wrapper:after {
   display: block;
@@ -710,7 +707,7 @@ footer {
   -moz-transition: border, 0.3s, ease;
   -o-transition: border, 0.3s, ease;
   transition: border, 0.3s, ease; }
-  .preview h2 {
+  .preview h3 {
     margin-top: 0; }
   .preview:hover {
     border-left: 6px solid #7fa5ec; }
@@ -720,7 +717,12 @@ footer {
     text-align: left;
     cursor: pointer; }
     .preview article p {
-      margin: 0; }
+      margin: 0;
+      color: #969696; }
+    .preview article p:last-child {
+      font-size: 0.8em;
+      margin-top: 1em;
+      opacity: 0.5; }
 
 .contact:after {
   clear: both;
@@ -745,11 +747,5 @@ footer {
   -webkit-animation: rotate 0.6s linear;
   -moz-animation: rotate 0.6s linear;
   -o-animation: rotate 0.6s linear; }
-
-.meta {
-  margin-top: 15px;
-  font-size: 0.75em;
-  text-transform: capitalize;
-  color: #afafaf; }
 
 /*# sourceMappingURL=index.css.map */
