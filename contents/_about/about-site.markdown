@@ -1,8 +1,0 @@
-# about this blog
-
-This is tech blog which is about web technology, mostly about front-end development. I present my previews and latest works, practices and ideas of front-end developing in this blog, also there could be some articles or works from ohther authors which are amzing or could be of a lot of help. Hope you enjoy your visit here.
-
-About the projects in this blog, most of them are created during my daily work as a front-end developer in ITC, a creating digital agency based in Shanghai, China, and Saigon, Vietnam. For developing such utilities, especially relating to Javascript, I am usually not satisfied merely to develop something that fit the current needs of the project, but obsessed of giving them a greate adaptability, flexbility, extensibility
-and reusability for the future, other use, like a product, as I am a believer of modular design, and to me a module here means independent, and with some similarities in a certain pattern which would not change a lot.
-
-During the developing, to achieve what I pursuit, I always choose to use vanilla Javascript, which is, native Javascript. The reasons for this, one is performance although with the nowaday computers' performance the final result might be indistinctive. The other one and the most important one is for independency, in this case the user who are using these modules will not fall into the "dependency hell", I know for any other bigger project, dependencies or a dependency tree are almost unavoidable as to repeatedly creating "wheel" is not a good idea. But what I am tring to do is to find the balance of creating "wheels" vs using some existing ones.
