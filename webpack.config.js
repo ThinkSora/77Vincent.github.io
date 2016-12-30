@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var extractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: './src/app.js',
@@ -30,6 +31,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.(css|scss)$/,
+        loader: extractTextPlugin.extract({loader: ['css-loader', 'sass-loader']})
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
@@ -50,7 +55,10 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new extractTextPlugin({filename: 'build.css', disable: false, allChunks: true})
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
