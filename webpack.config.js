@@ -3,7 +3,7 @@ var webpack = require('webpack')
 var extractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/App.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
