@@ -11,33 +11,22 @@
 export default {
     data () {
         return {
-            blogs: [
-                {
-                    title: 'Vinslider',
-                    content: 'A homemade slider module written in native Javascript'
-                },
-                {
-                    title: 'Scaffold.css',
-                    content: 'A homemade slider module written in native Javascript'
-                },
-                {
-                    title: 'Properly manage your events',
-                    content: 'A homemade slider module written in native Javascript'
-                },
-                {
-                    title: 'Vinslider',
-                    content: 'A homemade slider module written in native Javascript'
-                },
-                {
-                    title: 'Scaffold.css',
-                    content: 'A homemade slider module written in native Javascript'
-                },
-                {
-                    title: 'Properly manage your events',
-                    content: 'A homemade slider module written in native Javascript'
-                }
-            ] 
+            blogs: ''
         }
+    },
+    methods: {
+        getData (url) {
+            this.$http
+                .get(url)
+                .then(response => {
+                    this.$set(this._data, 'blogs', response.body)
+                }, err => {
+                    console.log(err)
+                })
+        }
+    },
+    mounted () {
+        this.getData('/src/data/blogs.json') 
     }
 }
 </script>

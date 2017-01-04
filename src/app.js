@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 
+// Components
 import App from './components/App.vue'
 import About from './components/about.vue'
 import Blogs from './components/blogs.vue'
@@ -23,7 +24,6 @@ const routes = [
         component: Blogs 
     }
 ]
-
 const router = new VueRouter({
     routes
 })

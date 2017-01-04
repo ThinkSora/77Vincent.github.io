@@ -5,15 +5,19 @@
         <div class="wrapper">
             <router-view></router-view>
         </div>
+
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
 import appHeader from './header.vue'
+import appFooter from './footer.vue'
 
 export default {
     components: {
-        appHeader 
+        appHeader, 
+        appFooter 
     },
     data () {
         return {

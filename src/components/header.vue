@@ -12,12 +12,6 @@ export default {
         return {
         
         }
-    },
-    methods: {
-        blogs () {
-        }, 
-        about () {
-        } 
     }
 }
 </script>
