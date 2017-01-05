@@ -33,6 +33,11 @@ header {
         background-size: cover;
         background-position: center;
         @include transition(transform, 1.5s);
+
+        @media (max-width: $bp-mobile) {
+            width: 25px;
+            height: 25px;
+        }
         
         &:hover {
             @include transform-rotate(360deg);
