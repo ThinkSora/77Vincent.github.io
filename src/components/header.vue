@@ -46,12 +46,12 @@ header {
 
     .logo {
         float: left;
-        background-image: url(../assets/media/logo.svg);
+        background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
     }
     
     .photo {
         float: right;
-        background-image: url(../assets/media/photo.jpg);
+        background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-photo.jpg);
     }
 
     h1 {
