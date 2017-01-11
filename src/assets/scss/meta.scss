@@ -14,6 +14,7 @@ $bp-mobile: 480px;
 @mixin wrapper {
     max-width: $max-content-width; 
     margin: 0 auto;
+    padding: 75px 0 40px 0;
 
     @media (max-width: $max-content-width) {
         padding-right: 5%;
@@ -22,7 +23,6 @@ $bp-mobile: 480px;
 }
 .wrapper {
     @include wrapper;
-    padding-top: 75px;
 }
 
 @mixin transition($property: all, $duration: 0.5s, $timing: ease, $delay: 0s) {

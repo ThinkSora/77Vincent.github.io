@@ -1,7 +1,7 @@
 <template>
     <header>
         <router-link to="/blogs" class="logo navicon"></router-link>
-        <h1><strong>77</strong>weblog</h1>
+        <router-link to="/"><h1><strong>77</strong>weblog</h1></router-link>
         <router-link to="/about" class="photo navicon"></router-link>
     </header>
 </template>

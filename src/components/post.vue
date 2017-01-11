@@ -1,5 +1,5 @@
 <template>
-    <div id="blog">
+    <div id="post">
         {{$route.params.id}}
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/meta";
 
-#blog {
+#post {
 
 }
 

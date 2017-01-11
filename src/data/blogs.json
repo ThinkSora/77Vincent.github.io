@@ -11,12 +11,12 @@
     },
     {
         "title": "Properly manage your events",
-        "href": "/blog/1",
+        "href": "/post/1",
         "content": "Sometimes we run into a situation where we find the window.onscroll is not working as we expected, or even does not respond at all, that's because it might be assigned somewhere else already."
     },
     {
         "title": "Functinal programming in JS glimpse",
-        "href": "/blog/2",
+        "href": "/post/2",
         "content": ""
     }
 ] 
