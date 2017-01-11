@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import App from './components/App.vue'
 import About from './components/about.vue'
 import Blogs from './components/blogs.vue'
+import Blog from './components/blog.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -22,6 +23,10 @@ const routes = [
     {
         path: '/blogs',
         component: Blogs 
+    },
+    {
+        path: '/blog/:id',
+        component: Blog 
     }
 ]
 const router = new VueRouter({

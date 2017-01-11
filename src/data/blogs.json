@@ -1,14 +1,22 @@
 [
     {
         "title": "Vinslider",
+        "href": "http://www.77webtech.com/vinslider",
         "content": "A homemade slider module written in native Javascript"
     },
     {
         "title": "Scaffold.css",
+        "href": "https://github.com/77Vincent/scaffold.css",
         "content": "An all in one normalizing CSS for scaffolding morden websites."
     },
     {
         "title": "Properly manage your events",
+        "href": "/blog/1",
         "content": "Sometimes we run into a situation where we find the window.onscroll is not working as we expected, or even does not respond at all, that's because it might be assigned somewhere else already."
+    },
+    {
+        "title": "Functinal programming in JS glimpse",
+        "href": "/blog/2",
+        "content": ""
     }
 ] 

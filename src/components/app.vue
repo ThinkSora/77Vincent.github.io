@@ -33,8 +33,9 @@ export default {
 html {
     line-height: 1.5;
     font-family: monospace;
-    background-color: rgb(250,250,250);
+    background-color: $color-white; 
 }
+
 pre {
     -moz-white-space: pre-wrap;
     -o-white-space: pre-wrap;
@@ -50,9 +51,6 @@ a {
 }
 
 #app {
-    .wrapper {
-        @include wrapper;
-    }
 }
 
 

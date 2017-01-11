@@ -1,7 +1,7 @@
 <template>
     <div id="blogs">
         <section v-for="item in blogs">
-            <a href=""><h2>{{item.title}}</h2></a>
+            <router-link v-bind:to="item.href"><h2>{{item.title}}</h2></router-link>
             <p>{{item.content}}</p>
        </section>
     </div>

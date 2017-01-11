@@ -1,8 +1,8 @@
 <template>
     <header>
-        <router-link to="/blogs" class="logo"></router-link>
+        <router-link to="/blogs" class="logo navicon"></router-link>
         <h1><strong>77</strong>weblog</h1>
-        <router-link to="/about" class="photo"></router-link>
+        <router-link to="/about" class="photo navicon"></router-link>
     </header>
 </template>
 
@@ -16,16 +16,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/scss/meta";
 
 header {
-    padding: 21px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px;
     text-align: center;
-    margin-bottom: 27px;
+    background: $color-white;
+    opacity: 0.9;
 
-    .logo,
-    .photo {
+    .navicon {
         width: 35px;
         height: 35px;
         border-radius: 50%;
@@ -42,18 +45,18 @@ header {
         &:hover {
             @include transform-rotate(360deg);
         }
-    }
 
-    .logo {
-        float: left;
-        background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
+        &.logo {
+            float: left;
+            background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
+        }
+
+        &.photo {
+            float: right;
+            background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-photo.jpg);
+        }
     }
     
-    .photo {
-        float: right;
-        background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-photo.jpg);
-    }
-
     h1 {
         display: inline-block;
         vertical-align: middle;
