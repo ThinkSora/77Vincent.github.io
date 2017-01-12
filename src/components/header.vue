@@ -23,14 +23,14 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 18px;
+    padding: 15px;
     text-align: center;
     background: $color-white;
     opacity: 0.9;
 
     .navicon {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         overflow: hidden;
         background-size: cover;
