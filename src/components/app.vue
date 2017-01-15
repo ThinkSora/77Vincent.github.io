@@ -36,6 +36,16 @@ html {
     background-color: $color-white; 
 }
 
+h2 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    @include transition(letter-spacing, 0.3s);
+
+    &:hover {
+        letter-spacing: 0.3em;
+    }
+}
+
 pre {
     -moz-white-space: pre-wrap;
     -o-white-space: pre-wrap;
@@ -46,11 +56,10 @@ pre {
     border-radius: 5px;
 }
 
-a {
-    color: inherit;
-}
-
 #app {
+    section {
+        margin: 3em 0;
+    }
 }
 
 

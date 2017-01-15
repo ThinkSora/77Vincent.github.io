@@ -1,7 +1,10 @@
 <template>
-    <div id="blogs">
-        <section v-for="item in blogs">
-            <router-link v-bind:to="item.href"><h2>{{item.title}}</h2></router-link>
+    <div id='blogs'>
+        <section v-for='item in blogs'>
+            <h2>
+                <router-link v-if='item.internal === "true"' v-bind:to='item.href'>{{item.title}}</router-link>
+                <a v-else v-bind:href='item.href'>{{item.title}}</a>
+            </h2>
             <p>{{item.content}}</p>
        </section>
     </div>
@@ -36,19 +39,6 @@ export default {
 
 #blogs {
     text-align: center;
-
-    section {
-        margin: 3em 0;
-
-        h2 {
-            margin: 0.3em 0;
-            @include transition(letter-spacing, 0.3s);
-
-            &:hover {
-                letter-spacing: 0.3em;
-            }
-        }
-    }
 }
 
 </style>

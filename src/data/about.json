@@ -1,53 +1,52 @@
-{
-    "Information": [
-        "Vincent Wen",
-        "Front-end developer",
-        "Shanghai, China"
-    ],
-    "Contact": { 
-        "Github": "https://github.com/77Vincent",
-        "Linkedin": "https://cn.linkedin.com/in/77vincent",
-        "Email": "wentianqi77@outlook.com",
-        "Wechat": "wentianqi77"
-    }, 
-    "Skills": {
-        "Basic": {
-            "Javascript": "advance",
-            "HTML": "advance",
-            "CSS": "advance"
-        },
-        "Compilers": {
-            "Sass": "intermediate",
-            "babel": "intermediate"
-        },
-        "Frameworks": {
-            "jQuery": "intermediate",
-            "Punch": "intermediate",
-            "Vue": "beginner"
-        },
-        "Tools": {
-            "Webpack": "intermediate",
-            "npm": "intermediate",
-            "Vim": "advance",
-            "Git": "intermediate",
-            "Bash": "intermediate",
-            "Photoshop": "advance"
-        }
+[
+    {
+        "section": "关于我",
+        "label": "information",
+        "content": [
+            {"title": "Vincent"},
+            {"title": "前端攻城狮"},
+            {"title": "上海"}
+        ]
     },
-    "OtherSkills": [
-        "Good communication skills",
-        "Time management",
-        "Team spirite",
-        "Easy-going personality",
-        "Positive and passionate"
-    ],
-    "Works": {
-        "Vinslider": "https://github.com/77Vincent/vinslider"
+    {
+        "section": "项目",
+        "label": "works",
+        "content": [
+            {
+                "title": "vinslider",
+                "href": "https://github.com/77Vincent/vinslider"
+            },
+            {
+                "title": "scaffold.css",
+                "href": "https://github.com/77Vincent/scaffold.css"
+            }
+        ]
     },
-    "Experience": {
-        "IT Consultis": "2015 - Present",
-        "Atelier Liu Yuyang Architects": "2014-2015",
-        "Hefei University of Technology(Architecture)": "2009-2014"
+    {
+        "section": "找到我",
+        "label": "contact",
+        "content": [
+            {
+                "title": "github",
+                "href": "https://github.com/77Vincent"
+            },
+            {
+                "title": "email",
+                "href": "wentianqi77@outlook.com"
+            },
+            {
+                "title": "linkedin",
+                "href": "https://cn.linkedin.com/in/77vincent"
+            }
+        ]
     },
-    "Introduction": "Hi guys, I am Vincent, you can call me 77, a front-end developer from China. I love all the things about web development (althrough mostly front-end for now) especially native Javascript developing to achieve amazing things and make code life easier and happier. If you want to have a talk about anything about web development, feel free to find me through the links above."
-}
+    {
+        "section": "关于这个博客",
+        "label": "about",
+        "content": [
+            {
+            "title": "Hi guys, I am Vincent, you can call me 77, a front-end developor from China. I love all the things about web development (althrough mostly front-end for now) especially native Javascript developing to achieve amazing things and make code life easier and happier. If you want to have a talk about anything about web development, feel free to contact me."
+            }
+        ]
+    }
+]
