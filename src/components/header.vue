@@ -10,7 +10,7 @@
 export default {
     data () {
         return {
-        
+
         }
     }
 }
@@ -41,7 +41,7 @@ header {
             width: 25px;
             height: 25px;
         }
-        
+
         &:hover {
             @include transform-rotate(360deg);
         }
@@ -56,9 +56,10 @@ header {
             background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-photo.jpg);
         }
     }
-    
+
     h1 {
         display: inline-block;
+        text-transform: uppercase;
         vertical-align: middle;
         margin: 0;
         letter-spacing: 0.5em;

@@ -14,19 +14,19 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        component: Blogs 
+        component: Blogs
     },
     {
         path: '/about',
-        component: About 
+        component: About
     },
     {
         path: '/blogs',
-        component: Blogs 
+        component: Blogs
     },
     {
         path: '/post/:id',
-        component: Post 
+        component: Post
     }
 ]
 const router = new VueRouter({
