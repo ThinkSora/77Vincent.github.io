@@ -26,7 +26,7 @@ export default {
         }
     },
     mounted () {
-        this.getData('/src/data/about.json') 
+        this.getData('/src/data/about.json')
     }
 }
 </script>
@@ -36,7 +36,7 @@ export default {
 
 #about {
     text-align: center;
-    
+
     a {
         display: block;
     }

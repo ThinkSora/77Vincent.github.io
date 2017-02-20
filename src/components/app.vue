@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <app-header></app-header>        
+        <app-header></app-header>
 
         <div class="wrapper">
             <router-view></router-view>
@@ -16,8 +16,8 @@ import appFooter from './footer.vue'
 
 export default {
     components: {
-        appHeader, 
-        appFooter 
+        appHeader,
+        appFooter
     },
     data () {
         return {
@@ -33,7 +33,7 @@ export default {
 html {
     line-height: 1.5;
     font-family: monospace;
-    background-color: $color-white; 
+    background-color: $color-white;
 }
 
 h2 {
@@ -61,6 +61,5 @@ pre {
         margin: 3em 0;
     }
 }
-
 
 </style>
