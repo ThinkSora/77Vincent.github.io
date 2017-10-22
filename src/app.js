@@ -10,7 +10,7 @@ import Post from "./components/post.vue";
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
-console.log(111111111);
+console.log(222222222);
 
 const router = new VueRouter({
   routes: [
