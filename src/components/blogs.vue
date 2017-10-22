@@ -41,13 +41,6 @@ export default {
 </script><style lang="scss">@import "../assets/scss/meta";
 #blogs {
   text-align: center;
-
-  section {
-    &:hover {
-      @include transition(background-color, 1.5s);
-      background-color: red;
-    }
-  }
 }
 
 </style>
