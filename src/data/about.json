@@ -1,0 +1,42 @@
+[{
+    "section": "关于我",
+    "label": "information",
+    "content": [{
+        "title": "Vincent"
+      },
+      {
+        "title": "应用开发攻城狮"
+      },
+      {
+        "title": ""
+      },
+      {
+        "title": "上海"
+      }
+    ]
+  },
+  {
+    "section": "找到我",
+    "label": "contact",
+    "content": [{
+        "title": "github",
+        "href": "https://github.com/77Vincent"
+      },
+      {
+        "title": "email",
+        "href": "wentianqi77@outlook.com"
+      },
+      {
+        "title": "linkedin",
+        "href": "https://cn.linkedin.com/in/77vincent"
+      }
+    ]
+  },
+  {
+    "section": "关于这个博客",
+    "label": "about",
+    "content": [{
+      "title": "Hi guys, I am Vincent, you can call me 77, a front-end developor from China. I love all the things about web development (althrough mostly front-end for now) especially native Javascript developing to achieve amazing things and make code life easier and happier. If you want to have a talk about anything about web development, feel free to contact me."
+    }]
+  }
+]
