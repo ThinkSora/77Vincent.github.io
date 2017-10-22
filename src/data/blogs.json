@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Vinslider",
+        "internal": "false",
+        "href": "http://www.77webtech.com/vinslider",
+        "content": "超轻量级，原生Javascript幻灯片模组"
+    },
+    {
+        "title": "Scaffold.css",
+        "internal": "false",
+        "href": "https://github.com/77Vincent/scaffold.css",
+        "content": "增强的初始化CSS, 包含浏览器渲染还原和辅助Class"
+    },
+    {
+        "title": "vinvim",
+        "internal": "false",
+        "href": "https://github.com/77Vincent/vinvim",
+        "content": "个人Vim和bash配置，让‘全命令行’工作流体验更流畅！"
+    },
+    {
+        "title": "如何在JS中恰当地管理事件",
+        "internal": "true",
+        "href": "/post/1",
+        "content": "理解addEventlistener和普通事件绑定诸如onclick, onresize的区别，恰当的管理事件绑定。"
+    }
+] 
