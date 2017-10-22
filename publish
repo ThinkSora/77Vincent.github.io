@@ -1,6 +1,0 @@
-npm run build
-git status
-git add .
-git commit -m "publish"
-git push 
-git push origin develop:master

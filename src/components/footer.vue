@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Built and powered by Vue.js and webpack</p>
+        <p>Powered by Vue.js</p>
     </footer>
 </template>
 
