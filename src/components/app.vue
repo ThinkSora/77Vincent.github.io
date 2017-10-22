@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <app-header></app-header>
+    
 
     <div class="wrapper">
       <router-view></router-view>
@@ -11,8 +12,8 @@
 </template>
 
 <script>
-import appHeader from './header.vue'
-import appFooter from './footer.vue'
+import appHeader from './header.vue';
+import appFooter from './footer.vue';
 
 export default {
   components: {
@@ -20,7 +21,7 @@ export default {
     appFooter
   },
   data() {
-    return {}
+    return {};
   }
 }
 </script>
@@ -33,6 +34,34 @@ html {
   line-height: 1.5;
   font-family: monospace;
   background-color: $color-white;
+}
+
+.wrapper {
+  // max-width: $bp-desktop;
+  margin: 0 auto;
+  padding: 75px 0 20px 0;
+  @media (max-width: 800px) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.icon-loading {
+  &:before {
+    animation: spin 1.5s linear infinite;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
+    background-size: contain;
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+  }
 }
 
 h2 {
@@ -56,7 +85,9 @@ pre {
 
 #app {
   section {
-    margin: 3em 0;
+    margin: 0.6em 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
   }
 }
 </style>
