@@ -12,6 +12,7 @@
   "dependencies": {
     "scaffold.css": "^1.2.1",
     "vue": "^2.5.2",
+    "vue-markdown": "^2.2.4",
     "vue-resource": "^1.3.4",
     "vue-router": "^2.8.1"
   },

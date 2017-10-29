@@ -1,22 +1,28 @@
 <template>
   <div id="blogs">
     <div class="icon-loading" v-show="loading"></div>
+    <vue-markdown :source="blogs"></vue-markdown>
 
-    <section v-if="!item.fork && excludedItems.indexOf(item.name) < 0" v-for="item in blogs">
+    <!-- <section v-if="!item.fork && excludedItems.indexOf(item.name) < 0" v-for="item in blogs">
       <h2>
         <a v-bind:href="item.html_url">{{item.name}}</a>
       </h2>
       <p>{{item.description}}</p>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
+import VueMarkdown from "vue-markdown";
+
 export default {
+  components: {
+    VueMarkdown
+  },
   data() {
     return {
       loading: true,
-      blogs: '',
+      blogs: "",
       excludedItems: [
         "angular-app",
         "instant"
@@ -26,7 +32,12 @@ export default {
   methods: {
     getData(url) {
       this.$http.get(url).then(response => {
-        this.$set(this.$data, 'blogs', response.body);
+
+        // process the markdown text
+        let data = response.body
+          .replace("github.com", "api.github.com/repos");
+
+        this.$set(this.$data, "blogs", data);
         this.$data.loading = false;
       }, err => {
         console.log(err);
@@ -34,11 +45,15 @@ export default {
     }
   },
   mounted() {
-    this.getData("https://api.github.com/users/77Vincent/repos");
+    this.getData("https://raw.githubusercontent.com/77Vincent/blog/master/README.md");
   }
 }
 
-</script><style lang="scss">@import "../assets/scss/meta";
+</script>
+
+<style lang="scss">
+@import "../assets/scss/meta";
+
 #blogs {
   text-align: center;
 
