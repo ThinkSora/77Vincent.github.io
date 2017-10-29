@@ -3,7 +3,7 @@ import VueResource from "vue-resource";
 import VueRouter from "vue-router";
 
 // Components
-import App from "./components/App.vue";
+import App from "./components/app.vue";
 import About from "./components/about.vue";
 import Blogs from "./components/blogs.vue";
 import Post from "./components/post.vue";
