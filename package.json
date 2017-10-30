@@ -10,6 +10,9 @@
     "release": "npm run build; git add .; git commit -m 'update master with commits on develop'; git push; git checkout master; git pull origin develop; git push; git checkout develop"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "moment": "^2.19.1",
+    "normalize.css": "^7.0.0",
     "scaffold.css": "^1.2.1",
     "vue": "^2.5.2",
     "vue-markdown": "^2.2.4",

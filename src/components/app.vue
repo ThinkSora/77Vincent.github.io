@@ -27,13 +27,33 @@ export default {
 </script>
 
 <style lang="scss">
+// @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/scaffold.css/scaffold.css";
 @import "../assets/scss/meta";
 
 html {
   line-height: 1.5;
   font-family: monospace;
-  background-color: $color-white;
+  position: relative;
+  // background-color: $color-white;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../assets/mountain.png");
+    background-size: cover;
+    filter: blur(15px);
+    -ms-filter: blur(15px);
+    -webkit-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: -1;
+    opacity: 0.2;
+  }
 }
 
 .wrapper {
@@ -82,11 +102,9 @@ pre {
   border-radius: 5px;
 }
 
-#app {
-  section {
-    margin: 0.6em 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-  }
+section {
+  margin: 0.6em 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 </style>
