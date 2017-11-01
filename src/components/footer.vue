@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/scss/meta";
+@import "../assets/meta";
 
 footer {
     background: $color-darkgray;

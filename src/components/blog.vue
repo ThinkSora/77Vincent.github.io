@@ -1,7 +1,10 @@
 <template>
   <div id="blog">
     <div class="icon-loading" v-show="loading"></div>
-    <vue-markdown :source="blog"></vue-markdown>
+
+    <div class="markdown">
+      <vue-markdown :source="blog"></vue-markdown>
+    </div>
   </div>
 </template>
 
@@ -19,17 +22,21 @@ export default {
     };
   },
   mounted() {
+    const url = `https://api.github.com/repos/77Vincent/blog/issues/${this.$route.params.id}`;
 
+    this.$http.get(url).then(response => {
+      console.log(response.data)
+      this.$set(this.$data, "blog", response.data.body);
+      this.$data.loading = false;
+    }, err => {
+      console.log(err);
+    });
   }
 }
 
 </script>
 
-<style lang="scss">
-@import "../assets/scss/meta";
-
-#blogs {
-  text-align: center;
-}
+<style lang="scss" scoped>
+@import "../assets/meta";
 
 </style>

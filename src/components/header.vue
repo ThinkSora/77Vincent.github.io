@@ -1,7 +1,7 @@
 <template>
   <header>
     <a href="https://github.com/77Vincent/77Vincent.github.io" class="logo navicon"></a>
-    <router-link to="/"><h1><strong>77</strong>weblog</h1></router-link>
+    <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
   </header>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/meta";
+@import "../assets/meta";
 header {
   position: fixed;
   top: 0;
@@ -55,7 +55,7 @@ header {
     text-transform: uppercase;
     vertical-align: middle;
     margin: 0;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     animation: expand 7s 1s ease infinite;
     strong {
       display: inline-block;

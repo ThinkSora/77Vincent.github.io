@@ -27,15 +27,13 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/scaffold.css/scaffold.css";
-@import "../assets/scss/meta";
+@import "../assets/meta";
 
 html {
   line-height: 1.5;
   font-family: monospace;
   position: relative;
-  // background-color: $color-white;
 
   &:before {
     content: "";
@@ -47,18 +45,28 @@ html {
     top: 0;
     background-image: url("../assets/mountain.png");
     background-size: cover;
-    filter: blur(15px);
-    -ms-filter: blur(15px);
-    -webkit-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    filter: blur(20px);
+    -ms-filter: blur(20px);
+    -webkit-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.15;
   }
+}
+
+p {
+  font-size: 14px;
+}
+
+pre {
+  border: 1px solid $color-gray;
 }
 
 .wrapper {
   margin: 0 auto;
-  padding: 75px 0 20px 0;
+  padding: 90px 0 20px 0;
+  max-width: 800px;
+  min-height: 80vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
@@ -84,7 +92,6 @@ html {
 }
 
 h2 {
-  text-decoration: underline;
   text-transform: capitalize;
   @include transition(letter-spacing, 0.3s);
   &:hover {
@@ -102,9 +109,19 @@ pre {
   border-radius: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 section {
   margin: 0.6em 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
+}
+
+.markdown {
+  h2 {
+    border-bottom: 1px solid $color-gray;
+  }
 }
 </style>
