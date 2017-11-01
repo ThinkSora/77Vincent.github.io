@@ -3,13 +3,11 @@
     <div class="icon-loading" v-show="loading"></div>
 
     <section v-for="item in blogs">
-      <router-link :to="{path: 'blog', params: {id: item.number}}">
+      <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
+        <span>{{dateFormat(item.updated_at)}}</span>
         <h2>{{item.title}}</h2>
-      </router-link>
-      <div class="blogs-info">
-        <span>上次编辑: {{dateFormat(item.updated_at)}}</span>
         <span>评论数: {{item.comments}}</span>
-      </div>
+      </router-link>
     </section>
   </div>
 </template>
@@ -34,42 +32,48 @@ export default {
         lastWeek: '[Last] dddd',
         sameElse: 'DD/MM/YYYY'
       });
-    },
-    getData(url) {
-      this.$http.get(url).then(response => {
-
-        this.$set(this.$data, "blogs", response.data);
-        this.$data.loading = false;
-      }, err => {
-        console.log(err);
-      });
     }
   },
   mounted() {
-    this.getData("https://api.github.com/repos/77Vincent/blog/issues");
+    const url = "https://api.github.com/repos/77Vincent/blog/issues";
+
+    this.$http.get(url).then(response => {
+
+      this.$set(this.$data, "blogs", response.data);
+      this.$data.loading = false;
+    }, err => {
+      console.log(err);
+    });
   }
 }
 
 </script>
 
-<style lang="scss">
-@import "../assets/scss/meta";
+<style lang="scss" scoped>
+@import "../assets/meta";
 
 #blogs {
-  text-align: center;
 
-<<<<<<< HEAD
-  section {
-    &:hover {
-      @include transition(background-color, 1.5s);
-      background-color: red;
-=======
-  .blogs-info {
-    font-size: 11px;
+  .blogs-link {
+    display: block;
 
     span {
-      margin: 0 10px;
->>>>>>> 2963d9b9e951e26eada2ee64733da513974b9247
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-child {
+        color: $color-darkgray;
+        font-size: 12px;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid $color-darkgray;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      display: inline-block;
+      width: 500px;
     }
   }
 }
