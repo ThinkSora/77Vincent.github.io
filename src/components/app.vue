@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    
 
     <div class="wrapper">
       <router-view></router-view>
@@ -22,7 +21,7 @@ export default {
   },
   data() {
     return {};
-  }
+  },
 }
 </script>
 
@@ -34,39 +33,47 @@ html {
   line-height: 1.5;
   font-family: monospace;
   position: relative;
+  letter-spacing: 1px;
 
   &:before {
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     left: 0;
     top: 0;
-    background-image: url("../assets/mountain.png");
+    background-image: url("../assets/mountain.jpeg");
     background-size: cover;
-    filter: blur(20px);
-    -ms-filter: blur(20px);
-    -webkit-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    filter: blur(30px);
+    -ms-filter: blur(30px);
+    -webkit-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     z-index: -1;
     opacity: 0.15;
   }
+}
+
+ul, ol {
+  list-style-position: inside;
 }
 
 p {
   font-size: 14px;
 }
 
-pre {
-  border: 1px solid $color-gray;
+blockquote {
+  border-left: 4px solid $color-gray;
+  margin-left: 0;
+  padding-left: 10px;
+  opacity: 0.5;
 }
 
 .wrapper {
   margin: 0 auto;
-  padding: 90px 0 20px 0;
+  padding: 80px 0 20px 0;
   max-width: 800px;
-  min-height: 80vh;
+  min-height: 90vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
@@ -93,6 +100,7 @@ pre {
 
 h2 {
   text-transform: capitalize;
+
   @include transition(letter-spacing, 0.3s);
   &:hover {
     letter-spacing: 0.3em;
@@ -100,6 +108,7 @@ h2 {
 }
 
 pre {
+  border: 1px solid $color-middlegray;
   -moz-white-space: pre-wrap;
   -o-white-space: pre-wrap;
   -white-space: pre-wrap;
@@ -107,6 +116,7 @@ pre {
   background-color: $color-lightgray;
   padding: 15px 25px;
   border-radius: 5px;
+  letter-spacing: 0;
 }
 
 a {
@@ -119,9 +129,58 @@ section {
   padding-bottom: 0.2em;
 }
 
+.breadcrumbs {
+  font-size: 12px;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .labels {
+    float: left;
+  }
+
+  .info {
+    float: right;
+    text-align: right;
+    color: $color-darkgray;
+
+    span {
+      &:after {
+        content: "/";
+        display: inline;
+        margin-left: 7px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.label {
+  padding: 2px 6px;
+  margin-right: 7px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
 .markdown {
+  font-size: 1.05em;
+  margin-top: 40px;
+
   h2 {
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid $color-middlegray;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-top: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 </style>

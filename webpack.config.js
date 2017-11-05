@@ -35,7 +35,7 @@ module.exports = {
         loader: extractTextPlugin.extract({loader: ["css-loader", "sass-loader"]})
       },
       {
-        test: /\.(png|jpg|gif|svg|eot|woff2|woff|ttf)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|eot|woff2|woff|ttf)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]?[hash]"
