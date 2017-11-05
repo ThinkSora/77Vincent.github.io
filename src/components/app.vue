@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    
 
     <div class="wrapper">
       <router-view></router-view>
@@ -22,7 +21,7 @@ export default {
   },
   data() {
     return {};
-  }
+  },
 }
 </script>
 
@@ -34,16 +33,17 @@ html {
   line-height: 1.5;
   font-family: monospace;
   position: relative;
+  letter-spacing: 1px;
 
   &:before {
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     left: 0;
     top: 0;
-    background-image: url("../assets/mountain.png");
+    background-image: url("../assets/mountain.jpeg");
     background-size: cover;
     filter: blur(20px);
     -ms-filter: blur(20px);
@@ -54,19 +54,26 @@ html {
   }
 }
 
+ul, ol {
+  list-style-position: inside;
+}
+
 p {
   font-size: 14px;
 }
 
-pre {
-  border: 1px solid $color-gray;
+blockquote {
+  border-left: 4px solid $color-gray;
+  margin-left: 0;
+  padding-left: 10px;
+  opacity: 0.6;
 }
 
 .wrapper {
   margin: 0 auto;
   padding: 90px 0 20px 0;
   max-width: 800px;
-  min-height: 80vh;
+  min-height: 90vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
@@ -93,6 +100,7 @@ pre {
 
 h2 {
   text-transform: capitalize;
+
   @include transition(letter-spacing, 0.3s);
   &:hover {
     letter-spacing: 0.3em;
@@ -100,6 +108,7 @@ h2 {
 }
 
 pre {
+  border: 1px solid $color-middlegray;
   -moz-white-space: pre-wrap;
   -o-white-space: pre-wrap;
   -white-space: pre-wrap;
@@ -120,8 +129,13 @@ section {
 }
 
 .markdown {
+  font-size: 1.05em;
+
   h2 {
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid $color-middlegray;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-top: 15px;
   }
 }
 </style>

@@ -25,7 +25,6 @@ export default {
     const url = `https://api.github.com/repos/77Vincent/blog/issues/${this.$route.params.id}`;
 
     this.$http.get(url).then(response => {
-      console.log(response.data)
       this.$set(this.$data, "blog", response.data.body);
       this.$data.loading = false;
     }, err => {
