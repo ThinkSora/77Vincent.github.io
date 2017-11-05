@@ -43,6 +43,7 @@ export default {
 @import "../assets/meta";
 
 #blogs {
+  font-family: monospace;
 
   .blogs-link {
     display: block;
@@ -50,7 +51,7 @@ export default {
     span {
       display: inline-block;
       vertical-align: middle;
-      font-size: 12px;
+      font-size: $font-s;
 
       &:first-child {
         color: $color-darkgray;
@@ -61,7 +62,7 @@ export default {
     }
 
     h2 {
-      font-size: 18px;
+      font-size: $font-l;
       display: inline-block;
       width: 500px;
     }

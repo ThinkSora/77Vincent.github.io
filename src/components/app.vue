@@ -40,9 +40,9 @@ export default {
 
 html {
   line-height: 1.5;
-  font-family: monospace;
   position: relative;
   letter-spacing: 1px;
+  font-family: sans-serif;
 
   &:before {
     content: "";
@@ -67,15 +67,12 @@ ul, ol {
   list-style-position: inside;
 }
 
-p {
-  font-size: 14px;
-}
-
 blockquote {
   border-left: 4px solid $color-gray;
   margin-left: 0;
   padding-left: 10px;
-  opacity: 0.5;
+  opacity: 0.45;
+  font-weight: bold;
 }
 
 .wrapper {
@@ -97,6 +94,9 @@ blockquote {
   z-index: 9;
   left: 50%;
   top: 50%;
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
 h2 {
@@ -118,7 +118,7 @@ pre {
   padding: 15px;
   border-radius: 5px;
   letter-spacing: 0;
-  font-size: 13px;
+  font-size: $font-m;
 }
 
 a {
@@ -130,9 +130,10 @@ section {
 }
 
 .breadcrumbs {
-  font-size: 12px;
+  font-size: $font-s;
   color: $color-darkgray;
-  font-family: sans-serif;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-middlegray;
 
   &:after {
     content: "";
@@ -155,6 +156,10 @@ section {
         margin-left: 7px;
       }
 
+      &:first-child {
+        font-weight: bold;
+      }
+
       &:last-child:after {
         display: none;
       }
@@ -166,13 +171,12 @@ section {
   padding: 2px 6px;
   margin-right: 7px;
   border-radius: 3px;
-  font-size: 12px;
   font-weight: bold;
 }
 
 .markdown {
-  font-size: 1.05em;
   margin-top: 40px;
+  font-size: 0.95em;
 
   h2 {
     border-bottom: 1px solid $color-middlegray;
