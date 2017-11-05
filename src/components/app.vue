@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <loading-bar
+      :on-error-done="errorDone"
+      :on-progress-done="progressDone"
+      ></loading-bar>
     <app-header></app-header>
 
     <div class="wrapper">
@@ -13,11 +17,20 @@
 <script>
 import appHeader from './header.vue';
 import appFooter from './footer.vue';
+import loadingBar from "vue2-loading-bar";
 
 export default {
   components: {
     appHeader,
-    appFooter
+    appFooter,
+    loadingBar
+  },
+  methods: {
+    errorDone() {
+
+    },
+    progressDone() {
+    }
   },
   data() {
     return {};
@@ -27,6 +40,9 @@ export default {
 
 <style lang="scss">
 @import "../../node_modules/scaffold.css/scaffold.css";
+@import "../../node_modules/prismjs/themes/prism.css";
+@import "../../node_modules/vue2-loading-bar/src/css/loading-bar.css";
+@import "../assets/vendor/font-awesome.min.css";
 @import "../assets/meta";
 
 html {
@@ -114,9 +130,10 @@ pre {
   -white-space: pre-wrap;
   white-space: pre-wrap;
   background-color: $color-lightgray;
-  padding: 15px 25px;
+  padding: 15px;
   border-radius: 5px;
   letter-spacing: 0;
+  font-size: 13px;
 }
 
 a {
@@ -124,13 +141,13 @@ a {
 }
 
 section {
-  margin: 0.6em 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  margin: 0.5em 0;
 }
 
 .breadcrumbs {
   font-size: 12px;
+  color: $color-darkgray;
+  font-family: sans-serif;
 
   &:after {
     content: "";
@@ -145,7 +162,6 @@ section {
   .info {
     float: right;
     text-align: right;
-    color: $color-darkgray;
 
     span {
       &:after {
@@ -166,6 +182,7 @@ section {
   margin-right: 7px;
   border-radius: 3px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .markdown {

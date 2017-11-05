@@ -1,12 +1,12 @@
 <template>
   <div id="blogs">
-    <div class="icon-loading" v-show="loading"></div>
+
 
     <section v-for="item in blogs">
       <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
         <span>{{dateFormat(item.updated_at)}}</span>
         <h2>{{item.title}}</h2>
-        <span>评论数: {{item.comments}}</span>
+        <span class="">{{item.comments}}评论</span>
       </router-link>
     </section>
   </div>
@@ -14,7 +14,6 @@
 
 <script>
 import fn from "../assets/fn.js";
-
 export default {
   data() {
     return {
@@ -51,12 +50,12 @@ export default {
     span {
       display: inline-block;
       vertical-align: middle;
+      font-size: 12px;
 
       &:first-child {
         color: $color-darkgray;
-        font-size: 12px;
-        padding-right: 20px;
-        margin-right: 20px;
+        padding-right: 15px;
+        margin-right: 10px;
         border-right: 1px solid $color-darkgray;
       }
     }

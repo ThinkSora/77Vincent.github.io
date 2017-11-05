@@ -10,7 +10,7 @@
       <div class="info">
         <span>{{blog.title}}</span>
         <span>{{dateFormat(blog.updated_at)}}</span>
-        <span>{{blog.comments}}</span>
+        <span>{{blog.comments}}评论</span>
       </div>
     </div>
 
@@ -22,6 +22,7 @@
 
 <script>
 import fn from "../assets/fn.js";
+import Prism from "Prismjs";
 import VueMarkdown from "vue-markdown";
 
 export default {
@@ -35,9 +36,12 @@ export default {
     };
   },
   methods: {
-    dateFormat: fn.dateFormat
+    dateFormat: fn.dateFormat,
   },
   mounted() {
+    setTimeout(() => {
+      Prism.highlightAll();
+    }, 400);
     const url = `https://api.github.com/repos/77Vincent/blog/issues/${this.$route.params.id}`;
 
     this.$http.get(url).then(response => {
