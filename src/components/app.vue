@@ -18,7 +18,6 @@ export default {
   components: {
     appHeader,
     appFooter,
-    loadingBar
   },
   methods: {
     errorDone() {
@@ -91,21 +90,13 @@ blockquote {
 }
 
 .icon-loading {
-  &:before {
-    animation: spin 1.5s linear infinite;
-    content: "";
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
-    background-size: contain;
-    position: absolute;
-    z-index: 9;
-    left: 50%;
-    top: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-  }
+  animation: spin 1.5s linear infinite;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
 }
 
 h2 {

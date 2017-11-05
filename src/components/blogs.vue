@@ -1,6 +1,6 @@
 <template>
   <div id="blogs">
-    <div class="icon-loading" v-show="loading"></div>
+    <div class="icon-loading icon-spinner" v-show="loading"></div>
 
     <section v-for="item in blogs">
       <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">

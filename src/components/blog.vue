@@ -1,10 +1,10 @@
 <template>
   <div id="blog">
-    <div class="icon-loading" v-show="loading"></div>
+    <div class="icon-loading icon-spinner" v-show="loading"></div>
 
     <div class="breadcrumbs">
       <div class="labels">
-        <span class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</span>
+        标签： <span class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</span>
       </div>
 
       <div class="info">
