@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import moment from "moment";
+import fn from "../assets/fn.js";
 
 export default {
   data() {
@@ -23,9 +23,7 @@ export default {
     };
   },
   methods: {
-    dateFormat(dateString) {
-      return moment().calendar(dateString);
-    }
+    dateFormat: fn.dateFormat
   },
   mounted() {
     const url = "https://api.github.com/repos/77Vincent/blog/issues";

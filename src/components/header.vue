@@ -8,11 +8,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-
-    }
-  }
 }
 </script>
 
@@ -22,10 +17,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px;
+  padding: 12px 15px;
   text-align: center;
   background: $color-white;
   opacity: 0.9;
+  z-index: 1;
+  border-bottom: 1px solid $color-middlegray;
   .navicon {
     width: 32px;
     height: 32px;
@@ -51,6 +48,7 @@ header {
     }
   }
   h1 {
+    font-size: 1.75em;
     display: inline-block;
     text-transform: uppercase;
     vertical-align: middle;
