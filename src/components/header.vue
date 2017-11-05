@@ -15,6 +15,7 @@ export default {
 @import "../assets/meta";
 header {
   position: fixed;
+  font-family: monospace;
   top: 0;
   width: 100%;
   padding: 12px 15px;
