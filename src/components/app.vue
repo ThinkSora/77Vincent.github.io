@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <loading-bar
-      :on-error-done="errorDone"
-      :on-progress-done="progressDone"
-      ></loading-bar>
     <app-header></app-header>
 
     <div class="wrapper">
@@ -17,7 +13,6 @@
 <script>
 import appHeader from './header.vue';
 import appFooter from './footer.vue';
-import loadingBar from "vue2-loading-bar";
 
 export default {
   components: {
@@ -41,7 +36,6 @@ export default {
 <style lang="scss">
 @import "../../node_modules/scaffold.css/scaffold.css";
 @import "../../node_modules/prismjs/themes/prism.css";
-@import "../../node_modules/vue2-loading-bar/src/css/loading-bar.css";
 @import "../assets/vendor/font-awesome.min.css";
 @import "../assets/meta";
 
