@@ -43,6 +43,7 @@ html {
   position: relative;
   letter-spacing: 1px;
   font-family: sans-serif;
+  min-height: 100vh;
 
   &:before {
     content: "";
@@ -77,7 +78,7 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  padding: 80px 0 20px 0;
+  padding: 80px 0 60px 0;
   max-width: 800px;
   min-height: 90vh;
   @media (max-width: 800px) {
