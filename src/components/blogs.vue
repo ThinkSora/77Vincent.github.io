@@ -1,14 +1,20 @@
 <template>
-  <div id="blogs">
+  <div class="blogs clearfix">
     <div class="icon-loading icon-spinner" v-show="loading"></div>
 
-    <section v-for="item in blogs">
-      <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
-        <span>{{dateFormat(item.updated_at)}}</span>
-        <h2>{{item.title}}</h2>
-        <span class="">{{item.comments}}评论</span>
-      </router-link>
-    </section>
+    <div class="content">
+      <section v-for="item in blogs">
+        <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
+          <span>{{dateFormat(item.updated_at)}}</span>
+          <h2>{{item.title}}</h2>
+          <span class="">{{item.comments}}评论</span>
+        </router-link>
+      </section>
+    </div>
+
+    <div class="filter">
+      <div class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in labels">{{item.name}}</div>
+    </div>
   </div>
 </template>
 
@@ -18,19 +24,26 @@ export default {
   data() {
     return {
       loading: true,
-      blogs: ""
+      blogs: "",
+      labels: ""
     };
   },
   methods: {
     dateFormat: fn.dateFormat
   },
   mounted() {
-    const url = "https://api.github.com/repos/77Vincent/blog/issues";
+    const issuesAPI = "https://api.github.com/repos/77Vincent/blog/issues";
+    const labelsAPI = "https://api.github.com/repos/77Vincent/blog/labels";
 
-    // fetch all blogs from gibhub API 
-    this.$http.get(url).then(response => {
-      this.$set(this.$data, "blogs", response.data);
+    this.$http.get(issuesAPI).then(res => {
+      this.$set(this.$data, "blogs", res.data);
       this.$data.loading = false;
+    }, err => {
+      console.log(err);
+    });
+
+    this.$http.get(labelsAPI).then(res => {
+      this.$set(this.$data, "labels", res.data);
     }, err => {
       console.log(err);
     });
@@ -42,30 +55,52 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/meta";
 
-#blogs {
+.blogs {
   font-family: monospace;
+}
 
-  .blogs-link {
-    display: block;
+.content {
+  float: left;
+  width: 80%;
+  border-right: 1px solid $color-middlegray;
+}
 
-    span {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: $font-s;
+.filter {
+  float: right;
+  width: 20%;
+  padding-left: 20px;
 
-      &:first-child {
-        color: $color-darkgray;
-        padding-right: 15px;
-        margin-right: 10px;
-        border-right: 1px solid $color-darkgray;
-      }
+  .label {
+    margin-bottom: 10px;
+    cursor: pointer;
+    @include transition(all, 0.2s);
+    &:hover {
+      background-color: $color-darkgray !important;
+      color: white;
     }
+  }
+}
 
-    h2 {
-      font-size: $font-l;
-      display: inline-block;
-      width: 500px;
+.blogs-link {
+  display: block;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $font-s;
+
+    &:first-child {
+      color: $color-darkgray;
+      padding-right: 15px;
+      margin-right: 10px;
+      border-right: 1px solid $color-darkgray;
     }
+  }
+
+  h2 {
+    font-size: $font-l;
+    display: inline-block;
+    width: 450px;
   }
 }
 

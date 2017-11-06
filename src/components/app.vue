@@ -173,6 +173,9 @@ section {
   margin-right: 7px;
   border-radius: 3px;
   font-weight: bold;
+  font-size: $font-s;
+  max-width: 120px;
+  display: inline-block;
 }
 
 .markdown {
