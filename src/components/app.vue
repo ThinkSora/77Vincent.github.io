@@ -157,7 +157,6 @@ button {
   cursor: pointer;
   @include transition(all, 0.2s);
   &:hover {
-    background-color: $color-lightgray !important;
     box-shadow: 0px 0px 6px $color-gray;
   }
 }
