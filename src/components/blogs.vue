@@ -12,8 +12,16 @@
       </section>
     </div>
 
-    <div class="filter">
-      <div class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in labels">{{item.name}}</div>
+    <div class="filters">
+      <section>
+        <div class="filter">筛选:</div>
+        <button class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in labels">{{item.name}}</button>
+      </section>
+      <section>
+        <div class="filter">排序:</div>
+        <button>按时间</button>
+        <button>按评论数</button>
+      </section>
     </div>
   </div>
 </template>
@@ -59,26 +67,30 @@ export default {
   font-family: monospace;
 }
 
+.filter {
+  border-bottom: 1px solid $color-middlegray;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+section {
+  margin: 1.5em 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 .content {
   float: left;
   width: 80%;
   border-right: 1px solid $color-middlegray;
 }
 
-.filter {
+.filters {
   float: right;
   width: 20%;
   padding-left: 20px;
-
-  .label {
-    margin-bottom: 10px;
-    cursor: pointer;
-    @include transition(all, 0.2s);
-    &:hover {
-      background-color: $color-darkgray !important;
-      color: white;
-    }
-  }
 }
 
 .blogs-link {
@@ -100,7 +112,14 @@ export default {
   h2 {
     font-size: $font-l;
     display: inline-block;
+    vertical-align: middle;
     width: 450px;
+    margin: 0;
+
+    @include transition(letter-spacing, 0.3s);
+    &:hover {
+      letter-spacing: 0.3em;
+    }
   }
 }
 

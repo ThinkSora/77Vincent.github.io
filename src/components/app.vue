@@ -42,26 +42,9 @@ html {
   line-height: 1.5;
   position: relative;
   letter-spacing: 1px;
-  font-family: sans-serif;
+  font-family: Arial, "SimHei", sans-serif;
   min-height: 100vh;
-
-  &:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-image: url("../assets/mountain.jpeg");
-    background-size: cover;
-    filter: blur(30px);
-    -ms-filter: blur(30px);
-    -webkit-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    z-index: -1;
-    opacity: 0.15;
-  }
+  background-color: $color-white;
 }
 
 ul, ol {
@@ -78,7 +61,7 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  padding: 80px 0 60px 0;
+  padding: 90px 0 60px 0;
   max-width: 800px;
   min-height: 90vh;
   @media (max-width: 800px) {
@@ -100,13 +83,8 @@ blockquote {
   margin-left: -10px;
 }
 
-h2 {
-  text-transform: capitalize;
-
-  @include transition(letter-spacing, 0.3s);
-  &:hover {
-    letter-spacing: 0.3em;
-  }
+img {
+  max-width: 100%;
 }
 
 pre {
@@ -126,14 +104,9 @@ a {
   text-decoration: none;
 }
 
-section {
-  margin: 0.5em 0;
-}
-
 .breadcrumbs {
   font-size: $font-s;
   color: $color-darkgray;
-  padding-bottom: 10px;
   border-bottom: 1px solid $color-middlegray;
 
   &:after {
@@ -168,14 +141,25 @@ section {
   }
 }
 
-.label {
+button {
+  background-color: $color-middlegray;
   padding: 2px 6px;
+  margin-bottom: 10px;
   margin-right: 7px;
   border-radius: 3px;
   font-weight: bold;
   font-size: $font-s;
   max-width: 120px;
-  display: inline-block;
+  display: block;
+  font-family: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  @include transition(all, 0.2s);
+  &:hover {
+    background-color: $color-lightgray !important;
+    box-shadow: 0px 0px 6px $color-gray;
+  }
 }
 
 .markdown {

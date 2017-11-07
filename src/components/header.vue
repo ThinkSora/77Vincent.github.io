@@ -20,10 +20,10 @@ header {
   width: 100%;
   padding: 12px 15px;
   text-align: center;
-  background: $color-white;
   opacity: 0.9;
   z-index: 1;
   border-bottom: 1px solid $color-middlegray;
+  background-color: #fff;
   .navicon {
     width: 32px;
     height: 32px;

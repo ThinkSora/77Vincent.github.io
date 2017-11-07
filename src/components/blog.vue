@@ -4,7 +4,7 @@
 
     <div class="breadcrumbs">
       <div class="labels">
-        标签： <span class="label" :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</span>
+        标签： <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
       </div>
 
       <div class="info">
@@ -57,5 +57,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-
 </style>
