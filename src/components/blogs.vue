@@ -3,7 +3,7 @@
     <div class="icon-loading icon-spinner" v-show="loading"></div>
 
     <div class="content">
-      <section :id="getLabels(item.labels)" v-for="item in blogs">
+      <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
           <span>{{dateFormat(item.updated_at)}}</span>
           <h2>{{item.title}}</h2>
@@ -17,7 +17,7 @@
         <div class="filter">筛选:</div>
         <button 
           class="label" 
-          v-bind:class="{unselected: !item.show}"
+          v-bind:class="{disabled: item.disabled}"
           :style="{backgroundColor: '#' + item.color}" 
           v-for="item in labels"
           @click="toggle(item.id)"
@@ -50,26 +50,46 @@ export default {
     },
     filterByComments: function() {
     },
-    getLabels: function(labels) {
-      return labels.map((item) => {
-        return item.id;
+    toggleBlog: function() {
+      let disabledList = this.labels.map((item) => {
+        if (item.disabled) {
+          return item.name;
+        }
+      });
+
+      this.blogs.map((blog) => {
+        let show = 0;
+        blog.labelsList.map((item) => {
+          if (disabledList.indexOf(item) == -1) {
+            show++
+          } else {
+            show--
+          }
+        });
+        if (show > 0) {
+          blog.show = true;
+        } else {
+          blog.show = false;
+        }
       });
     },
     toggle: function(id) {
       let newLabels = this.labels.map((item) => {
         if (item.id === id) {
-          item.show = !item.show;
+          item.disabled = !item.disabled;
         }
         return item;
       });
       this.$set(this.$data, "labels", newLabels);
+      this.toggleBlog();
     },
     toggleAll: function() {
       let newLabels = this.labels.map((item) => {
-        item.show = true;
+        item.disabled = false;
         return item;
       });
       this.$set(this.$data, "labels", newLabels);
+      this.toggleBlog();
     },
     dateFormat: fn.dateFormat
   },
@@ -79,26 +99,30 @@ export default {
 
     this.$http.get(issuesAPI).then(res => {
       this.blogs = res.data;
+      this.blogs.map((blog) => {
+        blog.labelsList = blog.labels.map((label) => {
+          return label.name;
+        });
+      });
+
+      // GET labels
+      this.$http.get(labelsAPI).then(res => {
+        this.labels = res.data;
+
+        // Set all labels to show
+        this.labels.map((item) => {
+          item.disabled = false;
+        });
+        this.toggleBlog();
+      }, err => {
+        console.log(err);
+      });
+
       this.loading = false;
-
-      // Set all blogs to show
-      this.blogs.map((item) => {
-        item.show = true;
-      });
     }, err => {
       console.log(err);
     });
 
-    this.$http.get(labelsAPI).then(res => {
-      this.labels = res.data;
-
-      // Set all labels to show
-      this.labels.map((item) => {
-        item.show = true;
-      });
-    }, err => {
-      console.log(err);
-    });
   }
 }
 
@@ -131,7 +155,7 @@ section {
   border-right: 1px solid $color-middlegray;
 }
 
-.unselected {
+.disabled {
   background-color: $color-middlegray !important;
   opacity: 0.4;
 }
