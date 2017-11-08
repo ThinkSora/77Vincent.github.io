@@ -57,4 +57,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
+.labels {
+  button {
+    display: inline;
+  }
+}
+
 </style>

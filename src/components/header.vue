@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{collapsed: collapsed}">
     <a href="https://github.com/77Vincent/77Vincent.github.io" class="logo navicon"></a>
     <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
@@ -8,6 +8,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      collapsed: false
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 100) {
+        this.collapsed = true;
+      } else {
+        this.collapsed = false;
+      }
+    });
+  }
 }
 </script>
 
@@ -18,12 +32,24 @@ header {
   font-family: monospace;
   top: 0;
   width: 100%;
-  padding: 12px 15px;
+  padding: 15px;
   text-align: center;
   opacity: 0.9;
   z-index: 1;
   border-bottom: 1px solid $color-middlegray;
   background-color: #fff;
+  @include transition(all, 0.5s);
+
+  &.collapsed {
+    padding: 5px 15px;
+    font-size: 0.75em;
+
+    .navicon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   .navicon {
     width: 32px;
     height: 32px;
@@ -31,7 +57,7 @@ header {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    @include transition(transform, 1.5s);
+    @include transition(all, 1.5s);
     @media (max-width: $bp-mobile) {
       width: 25px;
       height: 25px;
