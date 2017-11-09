@@ -20,10 +20,10 @@
           v-bind:class="{disabled: item.disabled}"
           :style="{backgroundColor: '#' + item.color}" 
           v-for="item in labels"
-          @click="toggle(item.id)"
+          @click="toggleLabels(item.id)"
          >{{item.name}}
          </button>
-        <button @click="toggleAll">所有</button>
+        <button @click="toggleLabels()">反选所有</button>
       </section>
       <section>
         <div class="filter">排序:</div>
@@ -36,6 +36,8 @@
 
 <script>
 import fn from "../assets/fn.js";
+import _ from "lodash";
+
 export default {
   data() {
     return {
@@ -50,55 +52,52 @@ export default {
     },
     filterByComments: function() {
     },
-    toggleBlog: function() {
+    toggleBlogs: function() {
       let disabledList = this.labels.map((item) => {
         if (item.disabled) {
           return item.name;
         }
       });
 
+      // Check blogs visibility
       this.blogs.map((blog) => {
-        let show = 0;
-        blog.labelsList.map((item) => {
-          if (disabledList.indexOf(item) == -1) {
-            show++
-          } else {
-            show--
-          }
-        });
-        if (show > 0) {
-          blog.show = true;
-        } else {
+        if (_.intersection(blog.labelsList, disabledList).length) {
           blog.show = false;
+        } else {
+          blog.show = true;
         }
       });
     },
-    toggle: function(id) {
+    toggleLabels: function(id) {
       let newLabels = this.labels.map((item) => {
         if (item.id === id) {
+          item.disabled = !item.disabled;
+        }
+        
+        // When clicking on a non-label button
+        if (!id) {
           item.disabled = !item.disabled;
         }
         return item;
       });
       this.$set(this.$data, "labels", newLabels);
-      this.toggleBlog();
-    },
-    toggleAll: function() {
-      let newLabels = this.labels.map((item) => {
-        item.disabled = false;
-        return item;
-      });
-      this.$set(this.$data, "labels", newLabels);
-      this.toggleBlog();
     },
     dateFormat: fn.dateFormat
   },
+  watch: {
+    labels: function() {
+      this.toggleBlogs();
+    }
+  },
   mounted() {
-    const issuesAPI = "https://api.github.com/repos/77Vincent/blog/issues";
+    const blogsAPI = "https://api.github.com/repos/77Vincent/blog/issues";
     const labelsAPI = "https://api.github.com/repos/77Vincent/blog/labels";
 
-    this.$http.get(issuesAPI).then(res => {
+    // GET blogs 
+    this.$http.get(blogsAPI).then(res => {
       this.blogs = res.data;
+
+      // Set a single dimension arrary of labels for each blog
       this.blogs.map((blog) => {
         blog.labelsList = blog.labels.map((label) => {
           return label.name;
@@ -113,7 +112,6 @@ export default {
         this.labels.map((item) => {
           item.disabled = false;
         });
-        this.toggleBlog();
       }, err => {
         console.log(err);
       });
