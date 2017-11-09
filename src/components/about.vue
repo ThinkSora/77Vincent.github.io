@@ -1,11 +1,12 @@
 <template>
   <div class="about">
+    <div class="icon-loading icon-spinner" v-show="loading"></div>
+
     <div class="profile-photo"></div>
     <div class="info">
       <h2>{{info.name}}</h2>
       <p>{{info.location}}</p>
       <p>{{info.bio}}</p>
-      <a :href="info.url" class="github"></a>
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@
 export default {
   data() {
     return {
+      loading: true,
       info: "" 
     };
   },
@@ -28,6 +30,7 @@ export default {
       .get(profileAPI)
       .then(res => {
         this.info = res.data;
+        this.loading = false;
       }, err => {
         console.log(err);
       });

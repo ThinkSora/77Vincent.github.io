@@ -1,6 +1,6 @@
 <template>
   <header :class="{collapsed: collapsed}">
-    <a href="https://github.com/77Vincent/77Vincent.github.io" class="github navicon"></a>
+    <a href="https://github.com/77Vincent" class="github navicon"></a>
     <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
   </header>
