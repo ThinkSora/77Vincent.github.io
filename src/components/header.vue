@@ -15,7 +15,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 100) {
+      if (window.pageYOffset > 90) {
         this.collapsed = true;
       } else {
         this.collapsed = false;
@@ -34,7 +34,7 @@ header {
   width: 100%;
   padding: 15px;
   text-align: center;
-  opacity: 0.9;
+  opacity: 0.8;
   z-index: 1;
   border-bottom: 1px solid $color-middlegray;
   background-color: #fff;
@@ -43,6 +43,8 @@ header {
   &.collapsed {
     padding: 5px 15px;
     font-size: 0.75em;
+    background-color: $color-theme;
+    color: white;
 
     .navicon {
       width: 24px;
@@ -80,7 +82,6 @@ header {
     text-transform: uppercase;
     vertical-align: middle;
     margin: 0;
-    letter-spacing: 0.2em;
     animation: expand 7s 1s ease infinite;
     strong {
       display: inline-block;

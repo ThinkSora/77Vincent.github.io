@@ -142,7 +142,8 @@ a {
 }
 
 button {
-  background-color: $color-middlegray;
+  background-color: $color-theme;
+  color: #fff;
   padding: 2px 6px;
   margin-bottom: 10px;
   margin-right: 7px;
@@ -159,6 +160,12 @@ button {
   &:hover {
     box-shadow: 0px 0px 6px $color-gray;
   }
+
+  &.disabled {
+    background-color: $color-middlegray !important;
+    color: $color-darkgray;
+    opacity: 0.5;
+  }
 }
 
 .markdown {
@@ -174,6 +181,11 @@ button {
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  a {
+    color: $color-theme;
+    text-decoration: underline;
   }
 }
 </style>

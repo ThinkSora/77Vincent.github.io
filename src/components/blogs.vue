@@ -5,19 +5,19 @@
     <div class="content">
       <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
-          <span>{{dateFormat(item.updated_at)}}</span>
+          <span>{{formatDate(item.updated_at)}}</span>
           <h2>{{item.title}}</h2>
           <span class="">{{item.comments}}评论</span>
         </router-link>
       </section>
     </div>
 
-    <div class="filters">
+    <div class="filters-section">
       <section>
-        <div class="filter">筛选:</div>
+        <div class="filters">筛选:</div>
         <button 
           class="label" 
-          v-bind:class="{disabled: item.disabled}"
+          :class="{disabled: item.disabled}"
           :style="{backgroundColor: '#' + item.color}" 
           v-for="item in labels"
           @click="toggleLabels(item.id)"
@@ -26,9 +26,9 @@
         <button @click="toggleLabels()">反选所有</button>
       </section>
       <section>
-        <div class="filter">排序:</div>
-        <button v-on:click="filterByTime">按时间</button>
-        <button v-on:click="filterByComments">按评论数</button>
+        <div class="filters">排序:</div>
+        <button v-on:click="filterByTime" class="icon-arrow-up" :class="{'icon-arrow-down': ascTime}">按时间</button>
+        <button v-on:click="filterByComments" class="icon-arrow-up" :class="{'icon-arrow-down': ascComments}">按评论数</button>
       </section>
     </div>
   </div>
@@ -42,6 +42,8 @@ export default {
   data() {
     return {
       loading: true,
+      ascTime: true,
+      ascComments: true,
       blogs: "",
       labels: "",
       filterByLabels: ""
@@ -49,8 +51,26 @@ export default {
   },
   methods: {
     filterByTime: function() {
+      let newList = this.blogs.sort((a, b) => {
+        if (this.ascTime) {
+          return this.compareDate(a.updated_at, b.updated_at);
+        } else {
+          return this.compareDate(b.updated_at, a.updated_at);
+        }
+      });
+      this.ascTime = !this.ascTime;
+      this.$set(this.$data, "blogs", newList);
     },
     filterByComments: function() {
+      let newList = this.blogs.sort((a, b) => {
+        if (this.ascComments) {
+          return a.comments - b.comments;
+        } else {
+          return b.comments - a.comments;
+        }
+      });
+      this.ascComments = !this.ascComments;
+      this.$set(this.$data, "blogs", newList);
     },
     toggleBlogs: function() {
       let disabledList = this.labels.map((item) => {
@@ -69,7 +89,7 @@ export default {
       });
     },
     toggleLabels: function(id) {
-      let newLabels = this.labels.map((item) => {
+      let newList = this.labels.map((item) => {
         if (item.id === id) {
           item.disabled = !item.disabled;
         }
@@ -80,9 +100,12 @@ export default {
         }
         return item;
       });
-      this.$set(this.$data, "labels", newLabels);
+      this.$set(this.$data, "labels", newList);
     },
-    dateFormat: fn.dateFormat
+    compareDate: function(a, b) {
+      return this.formatDate(a).split("-").join("") - this.formatDate(b).split("-").join("");
+    },
+    formatDate: fn.formatDate
   },
   watch: {
     labels: function() {
@@ -133,12 +156,6 @@ export default {
   font-family: monospace;
 }
 
-.filter {
-  border-bottom: 1px solid $color-middlegray;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-}
-
 section {
   margin: 1.6em 0;
 
@@ -153,15 +170,16 @@ section {
   border-right: 1px solid $color-middlegray;
 }
 
-.disabled {
-  background-color: $color-middlegray !important;
-  opacity: 0.4;
-}
-
-.filters {
+.filters-section {
   float: right;
   width: 20%;
   padding-left: 20px;
+}
+
+.filters {
+  border-bottom: 1px solid $color-middlegray;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .blogs-link {

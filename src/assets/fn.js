@@ -4,7 +4,7 @@
 import moment from "moment";
 
 export default {
-  dateFormat(dateString) {
+  formatDate(dateString) {
     const format = "YYYY-MM-DD";
     return moment(dateString).calendar(null, {
       sameDay: format,
