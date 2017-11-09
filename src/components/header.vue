@@ -1,6 +1,6 @@
 <template>
   <header :class="{collapsed: collapsed}">
-    <a href="https://github.com/77Vincent/77Vincent.github.io" class="logo navicon"></a>
+    <a href="https://github.com/77Vincent/77Vincent.github.io" class="github navicon"></a>
     <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
   </header>
@@ -50,6 +50,10 @@ header {
       width: 24px;
       height: 24px;
     }
+
+    .github {
+      background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-github-white.png);
+    }
   }
 
   .navicon {
@@ -64,18 +68,21 @@ header {
       width: 25px;
       height: 25px;
     }
+
     &:hover {
       @include transform-rotate(360deg);
     }
-    &.logo {
-      float: left;
-      background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-logo.svg);
-    }
-    &.photo {
-      float: right;
-      background-image: url(https://avatars0.githubusercontent.com/u/12905966?s=40&v=4);
-    }
   }
+
+.github {
+  float: left;
+  background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-github.png);
+}
+.photo {
+  float: right;
+  background-image: url(https://avatars0.githubusercontent.com/u/12905966?s=40&v=4);
+}
+
   h1 {
     font-size: 1.75em;
     display: inline-block;
