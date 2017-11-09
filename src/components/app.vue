@@ -62,9 +62,9 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  padding: 90px 0 60px 0;
+  padding: 65px 0 29px;
   max-width: 800px;
-  min-height: 90vh;
+  min-height: 100vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;

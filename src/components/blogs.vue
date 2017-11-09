@@ -124,7 +124,6 @@ export default {
     }, err => {
       console.log(err);
     });
-
   }
 }
 
@@ -135,14 +134,11 @@ export default {
 
 .blogs {
   font-family: monospace;
+  height: 100%;
 }
 
 section {
   margin: 1.6em 0;
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 .content {
