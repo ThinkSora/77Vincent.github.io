@@ -9,7 +9,7 @@
 
       <div class="info">
         <span>{{blog.title}}</span>
-        <span>{{dateFormat(blog.updated_at)}}</span>
+        <span>{{formatDate(blog.updated_at)}}</span>
         <span>{{blog.comments}}评论</span>
       </div>
     </div>
@@ -36,7 +36,7 @@ export default {
     };
   },
   methods: {
-    dateFormat: fn.dateFormat,
+    formatDate: fn.formatDate,
   },
   mounted() {
     setTimeout(() => {
