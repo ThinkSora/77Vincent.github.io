@@ -16,7 +16,6 @@
       <section>
         <div class="filters">筛选:</div>
         <button 
-          class="label" 
           :class="{disabled: item.disabled}"
           :style="{backgroundColor: '#' + item.color}" 
           v-for="item in labels"
@@ -50,65 +49,47 @@ export default {
     };
   },
   methods: {
-    filterByTime: function() {
+    filterByTime: function () {
       let newList = this.blogs.sort((a, b) => {
-        if (this.ascTime) {
-          return this.compareDate(a.updated_at, b.updated_at);
-        } else {
-          return this.compareDate(b.updated_at, a.updated_at);
-        }
+        return this.ascTime ? this.compareDate(a.updated_at, b.updated_at) : this.compareDate(b.updated_at, a.updated_at);
       });
       this.ascTime = !this.ascTime;
       this.$set(this.$data, "blogs", newList);
     },
-    filterByComments: function() {
+    filterByComments: function () {
       let newList = this.blogs.sort((a, b) => {
-        if (this.ascComments) {
-          return a.comments - b.comments;
-        } else {
-          return b.comments - a.comments;
-        }
+        return this.ascComments ? a.comments - b.comments : b.comments - a.comments
       });
       this.ascComments = !this.ascComments;
       this.$set(this.$data, "blogs", newList);
     },
-    toggleBlogs: function() {
+    toggleBlogs: function () {
       let disabledList = this.labels.map((item) => {
-        if (item.disabled) {
-          return item.name;
-        }
+        return item.disabled ? item.name : undefined;
       });
 
       // Check blogs visibility
       this.blogs.map((blog) => {
-        if (_.intersection(blog.labelsList, disabledList).length) {
-          blog.show = false;
-        } else {
-          blog.show = true;
-        }
+        blog.show = !_.isEqual(_.intersection(blog.labelsList, disabledList), blog.labelsList);
       });
     },
-    toggleLabels: function(id) {
+    toggleLabels: function (id) {
       let newList = this.labels.map((item) => {
-        if (item.id === id) {
-          item.disabled = !item.disabled;
-        }
-        
+        item.disabled = item.id === id ? !item.disabled : item.disabled;
+
         // When clicking on a non-label button
-        if (!id) {
-          item.disabled = !item.disabled;
-        }
+        item.disabled = !id ? !item.disabled : item.disabled;
         return item;
       });
       this.$set(this.$data, "labels", newList);
     },
-    compareDate: function(a, b) {
+    compareDate: function (a, b) {
       return this.formatDate(a).split("-").join("") - this.formatDate(b).split("-").join("");
     },
     formatDate: fn.formatDate
   },
   watch: {
-    labels: function() {
+    labels: function () {
       this.toggleBlogs();
     }
   },

@@ -42,9 +42,10 @@ html {
   line-height: 1.5;
   position: relative;
   letter-spacing: 1px;
-  font-family: Arial, "SimHei", sans-serif;
+  font-family: $font-basic;
   min-height: 100vh;
   background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul, ol {
@@ -148,17 +149,20 @@ button {
   margin-bottom: 10px;
   margin-right: 7px;
   border-radius: 3px;
-  font-weight: bold;
   font-size: $font-s;
   max-width: 120px;
   display: block;
-  font-family: inherit;
   letter-spacing: inherit;
-  line-height: inherit;
+  line-height: inherit !important;
   cursor: pointer;
   @include transition(all, 0.2s);
+
   &:hover {
     box-shadow: 0px 0px 6px $color-gray;
+  }
+
+  &:before {
+    margin-right: 2px;
   }
 
   &.disabled {

@@ -34,7 +34,7 @@ header {
   width: 100%;
   padding: 15px;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 1;
   border-bottom: 1px solid $color-middlegray;
   background-color: #fff;
@@ -73,7 +73,7 @@ header {
     }
     &.photo {
       float: right;
-      background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/77-photo.jpg);
+      background-image: url(https://avatars0.githubusercontent.com/u/12905966?s=40&v=4);
     }
   }
   h1 {
