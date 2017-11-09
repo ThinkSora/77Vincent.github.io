@@ -57,10 +57,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-.blog {
-  padding-top: 30px;
-}
-
 .labels {
   button {
     display: inline;

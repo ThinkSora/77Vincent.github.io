@@ -3,7 +3,9 @@
     <app-header></app-header>
 
     <div class="wrapper">
-      <router-view></router-view>
+      <div class="inner-wrapper">
+        <router-view></router-view>
+      </div>
     </div>
 
     <app-footer></app-footer>
@@ -69,6 +71,10 @@ blockquote {
     padding-right: 5%;
     padding-left: 5%;
   }
+}
+
+.inner-wrapper {
+  margin-top: 30px;
 }
 
 .icon-loading {

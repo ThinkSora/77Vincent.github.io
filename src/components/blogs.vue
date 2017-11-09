@@ -135,6 +135,7 @@ export default {
 .blogs {
   font-family: monospace;
   height: 100%;
+  margin-top: -30px;
 }
 
 section {
