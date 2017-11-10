@@ -4,9 +4,9 @@ import VueRouter from "vue-router";
 
 // Components
 import App from "./components/app.vue";
-import About from "./components/about.vue";
-import Blogs from "./components/blogs.vue";
-import Blog from "./components/blog.vue";
+import appAbout from "./components/about.vue";
+import appBlogs from "./components/blogs.vue";
+import appBlog from "./components/blog.vue";
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -14,22 +14,24 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes: [{
     path: "/",
-    component: Blogs
+    component: appBlogs
   }, {
     path: "/about",
-    component: About
+    component: appAbout
   }, {
     path: "/blogs",
-    component: Blogs
+    component: appBlogs
   }, {
     path: "/blog/:id",
     name: "blog",
-    component: Blog
+    component: appBlog
   }]
 });
 
 new Vue({
   el: "#app",
   router,
-  render: h => h(App)
+  components: {
+    App
+  } 
 });
