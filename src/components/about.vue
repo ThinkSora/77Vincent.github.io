@@ -1,9 +1,13 @@
 <template>
-  <div id="about">
-    <section v-for="item in about" v-bind:class="item.label">
-      <h2>{{item.section}}</h2>
-      <a v-bind:href="subitem.href" v-bind:class="subitem.title" v-for="subitem in item.content">{{subitem.title}}</a>
-    </section>
+  <div class="about">
+    <div class="icon-loading icon-spinner" v-show="loading"></div>
+
+    <div class="profile-photo"></div>
+    <div class="info">
+      <h2>{{info.name}}</h2>
+      <p>{{info.location}}</p>
+      <p>{{info.bio}}</p>
+    </div>
   </div>
 </template>
 
@@ -11,60 +15,72 @@
 export default {
   data() {
     return {
-      about: ''
+      loading: true,
+      info: "" 
     };
   },
   methods: {
     getData(url) {
-      this.$http
-        .get(url)
-        .then(response => {
-          this.$set(this._data, 'about', response.body);
-        }, err => {
-          console.log(err);
-        });
     }
   },
   mounted() {
-    this.getData('/src/data/about.json');
+    const profileAPI = "https://api.github.com/users/77Vincent";
+
+    this.$http
+      .get(profileAPI)
+      .then(res => {
+        this.info = res.data;
+        this.loading = false;
+      }, err => {
+        console.log(err);
+      });
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/meta";
 
-#about {
+
+
+.about {
   text-align: center;
-  a {
-    display: block;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  background-image: url(https://avatars2.githubusercontent.com/u/12905966?v=4);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.info {
+  p {
+    margin: 0.5em 0;
   }
-  section {
-    &.contact {
-      a {
-        text-indent: 9999em;
-        overflow: hidden;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: 0 1em;
-        @include transition(transform, 1s);
-        &:hover {
-          @include transform-rotate(360deg);
-        }
-        &.github {
-          background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-github.png);
-        }
-        &.email {
-          background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-email.png);
-        }
-        &.linkedin {
-          background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-linkedin.png);
-        }
-      }
-    }
+}
+a {
+  text-indent: 9999em;
+  overflow: hidden;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 1em;
+  @include transition(transform, 1s);
+
+  &:hover {
+    @include transform-rotate(360deg);
   }
+}
+
+.github {
+  background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-github.png);
+}
+.linkedin {
+  background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-linkedin.png);
 }
 </style>

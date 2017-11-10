@@ -3,7 +3,9 @@
     <app-header></app-header>
 
     <div class="wrapper">
-      <router-view></router-view>
+      <div class="inner-wrapper">
+        <router-view></router-view>
+      </div>
     </div>
 
     <app-footer></app-footer>
@@ -42,9 +44,10 @@ html {
   line-height: 1.5;
   position: relative;
   letter-spacing: 1px;
-  font-family: Arial, "SimHei", sans-serif;
+  font-family: $font-basic;
   min-height: 100vh;
   background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul, ol {
@@ -61,13 +64,17 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  padding: 90px 0 60px 0;
+  padding: 65px 0;
   max-width: 800px;
-  min-height: 90vh;
+  min-height: 100vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
   }
+}
+
+.inner-wrapper {
+  margin-top: 30px;
 }
 
 .icon-loading {
@@ -148,17 +155,20 @@ button {
   margin-bottom: 10px;
   margin-right: 7px;
   border-radius: 3px;
-  font-weight: bold;
   font-size: $font-s;
   max-width: 120px;
   display: block;
-  font-family: inherit;
   letter-spacing: inherit;
-  line-height: inherit;
+  line-height: inherit !important;
   cursor: pointer;
   @include transition(all, 0.2s);
+
   &:hover {
     box-shadow: 0px 0px 6px $color-gray;
+  }
+
+  &:before {
+    margin-right: 2px;
   }
 
   &.disabled {
