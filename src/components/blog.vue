@@ -14,9 +14,9 @@
       </div>
     </div>
 
-    <div class="markdown">
+    <article>
       <vue-markdown :source="blog.body"></vue-markdown>
-    </div>
+    </article>
   </div>
 </template>
 

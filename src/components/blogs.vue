@@ -176,12 +176,13 @@ section {
     display: inline-block;
     vertical-align: middle;
     font-size: $font-s;
+    opacity: 0.8;
+    color: $color-darkgray;
 
     &:first-child {
-      color: $color-darkgray;
       padding-right: 15px;
       margin-right: 10px;
-      border-right: 1px solid $color-darkgray;
+      border-right: 1px solid $color-gray;
     }
   }
 

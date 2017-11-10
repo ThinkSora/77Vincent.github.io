@@ -137,7 +137,7 @@ a {
 }
 
 button {
-  background-color: $color-theme;
+  background-color: $color-darkgray;
   color: #fff;
   padding: 2px 6px;
   margin-bottom: 10px;
@@ -187,7 +187,7 @@ button {
   }
 }
 
-.markdown {
+article {
   margin-top: 40px;
   font-size: 0.95em;
 
@@ -195,7 +195,7 @@ button {
     border-bottom: 1px solid $color-middlegray;
     font-weight: bold;
     padding-bottom: 5px;
-    margin-top: 30px;
+    margin-top: 40px;
 
     &:first-child {
       margin-top: 0;

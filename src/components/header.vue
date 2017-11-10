@@ -43,7 +43,7 @@ header {
   &.collapsed {
     padding: 5px 15px;
     font-size: 0.75em;
-    background-color: $color-theme;
+    background-color: $color-darkgray;
     color: white;
 
     .navicon {
