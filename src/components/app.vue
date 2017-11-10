@@ -7,8 +7,6 @@
         <router-view></router-view>
       </div>
     </div>
-
-    <app-footer></app-footer>
   </div>
 </template>
 
@@ -20,13 +18,6 @@ export default {
   components: {
     appHeader,
     appFooter,
-  },
-  methods: {
-    errorDone() {
-
-    },
-    progressDone() {
-    }
   },
   data() {
     return {};
@@ -42,10 +33,8 @@ export default {
 
 html {
   line-height: 1.5;
-  position: relative;
   letter-spacing: 1px;
   font-family: $font-basic;
-  min-height: 100vh;
   background-color: $color-white;
   -webkit-font-smoothing: antialiased;
 }
@@ -66,7 +55,6 @@ blockquote {
   margin: 0 auto;
   padding: 65px 0;
   max-width: 800px;
-  min-height: 100vh;
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
@@ -161,6 +149,7 @@ button {
   letter-spacing: inherit;
   line-height: inherit !important;
   cursor: pointer;
+  position: relative;
   @include transition(all, 0.2s);
 
   &:hover {
@@ -169,6 +158,26 @@ button {
 
   &:before {
     margin-right: 2px;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    opacity: 0.3;
+    background: rgba(199,199,199,0);
+    background: -moz-linear-gradient(top, rgba(199,199,199,0) 0%, rgba(238,238,238,0) 55%, rgba(255,255,255,0.53) 79%, rgba(199,199,199,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,199,199,0)), color-stop(55%, rgba(238,238,238,0)), color-stop(79%, rgba(255,255,255,0.53)), color-stop(100%, rgba(199,199,199,1)));
+    background: -webkit-linear-gradient(top, rgba(199,199,199,0) 0%, rgba(238,238,238,0) 55%, rgba(255,255,255,0.53) 79%, rgba(199,199,199,1) 100%);
+    background: -o-linear-gradient(top, rgba(199,199,199,0) 0%, rgba(238,238,238,0) 55%, rgba(255,255,255,0.53) 79%, rgba(199,199,199,1) 100%);
+    background: -ms-linear-gradient(top, rgba(199,199,199,0) 0%, rgba(238,238,238,0) 55%, rgba(255,255,255,0.53) 79%, rgba(199,199,199,1) 100%);
+    background: linear-gradient(to bottom, rgba(199,199,199,0) 0%, rgba(238,238,238,0) 55%, rgba(255,255,255,0.53) 79%, rgba(199,199,199,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#c7c7c7', GradientType=0 );
   }
 
   &.disabled {

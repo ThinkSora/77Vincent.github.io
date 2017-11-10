@@ -14,20 +14,24 @@
 
     <div class="filters-section">
       <section>
-        <div class="filters">筛选:</div>
-        <button 
-          :class="{disabled: item.disabled}"
-          :style="{backgroundColor: '#' + item.color}" 
-          v-for="item in labels"
-          @click="toggleLabels(item.id)"
-         >{{item.name}}
-         </button>
-        <button @click="toggleLabels()">反选所有</button>
+        <div class="filters-title">筛选</div>
+        <div class="filters">
+          <button 
+            :class="{disabled: item.disabled}"
+            :style="{backgroundColor: '#' + item.color}" 
+            v-for="item in labels"
+            @click="toggleLabels(item.id)"
+          >{{item.name}}
+          </button>
+          <button @click="toggleLabels()">反选所有</button>
+        </div>
       </section>
       <section>
-        <div class="filters">排序:</div>
-        <button v-on:click="filterByTime" class="icon-arrow-up" :class="{'icon-arrow-down': ascTime}">按时间</button>
-        <button v-on:click="filterByComments" class="icon-arrow-up" :class="{'icon-arrow-down': ascComments}">按评论数</button>
+        <div class="filters-title">排序</div>
+        <div class="filters">
+          <button v-on:click="filterByTime" class="icon-arrow-up" :class="{'icon-arrow-down': ascTime}">按时间</button>
+          <button v-on:click="filterByComments" class="icon-arrow-up" :class="{'icon-arrow-down': ascComments}">按评论数</button>
+        </div>
       </section>
     </div>
   </div>
@@ -134,8 +138,8 @@ export default {
 
 .blogs {
   font-family: monospace;
-  height: 100%;
   margin-top: -30px;
+  margin-bottom: -65px;
 }
 
 section {
@@ -145,19 +149,24 @@ section {
 .content {
   float: left;
   width: 80%;
+  height: 92vh;
   border-right: 1px solid $color-middlegray;
 }
 
 .filters-section {
   float: right;
   width: 20%;
-  padding-left: 20px;
-}
 
-.filters {
-  border-bottom: 1px solid $color-middlegray;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
+  .filters-title {
+    border-bottom: 1px solid $color-middlegray;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+  }
+
+  .filters {
+    padding-left: 15px;
+  }
 }
 
 .blogs-link {

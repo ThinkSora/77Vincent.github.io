@@ -15,10 +15,6 @@ footer {
   color: #fff;
   padding: 5px;
   text-align: center;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
   font-size: 0.8em;
 
   p {
