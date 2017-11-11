@@ -1,6 +1,6 @@
 <template>
   <div class="blog">
-    <div class="icon-loading icon-spinner" v-show="loading"></div>
+    <div class="icon-spinner" v-show="loading"></div>
 
     <article class="section-left">
       <section>
@@ -22,6 +22,10 @@
           <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
         </div>
       </section>
+
+      <section>
+        <div v-for="item in content">{{item.name}}</div>
+      </section>
     </div>
   </div>
 </template>
@@ -39,7 +43,8 @@ export default {
     return {
       loading: true,
       markdown: "",
-      blog: ""
+      blog: "",
+      content: "",
     };
   },
   methods: {
@@ -48,6 +53,10 @@ export default {
       setTimeout(() => {
         Prism.highlightAll();
       }, 100);
+
+      // Render table content 
+      console.log(this.$el)
+      // this.content = result;
     },
     formatDate: fn.formatDate,
   },
@@ -99,6 +108,10 @@ button {
   section {
     padding-left: 20px;
     border-bottom: 1px solid $color-middlegray; 
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   span {

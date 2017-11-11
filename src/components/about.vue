@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="icon-loading icon-spinner" v-show="loading"></div>
+    <div class="icon-spinner" v-show="loading"></div>
 
     <div class="profile-photo"></div>
     <div class="info">

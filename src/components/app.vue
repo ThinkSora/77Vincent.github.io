@@ -54,6 +54,7 @@ blockquote {
 .wrapper {
   margin: 0 auto;
   max-width: 900px;
+  min-height: 90vh;
 
   @media (max-width: 800px) {
     padding-right: 5%;
@@ -65,7 +66,7 @@ blockquote {
   margin-top: 30px;
 }
 
-.icon-loading {
+.icon-spinner {
   animation: spin 1.5s linear infinite;
   content: "";
   display: block;
@@ -103,6 +104,7 @@ a {
 .section-left {
   float: left;
   min-height: 90vh;
+  padding-top: 15px;
   width: 75%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
@@ -113,6 +115,7 @@ a {
 .section-right {
   float: right;
   width: 25%;
+  padding-top: 15px;
 }
 
 button {
@@ -168,7 +171,8 @@ button {
 }
 
 section {
-  margin: 1.6em 0;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
 
 article {
