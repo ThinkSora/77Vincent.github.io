@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="loading-bar" v-show="loading"></div>
+    <div class="progress-bar" :class="{completed: !loading, loading: loading}"></div>
 
     <div class="profile-photo"></div>
     <div class="info">

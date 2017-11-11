@@ -1,6 +1,6 @@
 <template>
   <div class="blogs">
-    <div class="loading-bar" v-show="loading"></div>
+    <div class="progress-bar" :class="{completed: !loading, loading: loading}"></div>
 
     <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">

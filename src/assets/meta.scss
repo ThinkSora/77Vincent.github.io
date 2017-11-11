@@ -68,3 +68,17 @@ $bp-mobile: 480px;
   0% { width: 0; }
   100% { width: 80%; }
 }
+
+/**************************************************************************************/
+@-webkit-keyframes completed {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes completed {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes completed {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

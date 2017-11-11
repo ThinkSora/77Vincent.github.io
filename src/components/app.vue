@@ -61,8 +61,7 @@ blockquote {
   min-height: 90vh;
 }
 
-.loading-bar {
-  animation: processing 3s linear infinite;
+.progress-bar {
   position: absolute;
   z-index: 9;
   left: 0;
@@ -70,7 +69,16 @@ blockquote {
   height: 2px;
   width: 100%;
   background-color: $color-theme;
+
+  &.loading {
+    animation: processing 3s linear infinite;
+  }
+
+  &.completed {
+    animation: completed 0.1s 0.3s linear forwards;
+  }
 }
+
 
 img {
   max-width: 100%;
