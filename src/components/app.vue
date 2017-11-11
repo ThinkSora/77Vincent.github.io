@@ -110,7 +110,7 @@ a {
   min-height: 90vh;
   padding-top: 15px;
   padding-left: 17%;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   width: 65%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
@@ -195,8 +195,8 @@ button {
 }
 
 section {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 article {
@@ -226,18 +226,6 @@ article {
     position: fixed;
     top: 0;
     right: 0;
-  }
-}
-
-.anchor {
-  color: $color-darkgray;
-  font-size: 1.25em; 
-  display: block;
-  margin: 0.2em 0;
-
-  span {
-    opacity: 0.4 !important;
-    margin-right: 5px;
   }
 }
 </style>

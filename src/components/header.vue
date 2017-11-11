@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="https://github.com/77Vincent" class="github navicon"></a>
+    <a target="_blank" href="https://github.com/77Vincent" class="github navicon"></a>
     <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
   </header>

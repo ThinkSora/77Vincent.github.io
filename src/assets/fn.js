@@ -26,5 +26,19 @@ export default {
       arr[i] = (string[i].charCodeAt() + "")[i];
     }
     return arr.join("");
+  },
+  /**
+   * 从某个方向修剪数组
+   * @param {Array} 待修剪的数组
+   * @param {Number} 修剪终点
+   * @param {Boolean} [direction=true] 修剪方向，默认从头
+   * @return {Array} 修剪后的数组
+   */
+  trimArray(array, toIndex = 0, direction = true) {
+    if (direction) {
+      return array.slice(toIndex, array.length);
+    } else {
+      return array.slice(0, array.length - toIndex);
+    }
   }
 };

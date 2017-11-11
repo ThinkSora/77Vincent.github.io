@@ -12,7 +12,7 @@
         <div class="title">{{blog.title}}</div>
       </section>
 
-      <section>
+      <section class="info">
         <span class="date">{{blog.updated_at}}</span>
         <span class="comments">{{blog.comments}}评论</span>
 
@@ -21,8 +21,8 @@
         </div>
       </section>
 
-      <section>
-        <a :href="`#${item.id}`" class="anchor" v-for="item in index"><span>> </span>{{item.text}}</a>
+      <section class="anchors">
+        <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
       </section>
     </div>
   </div>
@@ -58,8 +58,7 @@ export default {
         };
       });
 
-      let resultArr = result.split("<h2>");
-      this.html = resultArr.slice(1, resultArr.length).map((item, i) => {
+      this.html = fn.trimArray(result.split("<h2>"), 1).map((item, i) => {
         return `<h2 id="${this.index[i].id}">${item}`;
       }).join("");
 
@@ -67,8 +66,6 @@ export default {
         Prism.highlightAll();
       }, 100);
     }
-  },
-  mounted() {
   }
 }
 
@@ -115,6 +112,19 @@ button {
   span {
     color: $color-darkgray;
     opacity: 0.8;
+  }
+}
+
+.anchor {
+  color: #000;
+  font-size: 1.25em; 
+  display: block;
+  margin: 1em 0;
+  letter-spacing: 0;
+
+  &:before {
+    opacity: 0.7;    
+    margin-right: 7px;
   }
 }
 </style>
