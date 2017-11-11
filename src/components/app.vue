@@ -58,17 +58,7 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  // max-width: 900px;
   min-height: 90vh;
-
-  @media (max-width: 800px) {
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-}
-
-.inner-wrapper {
-  margin-top: 30px;
 }
 
 .icon-spinner {
@@ -105,8 +95,7 @@ a {
   text-decoration: none;
 }
 
-
-.section-left {
+.block-left {
   float: left;
   min-height: 90vh;
   padding-top: 15px;
@@ -121,9 +110,13 @@ a {
     padding-left: 10%;
     width: 70%;
   }
+  @media (max-width: 800px) {
+    padding-left: 5%;
+    width: 60%;
+  }
 }
 
-.section-right {
+.block-right {
   float: right;
   width: 35%;
   padding-top: 15px;
@@ -132,6 +125,10 @@ a {
   @media (max-width: 1200px) {
     padding-right: 10%;
     width: 30%;
+  }
+  @media (max-width: 800px) {
+    padding-left: 5%;
+    width: 40%;
   }
 }
 
@@ -215,7 +212,7 @@ article {
 .fixed {
   position: relative;
 
-  .section-right {
+  .block-right {
     position: fixed;
     top: 0;
     right: 0;

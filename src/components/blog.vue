@@ -1,13 +1,13 @@
 <template>
   <div>
-    <article class="section-left">
+    <article class="block-left">
       <section>
         <vue-markdown v-show="false" @rendered="render" :source="blog.body"></vue-markdown>
         <div v-html="markdown"></div>
       </section>
     </article>
 
-    <div class="section-right">
+    <div class="block-right">
       <section>
         <div class="title">{{blog.title}}</div>
       </section>
@@ -88,7 +88,7 @@ button {
   }
 }
 
-.section-right {
+.block-right {
   font-size: $font-s;
 
   section {

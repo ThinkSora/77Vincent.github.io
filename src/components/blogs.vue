@@ -2,7 +2,7 @@
   <div class="blogs">
     <div class="icon-spinner" v-show="loading"></div>
 
-    <div class="section-left">
+    <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.id, content: item}}" class="blog">
           <span>{{item.updated_at}}</span>
@@ -12,7 +12,7 @@
       </section>
     </div>
 
-    <div class="section-right">
+    <div class="block-right">
       <section>
         <div class="filters-title">筛选</div>
         <div class="filters">
