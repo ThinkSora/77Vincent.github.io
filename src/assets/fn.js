@@ -14,5 +14,17 @@ export default {
       lastWeek: format,
       sameElse: format
     });
+  },
+  /**
+   * Convert string in to numbers base on its char code 
+   * @param {String} srouce string 
+   * @returns {String} charcode in string
+   */
+  stringToNumber(string) {
+    var arr = [];
+    for (let i = 0; i < string.length; i++) {
+      arr[i] = (string[i].charCodeAt() + "")[i];
+    }
+    return arr.join("");
   }
 };

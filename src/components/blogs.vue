@@ -4,7 +4,7 @@
 
     <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">
-        <router-link :to="{name: 'blog', params: {id: item.id, content: item}}" class="blog">
+        <router-link :to="{name: 'blog', params: {id: item.id, blog: item}}" class="blog">
           <span>{{item.updated_at}}</span>
           <h2>{{item.title}}</h2>
           <span class="">{{item.comments}}评论</span>
@@ -119,7 +119,7 @@ export default {
 
         // Process data and assign
         this.labels = res.data.map((item) => {
-          item.disabled = false;
+          item.disabled = 0;
           return item;
         });
       }, err => {

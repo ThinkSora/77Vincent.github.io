@@ -2,8 +2,8 @@
   <div>
     <article class="block-left">
       <section>
-        <vue-markdown v-show="false" @rendered="render" :source="blog.body"></vue-markdown>
-        <div v-html="markdown"></div>
+        <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
+        <div v-html="html"></div>
       </section>
     </article>
 
@@ -22,7 +22,7 @@
       </section>
 
       <section>
-        <div v-for="item in content">{{item.name}}</div>
+        <a :href="`#${item.id}`" class="anchor" v-for="item in index"><span>> </span>{{item.text}}</a>
       </section>
     </div>
   </div>
@@ -33,30 +33,42 @@ import fn from "../assets/fn.js";
 import Prism from "Prismjs";
 import VueMarkdown from "vue-markdown";
 
+const titleRegex = /<h2>.*<\/h2>/g;
+const textRegex = /<h2>|<\/h2>/g;
+
 export default {
   components: {
     VueMarkdown
   },
   data() {
     return {
-      markdown: "",
-      blog: "",
-      content: "",
+      html: "",
+      blog: this.$route.params.blog,
+      index: "",
     };
   },
   methods: {
     render(result) {
-      this.markdown = result;
+
+      this.index = result.match(titleRegex).map((item) => {
+        let text = item.replace(textRegex, "");
+        return {
+          id: fn.stringToNumber(text),
+          text: text
+        };
+      });
+
+      let resultArr = result.split("<h2>");
+      this.html = resultArr.slice(1, resultArr.length).map((item, i) => {
+        return `<h2 id="${this.index[i].id}">${item}`;
+      }).join("");
+
       setTimeout(() => {
         Prism.highlightAll();
       }, 100);
-
-      // Render table content 
-      this.content = result;
     }
   },
   mounted() {
-    this.blog = this.$route.params.content;
   }
 }
 

@@ -21,11 +21,11 @@ export default {
   },
   data() {
     return {
-      fixed: false 
+      fixed: 0 
     }
   },
   mounted() {
-    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? true : false;
+    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? 1 : 0;
   },
 }
 </script>
@@ -71,11 +71,11 @@ blockquote {
   background-color: $color-theme;
 
   &.loading {
-    animation: processing 3s linear infinite;
+    animation: processing 3s linear forwards;
   }
 
   &.completed {
-    animation: completed 0.1s 0.3s linear forwards;
+    animation: completed 0.1s 0.2s linear forwards;
   }
 }
 
@@ -99,6 +99,10 @@ pre {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;    
+  }
 }
 
 .block-left {
@@ -110,7 +114,7 @@ a {
   width: 65%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
-  box-shadow: 5px 2px 20px $color-lightgray;
+  box-shadow: 5px 2px 20px rgba(200,200,200,0.3);
 
   @media (max-width: 1200px) {
     padding-left: 10%;
@@ -222,6 +226,18 @@ article {
     position: fixed;
     top: 0;
     right: 0;
+  }
+}
+
+.anchor {
+  color: $color-darkgray;
+  font-size: 1.25em; 
+  display: block;
+  margin: 0.2em 0;
+
+  span {
+    opacity: 0.4 !important;
+    margin-right: 5px;
   }
 }
 </style>

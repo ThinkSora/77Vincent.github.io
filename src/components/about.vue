@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      loading: true,
+      loading: 1,
       info: "" 
     };
   },
@@ -30,7 +30,7 @@ export default {
       .get(profileAPI)
       .then(res => {
         this.info = res.data;
-        this.loading = false;
+        this.loading = 0;
       }, err => {
         console.log(err);
       });
