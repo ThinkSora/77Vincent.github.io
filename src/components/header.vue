@@ -1,5 +1,5 @@
 <template>
-  <header :class="{collapsed: collapsed}">
+  <header>
     <a href="https://github.com/77Vincent" class="github navicon"></a>
     <router-link to="/"><h1><strong>77</strong>Vincent's blog</h1></router-link>
     <router-link to="/about" class="photo navicon"></router-link>
@@ -8,53 +8,18 @@
 
 <script>
 export default {
-  data() {
-    return {
-      collapsed: false
-    }
-  },
-  mounted() {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 90) {
-        this.collapsed = true;
-      } else {
-        this.collapsed = false;
-      }
-    });
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/meta";
 header {
-  position: fixed;
   font-family: monospace;
-  top: 0;
-  width: 100%;
   padding: 15px;
   text-align: center;
-  opacity: 0.9;
-  z-index: 1;
   border-bottom: 1px solid $color-middlegray;
   background-color: #fff;
   @include transition(all, 0.5s);
-
-  &.collapsed {
-    padding: 5px 15px;
-    font-size: 0.75em;
-    background-color: $color-darkgray;
-    color: white;
-
-    .navicon {
-      width: 24px;
-      height: 24px;
-    }
-
-    .github {
-      background-image: url(http://7xr7xo.com1.z0.glb.clouddn.com/icon-github-white.png);
-    }
-  }
 
   .navicon {
     width: 32px;

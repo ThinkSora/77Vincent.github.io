@@ -2,21 +2,26 @@
   <div class="blog">
     <div class="icon-loading icon-spinner" v-show="loading"></div>
 
-    <div class="breadcrumbs">
-      <div class="labels">
-        标签： <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
-      </div>
-
-      <div class="info">
-        <span>{{blog.title}}</span>
-        <span>{{formatDate(blog.updated_at)}}</span>
-        <span>{{blog.comments}}评论</span>
-      </div>
-    </div>
-
-    <article>
-      <vue-markdown :source="blog.body"></vue-markdown>
+    <article class="section-left">
+      <section>
+        <vue-markdown :source="blog.body"></vue-markdown>
+      </section>
     </article>
+
+    <div class="section-right">
+      <section>
+        <div class="title">{{blog.title}}</div>
+      </section>
+
+      <section>
+        <span class="date">{{formatDate(blog.updated_at)}}</span>
+        <span class="comments">{{blog.comments}}评论</span>
+
+        <div class="labels">
+          <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -57,10 +62,41 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
+.title {
+  font-weight: bold;
+  padding-bottom: 6px;
+  font-size: 1.2em;
+}
+
 .labels {
-  button {
+  margin-top: 5px;
+}
+
+button {
+  display: inline;
+}
+
+.date {
+  padding-right: 5px;
+
+  &:after {
+    content: "/";
     display: inline;
+    padding-left: 7px;
   }
 }
 
+.section-right {
+  font-size: $font-s;
+
+  section {
+    padding-left: 15px;
+    border-bottom: 1px solid $color-middlegray; 
+  }
+
+  span {
+    color: $color-darkgray;
+    opacity: 0.8;
+  }
+}
 </style>

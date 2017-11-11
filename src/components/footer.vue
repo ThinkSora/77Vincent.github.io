@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Powered by Vue.js</p>
+    <p>Powered by Vue.js and Github</p>
   </footer>
 </template>
 
@@ -16,6 +16,8 @@ footer {
   padding: 5px;
   text-align: center;
   font-size: 0.8em;
+  z-index: 1;
+  position: relative;
 
   p {
       margin: 0;

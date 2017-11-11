@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about">
     <div class="icon-loading icon-spinner" v-show="loading"></div>
 
     <div class="profile-photo"></div>
@@ -8,7 +8,7 @@
       <p>{{info.location}}</p>
       <p>{{info.bio}}</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -40,9 +40,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-
-
-
 .about {
   text-align: center;
 }
@@ -61,6 +58,7 @@ export default {
     margin: 0.5em 0;
   }
 }
+
 a {
   text-indent: 9999em;
   overflow: hidden;

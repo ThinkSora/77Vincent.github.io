@@ -1,8 +1,8 @@
 <template>
-  <div class="blogs clearfix">
+  <div class="blogs">
     <div class="icon-loading icon-spinner" v-show="loading"></div>
 
-    <div class="content">
+    <div class="section-left">
       <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
           <span>{{formatDate(item.updated_at)}}</span>
@@ -12,7 +12,7 @@
       </section>
     </div>
 
-    <div class="filters-section">
+    <div class="section-right">
       <section>
         <div class="filters-title">筛选</div>
         <div class="filters">
@@ -26,6 +26,7 @@
           <button @click="toggleLabels()">反选所有</button>
         </div>
       </section>
+
       <section>
         <div class="filters-title">排序</div>
         <div class="filters">
@@ -138,35 +139,17 @@ export default {
 
 .blogs {
   font-family: monospace;
-  margin-top: -30px;
-  margin-bottom: -65px;
 }
 
-section {
-  margin: 1.6em 0;
+.filters-title {
+  border-bottom: 1px solid $color-middlegray;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+  padding-left: 15px;
 }
 
-.content {
-  float: left;
-  width: 80%;
-  height: 92vh;
-  border-right: 1px solid $color-middlegray;
-}
-
-.filters-section {
-  float: right;
-  width: 20%;
-
-  .filters-title {
-    border-bottom: 1px solid $color-middlegray;
-    margin-bottom: 15px;
-    padding-bottom: 6px;
-    padding-left: 15px;
-  }
-
-  .filters {
-    padding-left: 15px;
-  }
+.filters {
+  padding-left: 15px;
 }
 
 .blogs-link {

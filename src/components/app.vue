@@ -2,11 +2,11 @@
   <div>
     <app-header></app-header>
 
-    <div class="wrapper">
-      <div class="inner-wrapper">
-        <router-view></router-view>
-      </div>
+    <div class="wrapper clearfix">
+      <router-view></router-view>
     </div>
+
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -53,8 +53,8 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  padding: 65px 0;
-  max-width: 800px;
+  max-width: 900px;
+
   @media (max-width: 800px) {
     padding-right: 5%;
     padding-left: 5%;
@@ -99,41 +99,20 @@ a {
   text-decoration: none;
 }
 
-.breadcrumbs {
-  font-size: $font-s;
-  color: $color-darkgray;
-  border-bottom: 1px solid $color-middlegray;
 
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+.section-left {
+  float: left;
+  min-height: 90vh;
+  width: 75%;
+  padding-right: 15px;
+  border-right: 1px solid $color-middlegray;
+  box-shadow: 5px 2px 20px $color-lightgray;
+  padding-bottom: 30px;
+}
 
-  .labels {
-    float: left;
-  }
-
-  .info {
-    float: right;
-    text-align: right;
-
-    span {
-      &:after {
-        content: "/";
-        display: inline;
-        margin-left: 7px;
-      }
-
-      &:first-child {
-        font-weight: bold;
-      }
-
-      &:last-child:after {
-        display: none;
-      }
-    }
-  }
+.section-right {
+  float: right;
+  width: 25%;
 }
 
 button {
@@ -154,6 +133,7 @@ button {
 
   &:hover {
     box-shadow: 0px 0px 6px $color-gray;
+    opacity: 0.9;
   }
 
   &:before {
@@ -187,8 +167,11 @@ button {
   }
 }
 
+section {
+  margin: 1.6em 0;
+}
+
 article {
-  margin-top: 40px;
   font-size: 0.95em;
 
   h2 {
