@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 @import "../../node_modules/scaffold.css/scaffold.css";
-@import "../../node_modules/prismjs/themes/prism.css";
+@import "../../node_modules/prismjs/themes/prism-okaidia.css";
 @import "../assets/vendor/font-awesome.min.css";
 @import "../assets/meta";
 

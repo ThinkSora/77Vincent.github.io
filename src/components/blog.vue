@@ -4,7 +4,8 @@
 
     <article class="section-left">
       <section>
-        <vue-markdown :source="blog.body"></vue-markdown>
+        <vue-markdown v-show="false" @rendered="render" :source="blog.body"></vue-markdown>
+        <div v-html="markdown"></div>
       </section>
     </article>
 
@@ -37,20 +38,26 @@ export default {
   data() {
     return {
       loading: true,
+      markdown: "",
       blog: ""
     };
   },
   methods: {
+    render(result) {
+      this.markdown = result;
+      setTimeout(() => {
+        Prism.highlightAll();
+      }, 100);
+    },
     formatDate: fn.formatDate,
   },
   mounted() {
     setTimeout(() => {
-      Prism.highlightAll();
     }, 400);
     const url = `https://api.github.com/repos/77Vincent/blog/issues/${this.$route.params.id}`;
 
-    this.$http.get(url).then(response => {
-      this.$set(this.$data, "blog", response.data);
+    this.$http.get(url).then(res => {
+      this.blog = res.data;
       this.$data.loading = false;
     }, err => {
       console.log(err);
