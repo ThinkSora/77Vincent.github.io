@@ -4,7 +4,7 @@
 
     <div class="section-left">
       <section v-show="item.show" v-for="item in blogs">
-        <router-link :to="{name: 'blog', params: {id: item.number}}" class="blogs-link">
+        <router-link :to="{name: 'blog', params: {id: item.number}}" class="blog">
           <span>{{formatDate(item.updated_at)}}</span>
           <h2>{{item.title}}</h2>
           <span class="">{{item.comments}}评论</span>
@@ -145,36 +145,33 @@ export default {
   border-bottom: 1px solid $color-middlegray;
   margin-bottom: 15px;
   padding-bottom: 6px;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .filters {
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
-.blogs-link {
-  display: block;
+.blog {
+  display: flex;
+  align-items: center;
 
   span {
-    display: inline-block;
-    vertical-align: middle;
     font-size: $font-s;
     opacity: 0.8;
     color: $color-darkgray;
 
     &:first-child {
       padding-right: 15px;
-      margin-right: 10px;
+      margin-right: 15px;
       border-right: 1px solid $color-gray;
     }
   }
 
   h2 {
     font-size: $font-l;
-    display: inline-block;
-    vertical-align: middle;
-    width: 450px;
     margin: 0;
+    width: 75%;
 
     @include transition(letter-spacing, 0.3s);
     &:hover {

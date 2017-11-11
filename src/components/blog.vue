@@ -97,7 +97,7 @@ button {
   font-size: $font-s;
 
   section {
-    padding-left: 15px;
+    padding-left: 20px;
     border-bottom: 1px solid $color-middlegray; 
   }
 
