@@ -53,7 +53,7 @@ blockquote {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 900px;
+  // max-width: 900px;
   min-height: 90vh;
 
   @media (max-width: 800px) {
@@ -105,17 +105,19 @@ a {
   float: left;
   min-height: 90vh;
   padding-top: 15px;
-  width: 75%;
+  padding-left: 15%;
+  padding-bottom: 30px;
+  width: 65%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 2px 20px $color-lightgray;
-  padding-bottom: 30px;
 }
 
 .section-right {
   float: right;
-  width: 25%;
+  width: 35%;
   padding-top: 15px;
+  padding-right: 15%;
 }
 
 button {

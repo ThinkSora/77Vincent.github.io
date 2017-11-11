@@ -1,5 +1,5 @@
 <template>
-  <div class="blog">
+  <div class="blog" :class="{fixed: fixed}">
     <div class="icon-spinner" v-show="loading"></div>
 
     <article class="section-left">
@@ -45,6 +45,7 @@ export default {
       markdown: "",
       blog: "",
       content: "",
+      fixed: false 
     };
   },
   methods: {
@@ -55,8 +56,7 @@ export default {
       }, 100);
 
       // Render table content 
-      console.log(this.$el)
-      // this.content = result;
+      this.content = result;
     },
     formatDate: fn.formatDate,
   },
@@ -71,6 +71,8 @@ export default {
     }, err => {
       console.log(err);
     });
+
+    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? true : false;
   }
 }
 
@@ -117,6 +119,16 @@ button {
   span {
     color: $color-darkgray;
     opacity: 0.8;
+  }
+}
+
+.fixed {
+  position: relative;
+
+  .section-right {
+    position: fixed;
+    top: 0;
+    right: 0;
   }
 }
 </style>

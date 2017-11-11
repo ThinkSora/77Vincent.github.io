@@ -162,16 +162,23 @@ export default {
     color: $color-darkgray;
 
     &:first-child {
+      flex: 4;
       padding-right: 15px;
       margin-right: 15px;
       border-right: 1px solid $color-gray;
+      max-width: 100px;
+    }
+
+    &:last-child {
+      flex: 2;
+      max-width: 50px;
     }
   }
 
   h2 {
     font-size: $font-l;
     margin: 0;
-    width: 75%;
+    flex: 22;
 
     @include transition(letter-spacing, 0.3s);
     &:hover {
