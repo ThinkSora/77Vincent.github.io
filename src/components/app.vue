@@ -61,17 +61,15 @@ blockquote {
   min-height: 90vh;
 }
 
-.icon-spinner {
-  animation: spin 1.5s linear infinite;
-  content: "";
-  display: block;
+.loading-bar {
+  animation: processing 3s linear infinite;
   position: absolute;
   z-index: 9;
-  left: 50%;
-  top: 50%;
-  font-size: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
+  left: 0;
+  top: 65px;
+  height: 2px;
+  width: 100%;
+  background-color: $color-theme;
 }
 
 img {
@@ -185,8 +183,8 @@ button {
 }
 
 section {
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 article {

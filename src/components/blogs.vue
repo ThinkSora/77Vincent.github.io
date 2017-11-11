@@ -1,6 +1,6 @@
 <template>
   <div class="blogs">
-    <div class="icon-spinner" v-show="loading"></div>
+    <div class="loading-bar" v-show="loading"></div>
 
     <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">

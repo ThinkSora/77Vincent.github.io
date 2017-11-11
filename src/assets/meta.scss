@@ -19,6 +19,7 @@ $bp-desktop: 800px;
 $bp-laptop: 770px;
 $bp-mobile: 480px;
 
+/**************************************************************************************/
 @mixin transition($property: all, $duration: 0.5s, $timing: ease, $delay: 0s) {
   -webkit-transition: $property $duration $timing $delay;
   -moz-transition: $property $duration $timing $delay;
@@ -34,89 +35,36 @@ $bp-mobile: 480px;
   transform: rotate($deg);
 }
 
+/**************************************************************************************/
 @-webkit-keyframes expand {
-  0% {
-    letter-spacing: 0.1em;
-  }
-  20% {
-    letter-spacing: 0.6em;
-  }
-  40% {
-    letter-spacing: 0.1em;
-  }
-  100% {
-    letter-spacing: 0.1em;
-  }
+  0% { letter-spacing: 0.1em; }
+  20% { letter-spacing: 0.6em; }
+  40% { letter-spacing: 0.1em; }
+  100% { letter-spacing: 0.1em; }
 }
-
 @-moz-keyframes expand {
-  0% {
-    letter-spacing: 0.1em;
-  }
-  20% {
-    letter-spacing: 0.6em;
-  }
-  40% {
-    letter-spacing: 0.1em;
-  }
-  100% {
-    letter-spacing: 0.1em;
-  }
+  0% { letter-spacing: 0.1em; }
+  20% { letter-spacing: 0.6em; }
+  40% { letter-spacing: 0.1em; }
+  100% { letter-spacing: 0.1em; }
 }
-
 @keyframes expand {
-  0% {
-    letter-spacing: 0.1em;
-  }
-  20% {
-    letter-spacing: 0.6em;
-  }
-  40% {
-    letter-spacing: 0.1em;
-  }
-  100% {
-    letter-spacing: 0.1em;
-  }
+  0% { letter-spacing: 0.1em; }
+  20% { letter-spacing: 0.6em; }
+  40% { letter-spacing: 0.1em; }
+  100% { letter-spacing: 0.1em; }
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0);
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0.8;
-  }
+/**************************************************************************************/
+@-webkit-keyframes processing {
+  0% { width: 0; }
+  100% { width: 80%; }
 }
-
-@-moz-keyframes spin {
-  0% {
-    transform: rotate(0);
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0.8;
-  }
+@-moz-keyframes processing {
+  0% { width: 0; }
+  100% { width: 80%; }
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0.8;
-  }
+@keyframes processing {
+  0% { width: 0; }
+  100% { width: 80%; }
 }

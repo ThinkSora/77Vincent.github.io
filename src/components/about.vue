@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="icon-spinner" v-show="loading"></div>
+    <div class="loading-bar" v-show="loading"></div>
 
     <div class="profile-photo"></div>
     <div class="info">
@@ -42,6 +42,7 @@ export default {
 @import "../assets/meta";
 .about {
   text-align: center;
+  padding-top: 30px;
 }
 
 .profile-photo {
