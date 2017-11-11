@@ -12,15 +12,18 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  hashbang: false,
   routes: [{
     path: "/",
+    name: "blogs",
     component: appBlogs,
   }, {
-    path: "blog/:id",
+    path: "/blog/:id",
     name: "blog",
     component: appBlog 
   }, {
     path: "/about",
+    name: "about",
     component: appAbout
   }]
 });

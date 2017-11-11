@@ -4,7 +4,7 @@
 
     <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">
-        <router-link :to="{name: 'blog', params: {id: item.id, blog: item}}" class="blog">
+        <router-link :to="{name: 'blog', params: {id: item.number, blog: item}}" class="blog">
           <span>{{item.updated_at}}</span>
           <h2>{{item.title}}</h2>
           <span class="">{{item.comments}}评论</span>
@@ -78,8 +78,9 @@ export default {
       });
 
       // Check blogs visibility
-      this.blogs.map((blog) => {
+      this.blogs = this.blogs.map((blog) => {
         blog.show = !_.isEqual(_.intersection(blog.labelsList, disabledList), blog.labelsList);
+        return blog;
       });
     },
     toggleLabels: function (id) {
@@ -90,7 +91,7 @@ export default {
         item.disabled = !id ? !item.disabled : item.disabled;
         return item;
       });
-      this.$set(this.$data, "labels", newList);
+      this.labels = newList;
     }
   },
   watch: {

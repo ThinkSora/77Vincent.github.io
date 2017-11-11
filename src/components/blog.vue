@@ -43,12 +43,13 @@ export default {
   data() {
     return {
       html: "",
-      blog: this.$route.params.blog,
+      blog: "",
       index: "",
     };
   },
   methods: {
     render(result) {
+      if (!result) return;
 
       this.index = result.match(titleRegex).map((item) => {
         let text = item.replace(textRegex, "");
@@ -65,6 +66,21 @@ export default {
       setTimeout(() => {
         Prism.highlightAll();
       }, 100);
+    },
+  },
+  created() {
+    const params = this.$route.params;
+
+    if (params.blog) {
+      this.blog = params.blog;
+    } else {
+      const blogAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}`;
+
+      this.$http.get(blogAPI).then(res => {
+        this.blog = res.data;
+      }, err => {
+        console.log(err);
+      });
     }
   }
 }

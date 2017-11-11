@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     window.onscroll = () => this.fixed = window.pageYOffset > 65 ? 1 : 0;
-  },
+  }
 }
 </script>
 
