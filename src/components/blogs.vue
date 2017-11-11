@@ -4,8 +4,8 @@
 
     <div class="section-left">
       <section v-show="item.show" v-for="item in blogs">
-        <router-link :to="{name: 'blog', params: {id: item.number}}" class="blog">
-          <span>{{formatDate(item.updated_at)}}</span>
+        <router-link :to="{name: 'blog', params: {id: item.id, content: item}}" class="blog">
+          <span>{{item.updated_at}}</span>
           <h2>{{item.title}}</h2>
           <span class="">{{item.comments}}评论</span>
         </router-link>
@@ -39,34 +39,38 @@
 </template>
 
 <script>
+import appBlog from "./blog.vue";
 import fn from "../assets/fn.js";
 import _ from "lodash";
 
 export default {
   data() {
     return {
-      loading: true,
-      ascTime: true,
-      ascComments: true,
       blogs: "",
       labels: "",
-      filterByLabels: ""
+      ascTime: 1,
+      ascComments: 1,
+      loading: 1 
     };
   },
   methods: {
     filterByTime: function () {
       let newList = this.blogs.sort((a, b) => {
-        return this.ascTime ? this.compareDate(a.updated_at, b.updated_at) : this.compareDate(b.updated_at, a.updated_at);
+        let tempA = a.updated_at;
+        let tempB = b.updated_at;
+        return this.ascTime 
+          ? tempA.split("-").join("") - tempB.split("-").join("")
+          : tempB.split("-").join("") - tempA.split("-").join("");
       });
       this.ascTime = !this.ascTime;
-      this.$set(this.$data, "blogs", newList);
+      this.blogs = newList;
     },
     filterByComments: function () {
       let newList = this.blogs.sort((a, b) => {
         return this.ascComments ? a.comments - b.comments : b.comments - a.comments
       });
       this.ascComments = !this.ascComments;
-      this.$set(this.$data, "blogs", newList);
+      this.blogs = newList;
     },
     toggleBlogs: function () {
       let disabledList = this.labels.map((item) => {
@@ -87,11 +91,7 @@ export default {
         return item;
       });
       this.$set(this.$data, "labels", newList);
-    },
-    compareDate: function (a, b) {
-      return this.formatDate(a).split("-").join("") - this.formatDate(b).split("-").join("");
-    },
-    formatDate: fn.formatDate
+    }
   },
   watch: {
     labels: function () {
@@ -104,28 +104,29 @@ export default {
 
     // GET blogs 
     this.$http.get(blogsAPI).then(res => {
-      this.blogs = res.data;
 
-      // Set a single dimension arrary of labels for each blog
-      this.blogs.map((blog) => {
+      // Process data and assign
+      this.blogs = res.data.map((blog) => {
         blog.labelsList = blog.labels.map((label) => {
           return label.name;
         });
+        blog.updated_at = fn.formatDate(blog.updated_at);
+        return blog;
       });
 
       // GET labels
       this.$http.get(labelsAPI).then(res => {
-        this.labels = res.data;
 
-        // Set all labels to show
-        this.labels.map((item) => {
+        // Process data and assign
+        this.labels = res.data.map((item) => {
           item.disabled = false;
+          return item;
         });
       }, err => {
         console.log(err);
       });
 
-      this.loading = false;
+      this.loading = !this.loading;
     }, err => {
       console.log(err);
     });
@@ -162,7 +163,7 @@ export default {
     color: $color-darkgray;
 
     &:first-child {
-      flex: 4;
+      flex: 5;
       padding-right: 15px;
       margin-right: 15px;
       border-right: 1px solid $color-gray;
@@ -170,7 +171,7 @@ export default {
     }
 
     &:last-child {
-      flex: 2;
+      flex: 3;
       max-width: 50px;
     }
   }
@@ -178,7 +179,7 @@ export default {
   h2 {
     font-size: $font-l;
     margin: 0;
-    flex: 22;
+    flex: 20;
 
     @include transition(letter-spacing, 0.3s);
     &:hover {
@@ -186,5 +187,4 @@ export default {
     }
   }
 }
-
 </style>

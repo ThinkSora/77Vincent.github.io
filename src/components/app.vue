@@ -2,7 +2,7 @@
   <div>
     <app-header></app-header>
 
-    <div class="wrapper clearfix">
+    <div :class="{fixed: fixed}" class="wrapper clearfix">
       <router-view></router-view>
     </div>
 
@@ -20,7 +20,12 @@ export default {
     appFooter,
   },
   data() {
-    return {};
+    return {
+      fixed: false 
+    }
+  },
+  mounted() {
+    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? true : false;
   },
 }
 </script>
@@ -105,19 +110,29 @@ a {
   float: left;
   min-height: 90vh;
   padding-top: 15px;
-  padding-left: 15%;
+  padding-left: 17%;
   padding-bottom: 30px;
   width: 65%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 2px 20px $color-lightgray;
+
+  @media (max-width: 1200px) {
+    padding-left: 10%;
+    width: 70%;
+  }
 }
 
 .section-right {
   float: right;
   width: 35%;
   padding-top: 15px;
-  padding-right: 15%;
+  padding-right: 17%;
+
+  @media (max-width: 1200px) {
+    padding-right: 10%;
+    width: 30%;
+  }
 }
 
 button {
@@ -194,6 +209,16 @@ article {
   a {
     color: $color-theme;
     text-decoration: underline;
+  }
+}
+
+.fixed {
+  position: relative;
+
+  .section-right {
+    position: fixed;
+    top: 0;
+    right: 0;
   }
 }
 </style>

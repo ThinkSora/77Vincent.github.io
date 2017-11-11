@@ -14,17 +14,14 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes: [{
     path: "/",
-    component: appBlogs
+    component: appBlogs,
+  }, {
+    path: "/:id",
+    name: "blog",
+    component: appBlog 
   }, {
     path: "/about",
     component: appAbout
-  }, {
-    path: "/blogs",
-    component: appBlogs
-  }, {
-    path: "/blog/:id",
-    name: "blog",
-    component: appBlog
   }]
 });
 

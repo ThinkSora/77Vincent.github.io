@@ -1,7 +1,5 @@
 <template>
-  <div class="blog" :class="{fixed: fixed}">
-    <div class="icon-spinner" v-show="loading"></div>
-
+  <div>
     <article class="section-left">
       <section>
         <vue-markdown v-show="false" @rendered="render" :source="blog.body"></vue-markdown>
@@ -15,7 +13,7 @@
       </section>
 
       <section>
-        <span class="date">{{formatDate(blog.updated_at)}}</span>
+        <span class="date">{{blog.updated_at}}</span>
         <span class="comments">{{blog.comments}}评论</span>
 
         <div class="labels">
@@ -41,11 +39,9 @@ export default {
   },
   data() {
     return {
-      loading: true,
       markdown: "",
       blog: "",
       content: "",
-      fixed: false 
     };
   },
   methods: {
@@ -57,22 +53,10 @@ export default {
 
       // Render table content 
       this.content = result;
-    },
-    formatDate: fn.formatDate,
+    }
   },
   mounted() {
-    setTimeout(() => {
-    }, 400);
-    const url = `https://api.github.com/repos/77Vincent/blog/issues/${this.$route.params.id}`;
-
-    this.$http.get(url).then(res => {
-      this.blog = res.data;
-      this.$data.loading = false;
-    }, err => {
-      console.log(err);
-    });
-
-    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? true : false;
+    this.blog = this.$route.params.content;
   }
 }
 
@@ -119,16 +103,6 @@ button {
   span {
     color: $color-darkgray;
     opacity: 0.8;
-  }
-}
-
-.fixed {
-  position: relative;
-
-  .section-right {
-    position: fixed;
-    top: 0;
-    right: 0;
   }
 }
 </style>
