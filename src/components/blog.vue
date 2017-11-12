@@ -8,18 +8,18 @@
         </section>
       </article>
 
-      <h2>评论</h2>
+      <h2 class="text-1">评论</h2>
       <div id="comments">
-        <section v-if="!comments.length" class="none">目前没有评论</section>
+        <div v-if="!comments.length" class="text-normal-gray">目前没有评论</div>
 
         <section class="comment clearfix" v-for="item in comments">
           <img :src="item.user.avatar_url" alt="user picture">
 
-          <div class="content">
-            <div>{{item.user.login}}</div>
-            <div>{{item.updated_at}}</div>
-            <div>{{item.body}}</div>
-          </div>
+          <aside>
+            <span class="text-2">{{item.user.login}} /</span>
+            <span class="text-3">{{item.updated_at}}</span>
+            <div class="content">{{item.body}}</div>
+          </aside>
         </section>
       </div>
     </div>
@@ -122,20 +122,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-.text-3 {
-  padding-right: 5px;
-
-  &:after {
-    content: "/";
-    display: inline;
-    padding-left: 7px;
-  }
-
-  &:last-child:after {
-    display: none;
-  }
-}
-
 .block-right {
   section {
     padding-left: 20px;
@@ -143,6 +129,19 @@ export default {
 
     &:last-child {
       border-bottom: 0;
+    }
+  }
+  .text-3 {
+    padding-right: 5px;
+
+    &:after {
+      content: "/";
+      display: inline;
+      padding-left: 7px;
+    }
+
+    &:last-child:after {
+      display: none;
     }
   }
 }
@@ -159,22 +158,28 @@ export default {
 }
 
 #comments {
-  border: 1px solid $color-middlegray;
   border-radius: 7px;
-  padding: 0 20px;
-  margin-top: 2em;
 
-  .none {
-    font-size: 0.9em;
-    color: $color-gray;
+  .comment {
+  }
+
+  aside {
+    float: left;
+    padding: 15px;
+    border: 1px solid $color-middlegray;
+    border-radius: 5px;
   }
 
   .content {
-    float: left;
+    margin-top: 3px;
+    border-top: 1px solid $color-middlegray;
+    padding-top: 10px;
+    font-size: $font-m;
   }
 
   img {
     border-radius: 5px;
+    margin-right: 10px;
     width: 40px;
     height: auto;
     float: left;

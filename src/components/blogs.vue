@@ -5,9 +5,9 @@
     <div class="block-left">
       <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.number, blog: item}}" class="blog">
-          <span>{{item.updated_at}}</span>
+          <span class="text-3">{{item.updated_at}}</span>
           <h2>{{item.title}}</h2>
-          <span class="">{{item.comments}}评论</span>
+          <span class="text-3">{{item.comments}}评论</span>
         </router-link>
       </section>
     </div>
@@ -140,10 +140,11 @@ export default {
 @import "../assets/meta";
 
 .blogs {
-  font-family: monospace;
+  font-family: $font-theme;
 }
 
 .filters-title {
+  @extend .text-normal-gray;
   border-bottom: 1px solid $color-middlegray;
   margin-bottom: 15px;
   padding-bottom: 6px;
@@ -159,10 +160,6 @@ export default {
   align-items: center;
 
   span {
-    font-size: $font-s;
-    opacity: 0.8;
-    color: $color-darkgray;
-
     &:first-child {
       flex: 5;
       padding-right: 15px;

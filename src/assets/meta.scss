@@ -7,17 +7,43 @@ $color-lightgray: rgb(240, 240, 240);
 $color-white: rgb(250, 250, 250);
 
 // font-size
-$font-s: 12px;
-$font-m: 14px;
-$font-l: 18px;
+$font-l: 1.2rem;
+$font-m: 0.95em;
+$font-s: 0.77rem;
+$font-xs: 0.65rem;
 
 // font-family
 $font-basic: Arial, "SimHei", sans-serif;
+$font-theme: monospace, Arial, "SimHei", sans-serif;
 
 // Dimenstion
 $bp-desktop: 800px;
 $bp-laptop: 770px;
 $bp-mobile: 480px;
+
+.text-1 {
+  border-bottom: 1px solid $color-middlegray;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-top: 40px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.text-2 {
+  font-size: $font-m;
+  font-weight: bold;
+}
+.text-3 {
+  font-size: $font-s;
+  color: $color-darkgray;
+  opacity: 0.8;
+}
+.text-normal-gray {
+  font-size: $font-m;
+  color: $color-darkgray;
+  opacity: 0.8;
+}
 
 /**************************************************************************************/
 @mixin transition($property: all, $duration: 0.5s, $timing: ease, $delay: 0s) {

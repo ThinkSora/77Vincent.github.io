@@ -67,15 +67,9 @@ ol {
 }
 
 article {
-  font-size: 0.95em;
+  font-size: $font-m;
   h2 {
-    border-bottom: 1px solid $color-middlegray;
-    font-weight: bold;
-    padding-bottom: 5px;
-    margin-top: 40px;
-    &:first-child {
-      margin-top: 0;
-    }
+    @extend .text-1;
   }
   a {
     color: $color-theme;
@@ -106,6 +100,7 @@ pre {
 
 button {
   background-color: $color-darkgray;
+  font-family: $font-theme;
   color: #fff;
   padding: 2px 6px;
   margin-bottom: 10px;
@@ -113,7 +108,6 @@ button {
   border-radius: 3px;
   font-size: $font-s;
   display: inline-block;
-  width: auto;
   letter-spacing: inherit;
   line-height: inherit !important;
   cursor: pointer;
@@ -135,7 +129,7 @@ button {
     top: 0;
     left: 0;
     border-radius: 3px;
-    opacity: 0.3;
+    opacity: 0.35;
     background: rgba(199, 199, 199, 0);
     background: -moz-linear-gradient(top, rgba(199, 199, 199, 0) 0%, rgba(238, 238, 238, 0) 55%, rgba(255, 255, 255, 0.53) 79%, rgba(199, 199, 199, 1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199, 199, 199, 0)), color-stop(55%, rgba(238, 238, 238, 0)), color-stop(79%, rgba(255, 255, 255, 0.53)), color-stop(100%, rgba(199, 199, 199, 1)));
@@ -194,20 +188,6 @@ button {
     padding-right: 5%;
     width: 40%;
   }
-}
-
-.text-1 {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-.text-2 {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-.text-3 {
-  font-size: 0.7em;
-  color: $color-darkgray;
-  opacity: 0.8;
 }
 
 .progress-bar {

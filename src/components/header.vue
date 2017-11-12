@@ -14,9 +14,9 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/meta";
 header {
-  font-family: monospace;
   padding: 15px;
   text-align: center;
+  font-family: $font-theme;
   border-bottom: 1px solid $color-middlegray;
   background-color: #fff;
   @include transition(all, 0.5s);
@@ -49,7 +49,7 @@ header {
 }
 
   h1 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     display: inline-block;
     text-transform: uppercase;
     vertical-align: middle;
