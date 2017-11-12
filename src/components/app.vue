@@ -150,8 +150,8 @@ button {
   margin-right: 7px;
   border-radius: 3px;
   font-size: $font-s;
-  max-width: 120px;
-  display: block;
+  display: inline-block;
+  width: auto;
   letter-spacing: inherit;
   line-height: inherit !important;
   cursor: pointer;
@@ -192,6 +192,10 @@ button {
     color: $color-darkgray;
     opacity: 0.5;
   }
+}
+
+.button {
+  @extend button;
 }
 
 section {

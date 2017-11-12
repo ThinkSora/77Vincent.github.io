@@ -1,28 +1,39 @@
 <template>
   <div>
-    <article class="block-left">
-      <section>
-        <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
-        <div v-html="html"></div>
-      </section>
-    </article>
+    <div class="block-left">
+      <article>
+        <section>
+          <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
+          <div v-html="html"></div>
+        </section>
+      </article>
+
+      <h2 id="comments">评论</h2>
+      <div class="comments">
+        <section v-for="item in comments">
+          <p>{{item.body}}</p>
+          
+        </section>
+      </div>
+    </div>
+
 
     <div class="block-right">
       <section>
         <div class="title">{{blog.title}}</div>
+        <span class="date">{{blog.updated_at}}更新</span>
+        <span class="comments-number">{{blog.comments}}评论</span>
       </section>
 
-      <section class="info">
-        <span class="date">{{blog.updated_at}}</span>
-        <span class="comments">{{blog.comments}}评论</span>
 
-        <div class="labels">
-          <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
-        </div>
-      </section>
+      <!-- <div class="labels">
+        <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
+      </div> -->
 
       <section class="anchors">
         <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
+        <div><a class="button icon-comment" href="#comments">查看评论</a></div>
+        <div><button class="icon-arrow-up" @click="gotoTop">回到顶部</button></div>
       </section>
     </div>
   </div>
@@ -42,8 +53,9 @@ export default {
   },
   data() {
     return {
-      html: "",
       blog: "",
+      comments: "",
+      html: "",
       index: "",
     };
   },
@@ -67,14 +79,22 @@ export default {
         Prism.highlightAll();
       }, 100);
     },
+    gotoTop() {
+      window.scrollTo(0, 0);
+    }
   },
   created() {
     const params = this.$route.params;
+    let commentsAPI;
 
     if (params.blog) {
+      // When land on blog page via homepage
       this.blog = params.blog;
+      commentsAPI = params.blog.comments_url;
     } else {
+      // When directly land on a blog page
       const blogAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}`;
+      commentsAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}/comments`;
 
       this.$http.get(blogAPI).then(res => {
         this.blog = res.data;
@@ -82,6 +102,12 @@ export default {
         console.log(err);
       });
     }
+
+    this.$http.get(commentsAPI).then(res => {
+      this.comments = res.data;
+    }, err => {
+      console.log(err);
+    });
   }
 }
 
@@ -142,5 +168,11 @@ button {
     opacity: 0.7;    
     margin-right: 7px;
   }
+}
+
+.comments {
+  border: 1px solid $color-middlegray;
+  border-radius: 7px;
+  padding: 0 20px;
 }
 </style>

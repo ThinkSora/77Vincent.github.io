@@ -12,7 +12,7 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  hashbang: false,
+  mode: "history",
   routes: [{
     path: "/",
     name: "blogs",

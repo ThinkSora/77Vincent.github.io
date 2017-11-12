@@ -23,7 +23,7 @@
             @click="toggleLabels(item.id)"
           >{{item.name}}
           </button>
-          <button @click="toggleLabels()">反选所有</button>
+          <button class="icon-refresh" @click="toggleLabels()">反选所有</button>
         </div>
       </section>
 
