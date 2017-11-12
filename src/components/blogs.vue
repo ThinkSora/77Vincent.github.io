@@ -138,11 +138,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-
-.blogs {
-  font-family: $font-theme;
-}
-
 .filters-title {
   @extend .text-normal-gray;
   border-bottom: 1px solid $color-middlegray;
@@ -161,7 +156,7 @@ export default {
 
   span {
     &:first-child {
-      flex: 5;
+      flex: 3;
       padding-right: 15px;
       margin-right: 15px;
       border-right: 1px solid $color-gray;
@@ -176,6 +171,7 @@ export default {
 
   h2 {
     font-size: $font-l;
+    font-family: $font-theme;
     margin: 0;
     flex: 20;
 

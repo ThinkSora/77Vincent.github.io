@@ -67,7 +67,7 @@ ol {
 }
 
 article {
-  font-size: $font-m;
+  font-size: 0.95em;
   h2 {
     @extend .text-1;
   }
@@ -100,7 +100,6 @@ pre {
 
 button {
   background-color: $color-darkgray;
-  font-family: $font-theme;
   color: #fff;
   padding: 2px 6px;
   margin-bottom: 10px;
