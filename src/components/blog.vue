@@ -8,32 +8,36 @@
         </section>
       </article>
 
-      <h2 id="comments">评论</h2>
-      <div class="comments">
-        <section v-for="item in comments">
-          <p>{{item.body}}</p>
-          
+      <h2>评论</h2>
+      <div id="comments">
+        <section v-if="!comments.length" class="none">目前没有评论</section>
+
+        <section class="comment clearfix" v-for="item in comments">
+          <img :src="item.user.avatar_url" alt="user picture">
+
+          <div class="content">
+            <div>{{item.user.login}}</div>
+            <div>{{item.updated_at}}</div>
+            <div>{{item.body}}</div>
+          </div>
         </section>
       </div>
     </div>
 
-
     <div class="block-right">
       <section>
-        <div class="title">{{blog.title}}</div>
-        <span class="date">{{blog.updated_at}}更新</span>
-        <span class="comments-number">{{blog.comments}}评论</span>
+        <div class="text-2">{{blog.title}}</div>
+        <span class="text-3">{{blog.updated_at}}更新</span>
+        <span class="text-3">{{blog.comments}}评论</span>
       </section>
-
-
-      <!-- <div class="labels">
-        <button :style="{backgroundColor: '#' + item.color}" v-for="item in blog.labels">{{item.name}}</button>
-      </div> -->
 
       <section class="anchors">
         <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
-        <div><a class="button icon-comment" href="#comments">查看评论</a></div>
-        <div><button class="icon-arrow-up" @click="gotoTop">回到顶部</button></div>
+      </section>
+
+      <section>
+        <div><a class="button" href="#comments">查看评论</a></div>
+        <div><button @click="gotoTop">回到顶部</button></div>
       </section>
     </div>
   </div>
@@ -98,38 +102,27 @@ export default {
 
       this.$http.get(blogAPI).then(res => {
         this.blog = res.data;
+        this.blog.updated_at = fn.formatDate(this.blog.updated_at);
       }, err => {
         console.log(err);
       });
     }
 
     this.$http.get(commentsAPI).then(res => {
-      this.comments = res.data;
+      this.comments = res.data.map((item) => {
+        item.updated_at = fn.formatDate(item.updated_at);
+        return item;
+      });
     }, err => {
       console.log(err);
     });
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-.title {
-  font-weight: bold;
-  padding-bottom: 6px;
-  font-size: 1.2em;
-}
-
-.labels {
-  margin-top: 5px;
-}
-
-button {
-  display: inline;
-}
-
-.date {
+.text-3 {
   padding-right: 5px;
 
   &:after {
@@ -137,11 +130,13 @@ button {
     display: inline;
     padding-left: 7px;
   }
+
+  &:last-child:after {
+    display: none;
+  }
 }
 
 .block-right {
-  font-size: $font-s;
-
   section {
     padding-left: 20px;
     border-bottom: 1px solid $color-middlegray; 
@@ -150,16 +145,9 @@ button {
       border-bottom: 0;
     }
   }
-
-  span {
-    color: $color-darkgray;
-    opacity: 0.8;
-  }
 }
 
 .anchor {
-  color: #000;
-  font-size: 1.25em; 
   display: block;
   margin: 1em 0;
   letter-spacing: 0;
@@ -170,9 +158,26 @@ button {
   }
 }
 
-.comments {
+#comments {
   border: 1px solid $color-middlegray;
   border-radius: 7px;
   padding: 0 20px;
+  margin-top: 2em;
+
+  .none {
+    font-size: 0.9em;
+    color: $color-gray;
+  }
+
+  .content {
+    float: left;
+  }
+
+  img {
+    border-radius: 5px;
+    width: 40px;
+    height: auto;
+    float: left;
+  }
 }
 </style>

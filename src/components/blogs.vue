@@ -99,7 +99,7 @@ export default {
       this.toggleBlogs();
     }
   },
-  mounted() {
+  created() {
     const blogsAPI = "https://api.github.com/repos/77Vincent/blog/issues";
     const labelsAPI = "https://api.github.com/repos/77Vincent/blog/labels";
 
