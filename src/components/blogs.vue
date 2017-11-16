@@ -46,8 +46,8 @@ import _ from "lodash";
 export default {
   data() {
     return {
-      blogs: "",
-      labels: "",
+      blogs: null,
+      labels: null,
       ascTime: 1,
       ascComments: 1,
       loading: 1 
@@ -102,6 +102,15 @@ export default {
   created() {
     const blogsAPI = "https://api.github.com/repos/77Vincent/blog/issues";
     const labelsAPI = "https://api.github.com/repos/77Vincent/blog/labels";
+    const visit = this.$store.state.visit;
+
+    this.blogs = this.$parent.blogs;
+    this.labels = this.$parent.labels;
+
+    if (visit) {
+      this.loading = !this.loading;
+      return;
+    }
 
     // GET blogs 
     this.$http.get(blogsAPI).then(res => {
@@ -114,6 +123,7 @@ export default {
         blog.updated_at = fn.formatDate(blog.updated_at);
         return blog;
       });
+      this.$parent.blogs = this.blogs;
 
       // GET labels
       this.$http.get(labelsAPI).then(res => {
@@ -123,11 +133,13 @@ export default {
           item.disabled = 0;
           return item;
         });
+        this.$parent.labels = this.labels;
       }, err => {
         console.log(err);
       });
 
       this.loading = !this.loading;
+      this.$store.commit('visit');
     }, err => {
       console.log(err);
     });

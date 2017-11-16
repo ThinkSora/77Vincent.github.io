@@ -23,7 +23,9 @@ export default {
   },
   data() {
     return {
-      fixed: 0 
+      fixed: 0,
+      blogs: null,
+      labels: null
     }
   },
   mounted() {
