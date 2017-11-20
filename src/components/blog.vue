@@ -93,12 +93,10 @@ export default {
 
     console.log(params.blog)
     if (params.blog) {
-      console.log("already loaded")
       // When land on blog page via homepage
       this.blog = params.blog;
       commentsAPI = params.blog.comments_url;
     } else {
-      console.log("first time")
       // When directly land on a blog page
       const blogAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}`;
       commentsAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}/comments`;

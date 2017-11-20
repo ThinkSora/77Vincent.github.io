@@ -168,7 +168,7 @@ export default {
 
   span {
     &:first-child {
-      flex: 3;
+      flex: 4;
       padding-right: 15px;
       margin-right: 15px;
       border-right: 1px solid $color-gray;

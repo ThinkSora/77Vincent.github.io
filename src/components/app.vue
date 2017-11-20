@@ -48,8 +48,8 @@ html {
 }
 
 section {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 img {
@@ -160,34 +160,38 @@ button {
   float: left;
   min-height: 90vh;
   padding-top: 15px;
-  padding-left: 17%;
+  padding-left: 25%;
   padding-bottom: 60px;
-  width: 65%;
+  width: 62%;
   padding-right: 15px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 2px 20px rgba(200, 200, 200, 0.3);
+  @media (max-width: 1600px) {
+    padding-left: 18%;
+  }
   @media (max-width: 1200px) {
     padding-left: 10%;
-    width: 70%;
   }
   @media (max-width: 800px) {
-    padding-left: 5%;
-    width: 60%;
+    padding-left: 15px;
+    width: 65%;
   }
 }
 
 .block-right {
   float: right;
-  width: 35%;
+  width: 38%;
   padding-top: 15px;
-  padding-right: 17%;
+  padding-right: 25%;
+  @media (max-width: 1600px) {
+    padding-right: 18%;
+  }
   @media (max-width: 1200px) {
     padding-right: 10%;
-    width: 30%;
   }
   @media (max-width: 800px) {
-    padding-right: 5%;
-    width: 40%;
+    padding-right: 15px;
+    width: 35%;
   }
 }
 
