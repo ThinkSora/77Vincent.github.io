@@ -1,6 +1,23 @@
 <template>
-  <div>
+  <div class="flex">
     <div class="block-left">
+      <section>
+        <div class="text-2">{{blog.title}}</div>
+        <span class="text-3">{{blog.updated_at}}更新</span>
+        <span class="text-3">{{blog.comments}}评论</span>
+      </section>
+
+      <section class="anchors">
+        <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
+      </section>
+
+      <section>
+        <div><a class="button" href="#comments">查看评论</a></div>
+        <div><button @click="gotoTop">回到顶部</button></div>
+      </section>
+    </div>
+
+    <div class="block-right">
       <article>
         <section>
           <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
@@ -24,22 +41,6 @@
       </div>
     </div>
 
-    <div class="block-right">
-      <section>
-        <div class="text-2">{{blog.title}}</div>
-        <span class="text-3">{{blog.updated_at}}更新</span>
-        <span class="text-3">{{blog.comments}}评论</span>
-      </section>
-
-      <section class="anchors">
-        <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
-      </section>
-
-      <section>
-        <div><a class="button" href="#comments">查看评论</a></div>
-        <div><button @click="gotoTop">回到顶部</button></div>
-      </section>
-    </div>
   </div>
 </template>
 

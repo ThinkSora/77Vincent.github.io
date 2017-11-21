@@ -15,10 +15,12 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    visit: 0
+    visit: 0,
+    loading: 1 
   },
   mutations: {
     visit: state => state.visit = 1,
+    loaded: state => state.loading = 0
   }
 });
 

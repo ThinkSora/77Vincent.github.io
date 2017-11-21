@@ -1,18 +1,6 @@
 <template>
-  <div class="blogs">
-    <div class="progress-bar" :class="{completed: !loading, loading: loading}"></div>
-
+  <div class="blogs flex">
     <div class="block-left">
-      <section v-show="item.show" v-for="item in blogs">
-        <router-link :to="{name: 'blog', params: {id: item.number, blog: item}}" class="blog">
-          <span class="text-3">{{item.updated_at}}</span>
-          <h2>{{item.title}}</h2>
-          <span class="text-3">{{item.comments}}评论</span>
-        </router-link>
-      </section>
-    </div>
-
-    <div class="block-right">
       <section>
         <div class="filters-title">筛选</div>
         <div class="filters">
@@ -35,6 +23,16 @@
         </div>
       </section>
     </div>
+
+    <div class="block-right">
+      <section v-show="item.show" v-for="item in blogs">
+        <router-link :to="{name: 'blog', params: {id: item.number, blog: item}}" class="blog">
+          <span class="text-3">{{item.updated_at}}</span>
+          <h2>{{item.title}}</h2>
+          <span class="text-3">{{item.comments}}评论</span>
+        </router-link>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -50,7 +48,6 @@ export default {
       labels: null,
       ascTime: 1,
       ascComments: 1,
-      loading: 1 
     };
   },
   methods: {
@@ -108,7 +105,7 @@ export default {
     this.labels = this.$parent.labels;
 
     if (visit) {
-      this.loading = !this.loading;
+      this.$store.commit('loaded');
       return;
     }
 
@@ -138,8 +135,8 @@ export default {
         console.log(err);
       });
 
-      this.loading = !this.loading;
       this.$store.commit('visit');
+      this.$store.commit('loaded');
     }, err => {
       console.log(err);
     });
@@ -168,16 +165,10 @@ export default {
 
   span {
     &:first-child {
-      flex: 4;
       padding-right: 15px;
       margin-right: 15px;
       border-right: 1px solid $color-gray;
       max-width: 100px;
-    }
-
-    &:last-child {
-      flex: 3;
-      max-width: 50px;
     }
   }
 

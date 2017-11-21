@@ -2,7 +2,7 @@
   <div>
     <app-header></app-header>
 
-    <div :class="{fixed: fixed}" class="wrapper clearfix">
+    <div :class="{fixed: fixed}" class="wrapper">
       <router-view></router-view>
     </div>
 
@@ -48,8 +48,8 @@ html {
 }
 
 section {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 img {
@@ -154,69 +154,54 @@ button {
 .wrapper {
   margin: 0 auto;
   min-height: 90vh;
+  display: flex;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
 }
 
 .block-left {
-  float: left;
+  justify-content: space-between;
   min-height: 90vh;
-  padding-top: 15px;
-  padding-left: 25%;
-  padding-bottom: 60px;
-  width: 62%;
-  padding-right: 15px;
+  width: 300px;
   border-right: 1px solid $color-middlegray;
-  box-shadow: 5px 2px 20px rgba(200, 200, 200, 0.3);
-  @media (max-width: 1600px) {
-    padding-left: 18%;
-  }
-  @media (max-width: 1200px) {
-    padding-left: 10%;
-  }
-  @media (max-width: 800px) {
-    padding-left: 15px;
-    width: 65%;
-  }
+  box-shadow: 5px 0px 20px rgba(200, 200, 200, 0.5);
+  // @media (max-width: 1200px) {
+  //   padding-left: 10%;
+  // }
+  // @media (max-width: 800px) {
+  //   padding-left: 15px;
+  //   width: 65%;
+  // }
 }
 
 .block-right {
-  float: right;
-  width: 38%;
-  padding-top: 15px;
-  padding-right: 25%;
-  @media (max-width: 1600px) {
-    padding-right: 18%;
-  }
-  @media (max-width: 1200px) {
-    padding-right: 10%;
-  }
-  @media (max-width: 800px) {
-    padding-right: 15px;
-    width: 35%;
-  }
-}
-
-.progress-bar {
-  position: absolute;
-  z-index: 9;
-  left: 0;
-  top: 65px;
-  height: 2px;
-  width: 100%;
-  background-color: $color-theme;
-  &.loading {
-    animation: processing 3s linear forwards;
-  }
-  &.completed {
-    animation: completed 0.1s 0.2s linear forwards;
-  }
+  padding: 15px 30px 60px;
+  flex: 1;
+  // @media (max-width: 1200px) {
+  //   padding-right: 10%;
+  // }
+  // @media (max-width: 800px) {
+  //   padding-right: 15px;
+  //   width: 35%;
+  // }
 }
 
 .fixed {
   position: relative;
-  .block-right {
+
+  .block-left {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .block-right {
+    margin-left: 300px;
   }
 }
 </style>

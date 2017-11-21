@@ -1,7 +1,5 @@
 <template>
   <section class="about">
-    <div class="progress-bar" :class="{completed: !loading, loading: loading}"></div>
-
     <div class="profile-photo"></div>
     <div class="info">
       <h2>{{info.name}}</h2>
@@ -15,7 +13,6 @@
 export default {
   data() {
     return {
-      loading: 1,
       info: "" 
     };
   },
@@ -30,7 +27,6 @@ export default {
       .get(profileAPI)
       .then(res => {
         this.info = res.data;
-        this.loading = 0;
       }, err => {
         console.log(err);
       });

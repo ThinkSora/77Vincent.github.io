@@ -1,5 +1,5 @@
 // Colors
-$color-theme: #006969;
+$color-theme: #0f7e74;
 $color-darkgray: rgb(60, 60, 60);
 $color-gray: rgb(150, 150, 150);
 $color-middlegray: rgb(220, 220, 200);
@@ -62,49 +62,29 @@ $bp-mobile: 480px;
 }
 
 /**************************************************************************************/
-@-webkit-keyframes expand {
-  0% { letter-spacing: 0.1em; }
-  20% { letter-spacing: 0.6em; }
-  40% { letter-spacing: 0.1em; }
-  100% { letter-spacing: 0.1em; }
-}
-@-moz-keyframes expand {
-  0% { letter-spacing: 0.1em; }
-  20% { letter-spacing: 0.6em; }
-  40% { letter-spacing: 0.1em; }
-  100% { letter-spacing: 0.1em; }
-}
-@keyframes expand {
-  0% { letter-spacing: 0.1em; }
-  20% { letter-spacing: 0.6em; }
-  40% { letter-spacing: 0.1em; }
-  100% { letter-spacing: 0.1em; }
-}
-
-/**************************************************************************************/
-@-webkit-keyframes processing {
+@-webkit-keyframes loading {
   0% { width: 0; }
   100% { width: 80%; }
 }
-@-moz-keyframes processing {
+@-moz-keyframes loading {
   0% { width: 0; }
   100% { width: 80%; }
 }
-@keyframes processing {
+@keyframes loading {
   0% { width: 0; }
   100% { width: 80%; }
 }
 
 /**************************************************************************************/
-@-webkit-keyframes completed {
+@-webkit-keyframes loaded {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
-@-moz-keyframes completed {
+@-moz-keyframes loaded {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
-@keyframes completed {
+@keyframes loaded {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
