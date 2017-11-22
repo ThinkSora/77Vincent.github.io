@@ -8,7 +8,7 @@
       </section>
 
       <section class="anchors">
-        <a :href="`#${item.id}`" class="icon-caret-right anchor" v-for="item in index">{{item.text}}</a>
+        <a :href="`#${item.id}`" v-for="item in index">{{item.text}}</a>
       </section>
 
       <section>
@@ -19,13 +19,11 @@
 
     <div class="block-right">
       <article>
-        <section>
-          <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
-          <div v-html="html"></div>
-        </section>
+        <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
+        <div v-html="html"></div>
       </article>
 
-      <h2 class="text-1">评论</h2>
+      <h2 class="text-underline">评论</h2>
       <div id="comments">
         <div v-if="!comments.length" class="text-normal-gray">目前没有评论</div>
 
@@ -89,14 +87,16 @@ export default {
     }
   },
   created() {
+    this.$store.commit('loaded');
+
     const params = this.$route.params;
     let commentsAPI;
 
-    console.log(params.blog)
     if (params.blog) {
       // When land on blog page via homepage
       this.blog = params.blog;
       commentsAPI = params.blog.comments_url;
+      this.$store.commit('loaded');
     } else {
       // When directly land on a blog page
       const blogAPI = `https://api.github.com/repos/77Vincent/blog/issues/${params.id}`;
@@ -105,6 +105,7 @@ export default {
       this.$http.get(blogAPI).then(res => {
         this.blog = res.data;
         this.blog.updated_at = fn.formatDate(this.blog.updated_at);
+        this.$store.commit('loaded');
       }, err => {
         console.log(err);
       });
@@ -124,15 +125,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/meta";
-.block-right {
-  section {
-    padding-left: 20px;
-    border-bottom: 1px solid $color-middlegray; 
-
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
+.block-left {
   .text-3 {
     padding-right: 5px;
 
@@ -148,10 +141,13 @@ export default {
   }
 }
 
-.anchor {
-  display: block;
-  margin: 1em 0;
+.anchors {
   letter-spacing: 0;
+
+  a {
+    margin: 1em 0;
+    display: block;
+  }
 
   &:before {
     opacity: 0.7;    

@@ -3,24 +3,20 @@
     <div class="block-left">
       <section>
         <div class="filters-title">筛选</div>
-        <div class="filters">
-          <button 
-            :class="{disabled: item.disabled}"
-            :style="{backgroundColor: '#' + item.color}" 
-            v-for="item in labels"
-            @click="toggleLabels(item.id)"
-          >{{item.name}}
-          </button>
-          <button class="icon-refresh" @click="toggleLabels()">反选所有</button>
-        </div>
+        <button 
+          :class="{disabled: item.disabled}"
+          :style="{backgroundColor: '#' + item.color}" 
+          v-for="item in labels"
+          @click="toggleLabels(item.id)"
+        >{{item.name}}
+        </button>
+        <button class="icon-refresh" @click="toggleLabels()">反选所有</button>
       </section>
 
       <section>
         <div class="filters-title">排序</div>
-        <div class="filters">
-          <button v-on:click="filterByTime" class="icon-arrow-up" :class="{'icon-arrow-down': ascTime}">按时间</button>
-          <button v-on:click="filterByComments" class="icon-arrow-up" :class="{'icon-arrow-down': ascComments}">按评论数</button>
-        </div>
+        <button v-on:click="filterByTime" class="icon-arrow-up" :class="{'icon-arrow-down': ascTime}">按时间</button>
+        <button v-on:click="filterByComments" class="icon-arrow-up" :class="{'icon-arrow-down': ascComments}">按评论数</button>
       </section>
     </div>
 
@@ -97,6 +93,8 @@ export default {
     }
   },
   created() {
+    this.$store.commit('loaded');
+
     const blogsAPI = "https://api.github.com/repos/77Vincent/blog/issues";
     const labelsAPI = "https://api.github.com/repos/77Vincent/blog/labels";
     const visit = this.$store.state.visit;
@@ -152,11 +150,6 @@ export default {
   border-bottom: 1px solid $color-middlegray;
   margin-bottom: 15px;
   padding-bottom: 6px;
-  padding-left: 20px;
-}
-
-.filters {
-  padding-left: 20px;
 }
 
 .blog {

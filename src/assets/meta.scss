@@ -1,5 +1,5 @@
 // Colors
-$color-theme: #0f7e74;
+$color-theme: #0a635a;
 $color-darkgray: rgb(60, 60, 60);
 $color-gray: rgb(150, 150, 150);
 $color-middlegray: rgb(220, 220, 200);
@@ -21,7 +21,7 @@ $bp-desktop: 800px;
 $bp-laptop: 770px;
 $bp-mobile: 480px;
 
-.text-1 {
+.text-underline {
   border-bottom: 1px solid $color-middlegray;
   font-weight: bold;
   padding-bottom: 5px;
@@ -77,14 +77,14 @@ $bp-mobile: 480px;
 
 /**************************************************************************************/
 @-webkit-keyframes loaded {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% { z-index: 0; }
+  100% { z-index: -1; }
 }
 @-moz-keyframes loaded {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% { z-index: 0; }
+  100% { z-index: -1; }
 }
 @keyframes loaded {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% { z-index: 0; }
+  100% { z-index: -1; }
 }

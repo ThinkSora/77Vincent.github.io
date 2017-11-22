@@ -50,6 +50,10 @@ html {
 section {
   padding-top: 10px;
   padding-bottom: 10px;
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 img {
@@ -70,8 +74,9 @@ ol {
 
 article {
   font-size: 0.95em;
+  max-width: 700px;
   h2 {
-    @extend .text-1;
+    @extend .text-underline;
   }
   a {
     color: $color-theme;
@@ -101,15 +106,16 @@ pre {
 }
 
 button {
-  background-color: $color-darkgray;
+  background-color: $color-theme;
   color: #fff;
+  font-weight: bold !important;
   padding: 2px 6px;
   margin-bottom: 10px;
   margin-right: 7px;
   border-radius: 3px;
   font-size: $font-s;
   display: inline-block;
-  letter-spacing: inherit;
+  letter-spacing: inherit !important;
   line-height: inherit !important;
   cursor: pointer;
   position: relative;
@@ -153,7 +159,6 @@ button {
 // **********************************************************
 .wrapper {
   margin: 0 auto;
-  min-height: 90vh;
   display: flex;
 }
 
@@ -165,8 +170,8 @@ button {
 
 .block-left {
   justify-content: space-between;
-  min-height: 90vh;
   width: 300px;
+  padding: 20px 15px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 0px 20px rgba(200, 200, 200, 0.5);
   // @media (max-width: 1200px) {
@@ -179,7 +184,8 @@ button {
 }
 
 .block-right {
-  padding: 15px 30px 60px;
+  padding: 20px 30px 60px;
+  min-height: 95vh;
   flex: 1;
   // @media (max-width: 1200px) {
   //   padding-right: 10%;

@@ -11,7 +11,7 @@
 @import "../assets/meta";
 
 footer {
-  background: $color-darkgray;
+  background: $color-theme;
   color: #fff;
   padding: 5px;
   text-align: center;
