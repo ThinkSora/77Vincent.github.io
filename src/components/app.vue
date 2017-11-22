@@ -29,7 +29,8 @@ export default {
     }
   },
   mounted() {
-    window.onscroll = () => this.fixed = window.pageYOffset > 65 ? 1 : 0;
+    const headerHeight = parseInt(getComputedStyle(this.$el.querySelector('header')).height);
+    window.onscroll = () => this.fixed = window.pageYOffset > headerHeight ? 1 : 0;
   }
 }
 </script>
@@ -169,32 +170,16 @@ button {
 }
 
 .block-left {
-  max-width: 300px;
-  min-width: 250px;
-  width: 20%;
   padding: 20px 15px;
+  width: 20%;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.15);
-  // @media (max-width: 1200px) {
-  //   padding-left: 10%;
-  // }
-  // @media (max-width: 800px) {
-  //   padding-left: 15px;
-  //   width: 65%;
-  // }
 }
 
 .block-right {
+  width: 80%;
   padding: 20px 35px 60px;
   min-height: 95vh;
-  width: 80%;
-  // @media (max-width: 1200px) {
-  //   padding-right: 10%;
-  // }
-  // @media (max-width: 800px) {
-  //   padding-right: 15px;
-  //   width: 35%;
-  // }
 }
 
 .fixed {
@@ -205,10 +190,11 @@ button {
     top: 0;
     left: 0;
     height: 100%;
+    width: 20%;
   }
 
   .block-right {
-    padding-left: 20%;
+    margin-left: 20%;
   }
 }
 </style>
