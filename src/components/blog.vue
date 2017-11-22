@@ -21,22 +21,22 @@
       <article>
         <vue-markdown v-show="0" @rendered="render" :source="blog.body"></vue-markdown>
         <div v-html="html"></div>
+
+        <h2 class="text-underline">评论</h2>
+        <div id="comments">
+          <div v-if="!comments.length" class="text-normal-gray">目前没有评论</div>
+
+          <section class="comment clearfix" v-for="item in comments">
+            <img :src="item.user.avatar_url" alt="user picture">
+
+            <aside>
+              <span class="text-2">{{item.user.login}} /</span>
+              <span class="text-3">{{item.updated_at}}</span>
+              <div class="content">{{item.body}}</div>
+            </aside>
+          </section>
+        </div>
       </article>
-
-      <h2 class="text-underline">评论</h2>
-      <div id="comments">
-        <div v-if="!comments.length" class="text-normal-gray">目前没有评论</div>
-
-        <section class="comment clearfix" v-for="item in comments">
-          <img :src="item.user.avatar_url" alt="user picture">
-
-          <aside>
-            <span class="text-2">{{item.user.login}} /</span>
-            <span class="text-3">{{item.updated_at}}</span>
-            <div class="content">{{item.body}}</div>
-          </aside>
-        </section>
-      </div>
     </div>
 
   </div>

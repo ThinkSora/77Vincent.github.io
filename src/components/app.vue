@@ -169,11 +169,12 @@ button {
 }
 
 .block-left {
-  justify-content: space-between;
-  width: 300px;
+  max-width: 300px;
+  min-width: 250px;
+  width: 20%;
   padding: 20px 15px;
   border-right: 1px solid $color-middlegray;
-  box-shadow: 5px 0px 20px rgba(200, 200, 200, 0.5);
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.15);
   // @media (max-width: 1200px) {
   //   padding-left: 10%;
   // }
@@ -184,9 +185,9 @@ button {
 }
 
 .block-right {
-  padding: 20px 30px 60px;
+  padding: 20px 35px 60px;
   min-height: 95vh;
-  flex: 1;
+  width: 80%;
   // @media (max-width: 1200px) {
   //   padding-right: 10%;
   // }
@@ -207,7 +208,7 @@ button {
   }
 
   .block-right {
-    margin-left: 300px;
+    padding-left: 20%;
   }
 }
 </style>
