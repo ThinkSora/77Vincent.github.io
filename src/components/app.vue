@@ -105,7 +105,7 @@ pre {
 }
 
 button {
-  background-color: $color-theme;
+  background-color: $color-darkgray;
   color: #fff;
   font-weight: bold !important;
   padding: 2px 6px;

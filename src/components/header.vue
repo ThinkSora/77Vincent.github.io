@@ -16,7 +16,6 @@ header {
   position: relative;
   padding: 9px 20px 9px 30px;
   font-family: $font-theme;
-  background-color: $color-theme;
   color: white;
   &:before {
     display: block;
@@ -25,8 +24,7 @@ header {
     content: "";
     position: absolute;
     height: 100%;
-    opacity: 0.3;
-    background-color: #fff;
+    background-color: $color-theme;
   }
   &.loading {
     &:before {
