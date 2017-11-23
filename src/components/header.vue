@@ -2,7 +2,7 @@
   <header :class="{loaded: !this.$store.state.loading, loading: this.$store.state.loading}">
     <a target="_blank" href="https://github.com/77Vincent" class="github navicon"></a>
     <router-link to="/about" class="photo navicon"></router-link>
-    <router-link to="/"><h1><strong>77</strong>的博客</h1></router-link>
+    <router-link to="/"><h1>77的博客</h1></router-link>
   </header>
 </template>
 
@@ -14,7 +14,7 @@ export default {}
 @import "../assets/meta";
 header {
   position: relative;
-  padding: 9px 30px;
+  padding: 9px 20px 9px 30px;
   font-family: $font-theme;
   background-color: $color-theme;
   color: white;
@@ -73,9 +73,6 @@ h1 {
   margin: 0;
   position: relative;
   z-index: 1;
-
-  strong {
-    font-size: 1.2em;
-  }
+  font-weight: bold;
 }
 </style>

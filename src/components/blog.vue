@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div class="block-left">
-      <section>
+      <section class="info">
         <div class="text-2">{{blog.title}}</div>
         <span class="text-3">{{blog.updated_at}}更新</span>
         <span class="text-3">{{blog.comments}}评论</span>
@@ -9,11 +9,7 @@
 
       <section class="anchors">
         <a :href="`#${item.id}`" v-for="item in index">{{item.text}}</a>
-      </section>
-
-      <section>
-        <div><a class="button" href="#comments">查看评论</a></div>
-        <div><button @click="gotoTop">回到顶部</button></div>
+        <a href="#comments">评论</a>
       </section>
     </div>
 
@@ -81,9 +77,6 @@ export default {
       setTimeout(() => {
         Prism.highlightAll();
       }, 100);
-    },
-    gotoTop() {
-      window.scrollTo(0, 0);
     }
   },
   created() {
@@ -126,6 +119,10 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/meta";
 .block-left {
+  .text-2 {
+    font-size: 1.1em;
+  }
+
   .text-3 {
     padding-right: 5px;
 
@@ -141,11 +138,16 @@ export default {
   }
 }
 
+.info {
+  border-bottom: 1px solid $color-middlegray;
+}
+
 .anchors {
   letter-spacing: 0;
+  padding-left: 15px;
 
   a {
-    margin: 1em 0;
+    margin: 0.75em 0;
     display: block;
   }
 

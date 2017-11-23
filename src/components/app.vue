@@ -5,8 +5,6 @@
     <div :class="{fixed: fixed}" class="wrapper">
       <router-view></router-view>
     </div>
-
-    <app-footer></app-footer>
   </div>
 </template>
 
@@ -161,25 +159,32 @@ button {
 .wrapper {
   margin: 0 auto;
   display: flex;
+  min-height: 95vh;
 }
 
 .flex {
   width: 100%;
+  position: relative;
   display: flex;
   display: -webkit-flex;
 }
 
 .block-left {
-  padding: 20px 15px;
+  padding: 20px;
   width: 20%;
+  max-width: 300px;
+  min-width: 240px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.15);
 }
 
 .block-right {
-  width: 80%;
+  width: 75%;
+  max-width: 900px;
+  min-width: 600px;
   padding: 20px 35px 60px;
-  min-height: 95vh;
+  position: absolute;
+  left: 20%;
 }
 
 .fixed {
@@ -191,10 +196,6 @@ button {
     left: 0;
     height: 100%;
     width: 20%;
-  }
-
-  .block-right {
-    margin-left: 20%;
   }
 }
 </style>
