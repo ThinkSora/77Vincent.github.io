@@ -185,6 +185,9 @@ button {
   padding: 20px 35px 60px;
   position: absolute;
   left: 20%;
+  @media screen and (max-width: 1200px){
+    left: 230px;
+  }
 }
 
 .fixed {
@@ -195,7 +198,7 @@ button {
     top: 0;
     left: 0;
     height: 100%;
-    width: 20%;
+    border-top: 4px solid $color-theme;
   }
 }
 </style>

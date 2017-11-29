@@ -17,6 +17,7 @@ header {
   padding: 9px 20px 9px 30px;
   font-family: $font-theme;
   color: white;
+
   &:before {
     display: block;
     left: 0;
@@ -26,21 +27,24 @@ header {
     height: 100%;
     background-color: $color-theme;
   }
+
   &.loading {
     &:before {
       animation: loading 4s linear forwards;
     }
   }
+
   &.loaded {
     &:before {
       width: 100%;
       animation: loaded 0.1s 0.2s linear forwards;
     }
   }
+
   .navicon {
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     margin-left: 10px;
     overflow: hidden;
