@@ -71,6 +71,14 @@ ol {
   list-style-position: inside;
 }
 
+h4 {
+  font-size: $font-s;
+  opacity: 0.6;
+}
+.h4 {
+  @extend h4;
+}
+
 article {
   font-size: 0.95em;
   max-width: 700px;
@@ -171,22 +179,21 @@ button {
 
 .block-left {
   padding: 20px;
-  width: 20%;
-  max-width: 300px;
-  min-width: 240px;
+  width: 280px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.15);
+  @include transition(all, 0.3s);
 }
 
 .block-right {
   width: 75%;
-  max-width: 900px;
-  min-width: 600px;
+  max-width: 1000px;
   padding: 20px 35px 60px;
   position: absolute;
-  left: 20%;
+  left: 290px;
+  @media screen and (min-width: 1400px){
+  }
   @media screen and (max-width: 1200px){
-    left: 230px;
   }
 }
 
@@ -198,7 +205,12 @@ button {
     top: 0;
     left: 0;
     height: 100%;
-    border-top: 4px solid $color-theme;
+    background-color: $color-theme;
+
+    * {
+      color: white;
+      border-color: white !important;
+    }
   }
 }
 </style>

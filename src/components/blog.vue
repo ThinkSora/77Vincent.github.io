@@ -3,8 +3,8 @@
     <div class="block-left">
       <section class="info">
         <div class="text-2">{{blog.title}}</div>
-        <span class="text-3">{{blog.updated_at}}更新</span>
-        <span class="text-3">{{blog.comments}}评论</span>
+        <span class="h4">{{blog.updated_at}}更新</span>
+        <span class="h4">{{blog.comments}}评论</span>
       </section>
 
       <section class="anchors">
@@ -27,7 +27,7 @@
 
             <aside>
               <span class="text-2">{{item.user.login}} /</span>
-              <span class="text-3">{{item.updated_at}}</span>
+              <span class="h4">{{item.updated_at}}</span>
               <div class="content">{{item.body}}</div>
             </aside>
           </section>
@@ -123,7 +123,7 @@ export default {
     font-size: 1.1em;
   }
 
-  .text-3 {
+  .h4 {
     padding-right: 5px;
 
     &:after {

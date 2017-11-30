@@ -5,9 +5,7 @@
   "author": "77Vincent <wentianqi77@outlook.com>",
   "private": true,
   "scripts": {
-    "prestart": "npm install",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
-    "restart": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "release": "npm run build; git add .; git commit -m 'update master with commits on develop'; git pull; git pull origin master; git push; git checkout master; git pull; git pull origin develop; git push; git checkout develop"
   },

@@ -1,5 +1,5 @@
 // Colors
-$color-theme: #0a635a;
+$color-theme: #043f38;
 $color-darkgray: rgb(60, 60, 60);
 $color-gray: rgb(150, 150, 150);
 $color-middlegray: rgb(220, 220, 200);
@@ -33,11 +33,6 @@ $bp-mobile: 480px;
 .text-2 {
   font-size: $font-m;
   font-weight: bold;
-}
-.text-3 {
-  font-size: $font-s;
-  color: $color-darkgray;
-  opacity: 0.8;
 }
 .text-normal-gray {
   font-size: $font-m;

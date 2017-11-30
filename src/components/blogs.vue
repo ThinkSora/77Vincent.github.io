@@ -23,9 +23,9 @@
     <div class="block-right">
       <section v-show="item.show" v-for="item in blogs">
         <router-link :to="{name: 'blog', params: {id: item.number, blog: item}}" class="blog">
-          <span class="text-3">{{item.updated_at}}</span>
+          <span class="h4">{{item.updated_at}}</span>
           <h2>{{item.title}}</h2>
-          <span class="text-3">{{item.comments}}评论</span>
+          <span class="h4">{{item.comments}}评论</span>
         </router-link>
       </section>
     </div>
