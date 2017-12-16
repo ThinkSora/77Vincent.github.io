@@ -68,7 +68,7 @@ header {
 }
 
 h1 {
-  font-size: 1.35em;
+  font-size: 1.2em;
   display: inline-block;
   text-transform: uppercase;
   vertical-align: middle;

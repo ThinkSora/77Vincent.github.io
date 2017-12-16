@@ -71,6 +71,10 @@ ol {
   list-style-position: inside;
 }
 
+li {
+  margin-bottom: 1em;
+}
+
 h4 {
   font-size: $font-s;
   opacity: 0.6;
@@ -84,6 +88,13 @@ article {
   max-width: 700px;
   h2 {
     @extend .text-underline;
+  }
+  h4 {
+    font-size: 1.1em;
+    opacity: 1;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+    margin-top: 2em;
   }
   a {
     color: $color-theme;
