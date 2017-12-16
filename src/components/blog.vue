@@ -144,11 +144,19 @@ export default {
 
 .anchors {
   letter-spacing: 0;
-  padding-left: 15px;
+  padding-left: 30px;
 
   a {
     margin: 0.75em 0;
     display: block;
+    font-weight: bold;
+
+    &:before {
+      content: ">";
+      display: inline;
+      margin-right: 0.5em;
+      opacity: 0.5;
+    }
   }
 
   &:before {

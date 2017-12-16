@@ -84,7 +84,6 @@ h4 {
 }
 
 article {
-  font-size: 0.95em;
   max-width: 700px;
   h2 {
     @extend .text-underline;
@@ -189,11 +188,17 @@ button {
 }
 
 .block-left {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 280px;
   border-right: 1px solid $color-middlegray;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.15);
   @include transition(all, 0.3s);
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .block-right {

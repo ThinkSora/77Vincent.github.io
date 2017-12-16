@@ -39,6 +39,7 @@ export default {
 .about {
   text-align: center;
   padding-top: 30px;
+  width: 100%;
 }
 
 .profile-photo {
