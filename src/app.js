@@ -1,51 +1,26 @@
-import Vue from "vue";
-import VueResource from "vue-resource";
-import VueRouter from "vue-router";
-import Vuex from "vuex";
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
 
-// Components
-import App from "./components/app.vue";
-import appAbout from "./components/about.vue";
-import appBlogs from "./components/blogs.vue";
-import appBlog from "./components/blog.vue";
+import { fetchPosts } from './actions'
+import PostsComponent from './components/posts'
+import store from './store'
+import rootReducer from './reducers'
+import './App.css'
 
-Vue.use(VueResource);
-Vue.use(VueRouter);
-Vue.use(Vuex);
 
-const store = new Vuex.Store({
-  state: {
-    visit: 0,
-    loading: 0 
-  },
-  mutations: {
-    visit: state => state.visit = 1,
-    loaded: state => state.loading = !state.loading 
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div className='App'>
+          <header>
+            <h1>Vincent 77 Blog</h1>
+          </header>
+          <PostsComponent />
+        </div>
+      </Provider>
+    )
   }
-});
+}
 
-const router = new VueRouter({
-  mode: "history",
-  routes: [{
-    path: "/",
-    name: "blogs",
-    component: appBlogs,
-  }, {
-    path: "/blog/:id",
-    name: "blog",
-    component: appBlog 
-  }, {
-    path: "/about",
-    name: "about",
-    component: appAbout
-  }]
-});
-
-new Vue({
-  el: "#app",
-  router,
-  store,
-  components: {
-    App
-  } 
-});
+export default App
