@@ -2,21 +2,26 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
 import { fetchPosts } from './actions'
-import PostsComponent from './components/posts'
+import PostsComponent from './components/posts/'
+import HeaderComponent from './components/header/'
 import store from './store'
-import rootReducer from './reducers'
 import './App.css'
 
 
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(fetchPosts())
+  }
+
   render() {
     return (
       <Provider store={store}>
         <div className='App'>
-          <header>
-            <h1>Vincent 77 Blog</h1>
-          </header>
-          <PostsComponent />
+          <HeaderComponent />
+
+          <div className="App-layout">
+            <PostsComponent />
+          </div>
         </div>
       </Provider>
     )

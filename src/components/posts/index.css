@@ -1,0 +1,16 @@
+.App-posts .App-text-5 {
+  display: inline-block;
+  margin-right: 1em;
+} 
+
+.App-posts-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.App-posts-item-comments {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
