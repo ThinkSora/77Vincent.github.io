@@ -24,7 +24,7 @@ class PostsComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  posts: state.posts.items,
+  posts: state.posts,
 })
 
 export default connect(mapStateToProps, { fetchPosts })(PostsComponent)

@@ -1,13 +1,16 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import rootReducer from './reducers';
+import reducer from './reducers';
 
-const initialState = {}
+const initialState = {
+  posts: [],
+  post: {},
+}
 
 const middleware = [thunk]
 
 const store = createStore(
-  rootReducer,
+  reducer,
   initialState,
   applyMiddleware(...middleware)
 )
