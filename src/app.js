@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Link } from "react-router-dom"
 
 import { fetchPosts } from './actions'
+import PostComponent from './components/post/'
 import PostsComponent from './components/posts/'
 import HeaderComponent from './components/header/'
 import store from './store'
@@ -16,13 +18,16 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className='App'>
-          <HeaderComponent />
+        <BrowserRouter>
+          <div className='App'>
+            <HeaderComponent />
 
-          <div className="App-layout">
-            <PostsComponent />
+            <div className="App-layout">
+              <Route path="/" exact component={PostsComponent}/>
+              <Route path="/posts/:id" component={PostComponent}/>
+            </div>
           </div>
-        </div>
+        </BrowserRouter>
       </Provider>
     )
   }
