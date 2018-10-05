@@ -3,6 +3,10 @@
   margin-right: 1em;
 } 
 
+.App-posts .App-text-2 {
+  display: block;
+}
+
 .App-posts-item {
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;

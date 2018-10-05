@@ -1,6 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { fetchPosts } from '../../actions'
 import './index.css'
@@ -16,7 +17,7 @@ export default connect(mapStateToProps, { fetchPosts })(
         {
           props.posts.map((post) => (
             <div className="App-posts-item" key={post.id}>
-              <div className="App-text-2">{post.title}</div>
+              <Link to={`/posts/${post.id}`} className="App-text-2">{post.title}</Link>
 
               <div className="App-text-5">{moment(post.updated_at).format('D/MM/YYYY')}</div>
 

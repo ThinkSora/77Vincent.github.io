@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import { BrowserRouter, Route } from "react-router-dom"
 
 import { fetchPosts } from './actions'
 import PostComponent from './components/post/'
