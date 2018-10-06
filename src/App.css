@@ -1,13 +1,22 @@
 .App {
 }
 
-.App-markdown {
+.App-markdown h2 {
+  border-bottom: 1px solid #ccc;
+  margin: 1.5em 0 0.9em;
+}
+
+.App-markdown pre {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.9em;
 }
 
 .App-layout {
-  padding: 0 15px;
+  padding: 10px 20px;
   max-width: 1024px;
-  margin: 0 auto;
+  position: relative;
+  left: 300px;
 }
 
 .App-text-2 {
