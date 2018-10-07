@@ -1,13 +1,13 @@
-import { FETCH_POSTS, NEW_POSTS } from '../actions/types'
+import { FETCH_POSTS } from '../actions/types'
+import { combineReducers } from 'redux'
 
-export default (state, action) => {
+const posts = (state = [], action) => {
   switch(action.type) {
     default:
       return state
     case FETCH_POSTS:
-      return {
-        ...state,
-        posts: action.payload,
-      }
+      return action.payload
   }
 }
+
+export default combineReducers({ posts })

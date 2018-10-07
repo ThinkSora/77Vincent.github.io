@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, { })(
   ({ match, posts }) => {
+
     const post = posts.filter((v, i) => String(v.id) === match.params.id)[0] || {}
     setTimeout(() => {
       prism.highlightAll()

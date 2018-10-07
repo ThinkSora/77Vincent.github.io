@@ -11,11 +11,11 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, { fetchPosts })(
-  (props) => {
+  ({ posts }) => {
     return (
       <div className="App-posts">
         {
-          props.posts.map((post) => (
+          posts.map((post) => (
             <div className="App-posts-item" key={post.id}>
               <Link to={`/posts/${post.id}`} className="App-text-2">{post.title}</Link>
 

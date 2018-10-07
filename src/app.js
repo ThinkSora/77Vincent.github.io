@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from "react-router-dom"
+import LoadingBar from 'react-redux-loading-bar'
 
 import { fetchPosts } from './actions'
 import PostComponent from './components/post/'
