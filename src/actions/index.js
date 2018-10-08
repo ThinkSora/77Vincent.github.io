@@ -1,4 +1,8 @@
-import { FETCH_POSTS, NEW_POSTS } from './types'
+import fetch from 'cross-fetch'
+
+// Action types 
+export const FETCH_POSTS = 'FETCH_POSTS'
+export const SET_POST = 'SET_POST'
 
 const POSTS_URL = 'https://api.github.com/repos/77Vincent/blog/issues'
 
@@ -9,4 +13,11 @@ export const fetchPosts = () => dispatch => {
       type: FETCH_POSTS,
       payload: data, 
     }))
+}
+
+export const setContent = (post = {}) => dispatch => {
+  dispatch({
+    type: SET_POST,
+    payload: post,
+  })
 }

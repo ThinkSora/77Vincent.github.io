@@ -26,6 +26,7 @@ class App extends Component {
             <HeaderComponent />
 
             <div className="App-layout">
+              <LoadingBar />
               <Route path="/" exact component={PostsComponent}/>
               <Route path="/posts/:id" component={PostComponent}/>
             </div>
