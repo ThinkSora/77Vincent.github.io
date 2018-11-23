@@ -8,7 +8,7 @@ import PostComponent from '../components/post'
 import PostsComponent from '../components/posts'
 import HeaderComponent from '../components/header'
 import store from '../store'
-import '../../node_modules/scaffold.css/scaffold.css'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../../node_modules/prismjs/themes/prism-tomorrow.css'
 import './App.css'
 
