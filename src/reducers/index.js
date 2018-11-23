@@ -2,13 +2,16 @@ import { FETCH_POSTS, SET_POST, SET_NAVIGATION } from '../actions'
 import { combineReducers } from 'redux'
 import { loadingBarReducer } from 'react-redux-loading-bar'
 
-export const initialNavigation = [{
-  title: 'Posts / 博客',
-  link: '/',
-}, {
-  title: 'About Me / 关于我',
-  link: '/about-me',
-}]
+export const initialNavigation = {
+  type: 1,
+  links: [{
+    title: 'Posts / 博客',
+    link: '/',
+  }, {
+    title: 'About Me / 关于我',
+    link: '/about-me',
+  }]
+}
 
 const navigation = (state = initialNavigation, action) => {
   switch(action.type) {

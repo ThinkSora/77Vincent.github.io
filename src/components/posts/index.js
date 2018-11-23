@@ -13,10 +13,10 @@ const mapStateToProps = state => ({
 
 const setPostWrap = postId => () => {
   const post = store.getState().posts.filter(item => item.id === postId)[0]
-  const anchors = generateAnchors(post.body)
+  const links = generateAnchors(post.body)
 
   store.dispatch(setPost(post))
-  store.dispatch(setNavigation(anchors))
+  store.dispatch(setNavigation({ type: 0, links }))
 }
 
 export default connect(mapStateToProps, { })(

@@ -21,9 +21,13 @@ const Nav = ({ navigation }) => {
       <Link to="/" onClick={setNav} className="App-header-logo">Tianqi's Blog</Link>
 
       {
-        navigation.map((item, index) => (
-          <a key={index} className="App-header-link" href={item.link}>{item.title}</a>
-        ))
+        navigation.type ? 
+          navigation.links.map((item, index) => (
+            <Link key={index} className="App-header-link" to={item.link}>{item.title}</Link>
+          )) :
+          navigation.links.map((item, index) => (
+            <a key={index} className="App-header-link" href={item.link}>{item.title}</a>
+          ))
       }
     </header>
   ) 
