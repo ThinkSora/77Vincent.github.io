@@ -10,16 +10,19 @@
 
 .App-markdown {
   font-size: 1.1em;
+  color: #222;
 }
 
 .App-markdown h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 6px;
   margin: 1.5em 0 1.2em;
+  font-size: 1.5em;
+  color: #444;
+  font-weight: bold;
 }
 
 .App-markdown pre {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em !important;
   font-size: 0.9em;
 }
