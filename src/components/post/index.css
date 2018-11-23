@@ -1,6 +1,6 @@
 .App-post hgroup {
   text-align: center;
-  margin-bottom: 3.3em;
+  margin-bottom: 3.9em;
 }
 
 .App-post .App-text-1 {
@@ -24,5 +24,5 @@
 
 .App-markdown pre {
   margin-bottom: 1.5em !important;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
