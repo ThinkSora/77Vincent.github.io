@@ -8,12 +8,27 @@
   height: 100%;
 }
 
+.App-header-link {
+  display: block;
+  color: #fff;
+  line-height: 2;
+  font-size: 1.2em;
+  padding: 0 0.6em;
+  border-bottom: 1px solid transparent;
+}
+
+.App-header-link:hover {
+  border-bottom: 1px solid #fff;
+  opacity: 0.7;
+}
+
 .App-header-logo {
   text-align: center;
   display: block;
   color: white;
   font-size: 1.5em;
   line-height: 2;
-  margin: 0;
   font-weight: 300;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #fff;
 }

@@ -19,14 +19,13 @@ export const fetchPosts = () => dispatch => {
       const parsedHref = window.location.href.split('/')
       const postID = Number(parsedHref[parsedHref.length - 1])
 
-      if (postID !== 0) {
-        store.dispatch(setPost(postID))
-      }
+      store.dispatch(setPost(postID))
     })
 }
 
-export const setPost = (postID = null) => dispatch => {
-  const post = store.getState().posts.filter(item => item.id === postID)[0]
+export const setPost = (postID) => dispatch => {
+  let post = store.getState().posts.filter(item => item.id === postID)[0]
+  post = post ? post : {}
   dispatch({
     type: SET_POST,
     payload: post,

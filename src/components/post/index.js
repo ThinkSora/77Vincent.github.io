@@ -11,28 +11,21 @@ const mapStateToProps = state => ({
   post: state.post,
 })
 
-class Post extends Component {
-  componentDidMount() {
-  }
+const Post = ({ post }) => {
+  setTimeout(() => {
+    prism.highlightAll()
+  }, 0)
 
-  render() {
-    setTimeout(() => {
-      prism.highlightAll()
-    }, 0)
+  return (
+    <div className="App-post">
+      <hgroup>
+        <div className="App-text-1"> { post.title } </div>
+        <h3 className="App-text-5">{ formatDate(post.updated_at) }</h3>
+      </hgroup>
 
-    const { post } = this.props
-
-    return (
-      <div className="App-post">
-        <hgroup>
-          <div className="App-text-1"> { post.title } </div>
-          <h3 className="App-text-5">{ formatDate(post.updated_at) }</h3>
-        </hgroup>
-
-        <ReactMarkdown className="App-markdown" escapeHtml={false} source={post.body}/>
-      </div>
-    ) 
-  }
+      <ReactMarkdown className="App-markdown" escapeHtml={false} source={post.body}/>
+    </div>
+  ) 
 }
 
 export default connect(mapStateToProps, { })(Post)
