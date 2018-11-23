@@ -18,7 +18,10 @@ const setNav = () => {
 const Nav = ({ navigation }) => {
   return (
     <header className="App-header">
-      <Link to="/" onClick={setNav} className="App-header-logo">Tianqi's Blog</Link>
+      <Link to="/" onClick={setNav} className="App-header-logo">
+        <div className="App-header-logo-en"> Tianqi's Blog </div>
+        <div className="App-header-logo-cn"> 天启的博客 </div>
+      </Link>
 
       {
         navigation.type ? 
