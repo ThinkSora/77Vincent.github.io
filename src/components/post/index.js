@@ -4,8 +4,6 @@ import ReactMarkdown from 'react-markdown'
 import { connect } from 'react-redux'
 
 import { formatDate } from '../../service'
-import { setContent } from '../../actions'
-import store from '../../store'
 import './index.css'
 
 const mapStateToProps = state => ({
@@ -15,7 +13,6 @@ const mapStateToProps = state => ({
 
 class Post extends Component {
   componentDidMount() {
-    // this.setPost(this.props.match.params.id)
   }
 
   render() {

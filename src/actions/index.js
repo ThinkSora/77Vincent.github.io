@@ -10,10 +10,19 @@ const POSTS_URL = 'https://api.github.com/repos/77Vincent/blog/issues'
 export const fetchPosts = () => dispatch => {
   fetch(POSTS_URL)
     .then(res => res.json())
-    .then(data => dispatch({
-      type: FETCH_POSTS,
-      payload: data, 
-    }))
+    .then(data => {
+      dispatch({
+        type: FETCH_POSTS,
+        payload: data, 
+      })
+
+      const parsedHref = window.location.href.split('/')
+      const postID = Number(parsedHref[parsedHref.length - 1])
+
+      if (postID !== 0) {
+        store.dispatch(setContent(postID))
+      }
+    })
 }
 
 export const setContent = (postID = null) => dispatch => {

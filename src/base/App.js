@@ -12,7 +12,6 @@ import '../../node_modules/scaffold.css/scaffold.css'
 import '../../node_modules/prismjs/themes/prism.css'
 import './App.css'
 
-
 class App extends Component {
   componentDidMount() {
     store.dispatch(fetchPosts())
