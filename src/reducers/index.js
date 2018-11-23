@@ -1,8 +1,8 @@
-import { FETCH_POSTS, SET_POST } from '../actions'
+import { FETCH_POSTS, SET_POST, SET_NAVIGATION } from '../actions'
 import { combineReducers } from 'redux'
 import { loadingBarReducer } from 'react-redux-loading-bar'
 
-const initialNavigation = [{
+export const initialNavigation = [{
   title: 'Posts / 博客',
   link: '/',
 }, {
@@ -14,6 +14,8 @@ const navigation = (state = initialNavigation, action) => {
   switch(action.type) {
     default:
       return state
+    case SET_NAVIGATION:
+      return action.payload
   }
 }
 

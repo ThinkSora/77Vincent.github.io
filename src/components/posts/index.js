@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import store from '../../store'
-import { setPost } from '../../actions'
-import { formatDate } from '../../service'
+import { setPost, setNavigation } from '../../actions'
+import { formatDate, generateAnchors } from '../../service'
 import './index.css'
 
 const mapStateToProps = state => ({
@@ -12,7 +12,11 @@ const mapStateToProps = state => ({
 })
 
 const setPostWrap = postId => () => {
-  store.dispatch(setPost(postId))
+  const post = store.getState().posts.filter(item => item.id === postId)[0]
+  const anchors = generateAnchors(post.body)
+
+  store.dispatch(setPost(post))
+  store.dispatch(setNavigation(anchors))
 }
 
 export default connect(mapStateToProps, { })(
