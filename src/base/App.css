@@ -25,6 +25,10 @@ blockquote {
   opacity: 0.5;
 }
 
+/**********************************************************
+Start from App specific rules
+**********************************************************/
+
 .App {
 }
 
@@ -48,7 +52,7 @@ blockquote {
 
 .App-text-2 {
   font-size: 1.25em;
-  margin: 0.3em 0 0.72em;
+  margin: 0.3em 0 0.66em;
 }
 .App-text-5 {
   font-size: 12px;
@@ -59,7 +63,7 @@ blockquote {
   display: inline-block;
   padding: 3px 5px;
   border-radius: 3px;
-  color: #333;
+  color: #444;
   font-weight: bold;
   font-size: 12px;
 }

@@ -1,6 +1,7 @@
 .App-posts .App-text-5 {
   display: inline-block;
   margin-right: 1em;
+  letter-spacing: 1px;
 } 
 
 .App-posts .App-text-2 {
@@ -8,13 +9,21 @@
 }
 
 .App-posts-item {
+  display: block;
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
 
+.App-posts-item:last-child {
+  border-bottom: none;
+}
+
+.App-posts-item:hover .App-text-2 {
+  color: teal;
+  text-decoration: underline;
+}
+
 .App-posts-item-comments {
-  display: inline-block;
-  vertical-align: middle;
   float: right;
 }
