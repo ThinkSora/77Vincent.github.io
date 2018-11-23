@@ -32,24 +32,19 @@ Start from App specific rules
 .App {
 }
 
-.App-markdown h2 {
-  border-bottom: 1px solid #ccc;
-  margin: 1.5em 0 0.9em;
-}
-
-.App-markdown pre {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 0.9em;
-}
-
 .App-layout {
-  padding: 10px 20px;
+  padding: 21px 30px;
   max-width: 1024px;
+  min-height: 100vh;
   position: relative;
   left: 300px;
+  border-right: 1px solid #eee;
 }
 
+.App-text-1 {
+  font-size: 2em;
+  margin: 0.6em 0 0.9em;
+}
 .App-text-2 {
   font-size: 1.25em;
   margin: 0.3em 0 0.66em;

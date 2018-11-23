@@ -25,9 +25,10 @@ class Post extends Component {
     return (
       <div className="App-post">
         <hgroup>
-          <h2 className="App-post-title"> { post.title } </h2>
+          <div className="App-text-1"> { post.title } </div>
           <h3 className="App-text-5">{ formatDate(post.updated_at) }</h3>
         </hgroup>
+
         <ReactMarkdown className="App-markdown" escapeHtml={false} source={post.body}/>
       </div>
     ) 
