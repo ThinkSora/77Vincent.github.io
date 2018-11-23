@@ -1,4 +1,5 @@
 import fetch from 'cross-fetch'
+import store from '../store'
 
 // Action types 
 export const FETCH_POSTS = 'FETCH_POSTS'
@@ -15,7 +16,8 @@ export const fetchPosts = () => dispatch => {
     }))
 }
 
-export const setContent = (post = {}) => dispatch => {
+export const setContent = (postID = null) => dispatch => {
+  const post = store.getState().posts.filter(item => item.id === postID)[0]
   dispatch({
     type: SET_POST,
     payload: post,

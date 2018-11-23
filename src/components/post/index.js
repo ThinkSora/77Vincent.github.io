@@ -13,29 +13,9 @@ const mapStateToProps = state => ({
   post: state.post,
 })
 
-// const getContent = () => {
-//   const anchors = document.querySelectorAll('.App-markdown h2 a')
-//   const content = []
-//   for (let item of anchors) {
-//     content.push(item.name)
-//   }
-//   return content
-// }
-
 class Post extends Component {
   componentDidMount() {
-    this.setPost(this.props.match.params.id)
-  }
-
-  setPost = (currentPost) => {
-    const previousPost = String(store.getState().post.id)
-
-    if (previousPost !== currentPost) {
-      const post = this.props.posts.filter((v, i) => {
-        return String(v.id) === currentPost || {}
-      })[0]
-      store.dispatch(setContent(post))
-    }
+    // this.setPost(this.props.match.params.id)
   }
 
   render() {
