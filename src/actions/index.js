@@ -20,7 +20,7 @@ export const fetchPosts = () => dispatch => {
       })
 
       const parsedHref = window.location.href.split('/')
-      const postID = Number(parsedHref[parsedHref.length - 1])
+      const postID = Number(parsedHref[parsedHref.length - 1].split('#')[0])
 
       let post = store.getState().posts.filter(item => item.id === postID)[0]
 

@@ -22,7 +22,7 @@ const Nav = ({ navigation }) => {
 
       {
         navigation.map((item, index) => (
-          <Link key={index} className="App-header-link" to={item.link}>{item.title}</Link>
+          <a key={index} className="App-header-link" href={item.link}>{item.title}</a>
         ))
       }
     </header>
