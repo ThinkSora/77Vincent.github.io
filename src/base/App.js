@@ -3,13 +3,13 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from "react-router-dom"
 import LoadingBar from 'react-redux-loading-bar'
 
-import { fetchPosts } from './actions'
-import PostComponent from './components/post/'
-import PostsComponent from './components/posts/'
-import HeaderComponent from './components/header/'
-import store from './store'
-import './lib/prism.css'
-import '../node_modules/scaffold.css/scaffold.css'
+import { fetchPosts } from '../actions'
+import PostComponent from '../components/post'
+import PostsComponent from '../components/posts'
+import HeaderComponent from '../components/header'
+import store from '../store'
+import './../lib/prism.css'
+import '../../node_modules/scaffold.css/scaffold.css'
 import './App.css'
 
 
