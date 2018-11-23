@@ -40,10 +40,6 @@ export default connect(mapStateToProps, { })(
                   </div>
                 ))
               }
-
-              <div className="App-posts-item-comments App-text-5">
-                Comments: {post.comments}
-              </div>
             </Link>
           ))
         }

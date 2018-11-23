@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 const Post = ({ post }) => {
   setTimeout(() => {
     prism.highlightAll()
-  }, 0)
+  }, 100)
 
   return (
     <div className="App-post">

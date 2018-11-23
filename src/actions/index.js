@@ -16,7 +16,7 @@ export const fetchPosts = () => dispatch => {
     .then(data => {
       dispatch({
         type: FETCH_POSTS,
-        payload: data, 
+        payload: data.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()), 
       })
 
       const parsedHref = window.location.href.split('/')

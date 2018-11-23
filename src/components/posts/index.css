@@ -19,11 +19,11 @@
   border-bottom: none;
 }
 
+.App-posts-item .App-label {
+  float: right;
+}
+
 .App-posts-item:hover .App-text-2 {
   color: teal;
   text-decoration: underline;
-}
-
-.App-posts-item-comments {
-  float: right;
 }
