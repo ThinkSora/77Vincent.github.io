@@ -20,12 +20,12 @@ export const fetchPosts = () => dispatch => {
       const postID = Number(parsedHref[parsedHref.length - 1])
 
       if (postID !== 0) {
-        store.dispatch(setContent(postID))
+        store.dispatch(setPost(postID))
       }
     })
 }
 
-export const setContent = (postID = null) => dispatch => {
+export const setPost = (postID = null) => dispatch => {
   const post = store.getState().posts.filter(item => item.id === postID)[0]
   dispatch({
     type: SET_POST,

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import store from '../../store'
-import { setContent } from '../../actions'
+import { setPost } from '../../actions'
 import { formatDate } from '../../service'
 import './index.css'
 
@@ -11,8 +11,8 @@ const mapStateToProps = state => ({
   posts: state.posts,
 })
 
-const setPost = postId => () => {
-  store.dispatch(setContent(postId))
+const setPostWrap = postId => () => {
+  store.dispatch(setPost(postId))
 }
 
 export default connect(mapStateToProps, { })(
@@ -21,7 +21,7 @@ export default connect(mapStateToProps, { })(
       <div className="App-posts">
         {
           posts.map((post) => (
-            <Link to={`/posts/${post.id}`} onClick={setPost(post.id)} className="App-posts-item" key={post.id}>
+            <Link to={`/posts/${post.id}`} onClick={setPostWrap(post.id)} className="App-posts-item" key={post.id}>
               <div className="App-text-2">{post.title}</div>
 
               <div className="App-text-5">{formatDate(post.updated_at)}</div>
